@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/campingList">
+    <fragment
+        android:id="@+id/campingList"
+        android:name="pardo.tarin.uv.es.CampingList"
+        android:label="Campings Comunitat Valenciana"
+        tools:layout="@layout/fragment_camping_list" >
+        <action
+            android:id="@+id/action_campingList_to_campingDetails2"
+            app:destination="@id/campingDetails2" />
+        <action
+            android:id="@+id/action_campingList_to_campingFavouriteList"
+            app:destination="@id/campingFavouriteList" />
+    </fragment>
+    <fragment
+        android:id="@+id/campingDetails2"
+        android:name="pardo.tarin.uv.es.CampingDetails"
+        android:label="Detalles del camping"
+        tools:layout="@layout/fragment_camping_details" >
+        <action
+            android:id="@+id/action_campingDetails2_to_campingList"
+            app:destination="@id/campingList" />
+    </fragment>
+    <fragment
+        android:id="@+id/campingFavouriteList"
+        android:name="pardo.tarin.uv.es.CampingFavouriteList"
+        android:label="Favoritos"
+        tools:layout="@layout/fragment_camping_favourite_list" >
+        <action
+            android:id="@+id/action_campingFavouriteList_to_campingDetails2"
+            app:destination="@id/campingDetails2" />
+    </fragment>
+</navigation>
