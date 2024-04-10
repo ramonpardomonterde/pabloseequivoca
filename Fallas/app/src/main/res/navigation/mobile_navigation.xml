@@ -21,12 +21,12 @@
     <fragment
         android:id="@+id/nav_infantiles"
         android:name="pardo.tarin.uv.fallas.ui.infantiles.InfantilesFragment"
-        android:label="@string/menu_gallery"
+        android:label="Fallas Infantiles"
         tools:layout="@layout/fragment_infantiles" />
 
     <fragment
         android:id="@+id/nav_adultas"
         android:name="pardo.tarin.uv.fallas.ui.adultas.AdultasFragment"
-        android:label="@string/menu_slideshow"
+        android:label="Fallas Adultas"
         tools:layout="@layout/fragment_adultas" />
 </navigation>

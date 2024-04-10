@@ -282,6 +282,7 @@ class CampingList : Fragment(), OnDataLoaded {
         }
 
         return listaCampings
+    }*/
 
 
     fun getDataHttp(idDataset: String, callback: OnDataLoaded): ArrayList<Camping> {
