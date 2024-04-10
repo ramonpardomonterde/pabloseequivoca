@@ -282,7 +282,7 @@ class CampingList : Fragment(), OnDataLoaded {
         }
 
         return listaCampings
-    }*/
+
 
     fun getDataHttp(idDataset: String, callback: OnDataLoaded): ArrayList<Camping> {
         val url = "https://dadesobertes.gva.es/api/3/action/datastore_search?id=$idDataset"

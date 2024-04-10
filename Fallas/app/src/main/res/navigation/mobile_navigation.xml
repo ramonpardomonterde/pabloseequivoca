@@ -9,17 +9,24 @@
         android:id="@+id/nav_home"
         android:name="pardo.tarin.uv.fallas.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_adultas"
+            app:destination="@id/nav_adultas" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_infantiles"
+            app:destination="@id/nav_infantiles" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="pardo.tarin.uv.fallas.ui.gallery.GalleryFragment"
+        android:id="@+id/nav_infantiles"
+        android:name="pardo.tarin.uv.fallas.ui.infantiles.InfantilesFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_infantiles" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="pardo.tarin.uv.fallas.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_adultas"
+        android:name="pardo.tarin.uv.fallas.ui.adultas.AdultasFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_adultas" />
 </navigation>

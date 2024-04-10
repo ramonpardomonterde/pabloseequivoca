@@ -1,10 +1,10 @@
-package pardo.tarin.uv.fallas.ui.gallery
+package pardo.tarin.uv.fallas.ui.infantiles
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class GalleryViewModel : ViewModel() {
+class InfantilesViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is gallery Fragment"
