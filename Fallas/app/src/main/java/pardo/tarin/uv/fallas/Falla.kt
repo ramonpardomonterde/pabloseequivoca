@@ -1,5 +1,7 @@
 package pardo.tarin.uv.fallas
 
+import java.io.Serializable
+
 data class Falla(
     val id: Int,
     val nombre: String?,
@@ -13,4 +15,4 @@ data class Falla(
     val boceto: String?,
     val experim: Int,
     val coordenadas: Pair<Double, Double>?
-)
+) : Serializable

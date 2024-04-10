@@ -22,7 +22,11 @@
         android:id="@+id/nav_infantiles"
         android:name="pardo.tarin.uv.fallas.ui.infantiles.InfantilesFragment"
         android:label="Fallas Infantiles"
-        tools:layout="@layout/fragment_infantiles" />
+        tools:layout="@layout/fragment_infantiles" >
+        <action
+            android:id="@+id/action_nav_infantiles_to_nav_adultas"
+            app:destination="@id/nav_adultas" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_adultas"

@@ -1,16 +1,27 @@
 package pardo.tarin.uv.fallas.ui.infantiles
 
+import android.content.Context
+import android.graphics.Typeface
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.LinearLayout
+import android.widget.Spinner
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
 import pardo.tarin.uv.fallas.Falla
+import pardo.tarin.uv.fallas.R
 import pardo.tarin.uv.fallas.databinding.FragmentInfantilesBinding
 import java.io.IOException
 
@@ -18,7 +29,8 @@ class InfantilesFragment : Fragment() {
 
     private var _binding: FragmentInfantilesBinding? = null
     private lateinit var originalFallasData: ArrayList<Falla>
-    private var campingsData: ArrayList<Falla> = ArrayList()
+    private val coroutineScope = CoroutineScope(Dispatchers.Main)
+    private var fallasPorSeccion: List<List<Any>> = listOf()
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -33,14 +45,80 @@ class InfantilesFragment : Fragment() {
 
         _binding = FragmentInfantilesBinding.inflate(inflater, container, false)
 
-        originalFallasData = getFallasInfantiles()
+        coroutineScope.launch {
+            getFallasInfantiles { fallas ->
+                originalFallasData = fallas
+
+                fallasPorSeccion = ordenarPorSeccion(originalFallasData)
+            }
+
+            val spinners: List<Spinner> = listOf(
+                binding.spinnerSeccionE,
+                binding.spinnerSeccion1,
+                binding.spinnerSeccion2,
+                binding.spinnerSeccion3,
+                binding.spinnerSeccion4,
+                binding.spinnerSeccion5,
+                binding.spinnerSeccion6,
+                binding.spinnerSeccion7,
+                binding.spinnerSeccion8,
+                binding.spinnerSeccion9,
+                binding.spinnerSeccion10,
+                binding.spinnerSeccion11,
+                binding.spinnerSeccion12,
+                binding.spinnerSeccion13,
+                binding.spinnerSeccion14,
+                binding.spinnerSeccion15,
+                binding.spinnerSeccion16,
+                binding.spinnerSeccion17,
+                binding.spinnerSeccion18,
+                binding.spinnerSeccion19,
+                binding.spinnerSeccion20,
+                binding.spinnerSeccion21,
+                binding.spinnerSeccion22
+            )
+
+            for ((index, fila) in fallasPorSeccion.withIndex()) {
+                // Asegúrate de no salirte del rango de los Spinners
+                if (index >= spinners.size) break
+
+                val spinner = spinners[index]
+                val adapter = CustomArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, fila.toMutableList())
+                spinner.adapter = adapter
+                spinner.isEnabled = true // Deshabilita la interacción con el Spinner
+                spinner.layoutParams = LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+                )
+
+                spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+                    override fun onItemSelected(
+                        parent: AdapterView<*>?,
+                        view: View?,
+                        position: Int,
+                        id: Long
+                    ) {
+                        if (position != 0) {  // Evita abrir el AdultasFragment cuando se selecciona el nombre fijo
+                            findNavController().navigate(R.id.action_nav_infantiles_to_nav_adultas)
+
+                            // Vuelve a establecer el elemento seleccionado al nombre fijo
+                            spinner.setSelection(0)
+                        }
+                    }
+
+                    override fun onNothingSelected(parent: AdapterView<*>?) {
+                        // No hacer nada
+                    }
+                }
+            }
+        }
 
         /*val textView: TextView = binding.textGallery
         textView.text = "This is infantiles Fragment"*/
         return binding.root
     }
 
-    fun getFallasInfantiles(): ArrayList<Falla> {
+    suspend fun getFallasInfantiles(callback: (ArrayList<Falla>) -> Unit) = withContext(Dispatchers.IO) {
         val url = "https://mural.uv.es/pajotape/fallas_infantiles"
         val listaFallas = ArrayList<Falla>()
 
@@ -71,21 +149,83 @@ class InfantilesFragment : Fragment() {
                 val lema = record.optString("lema", null)
                 val boceto = record.optString("boceto", null)
                 val experim = record.optInt("experim")
-                val coordenadas = record.optString("geo_point_2d")?.split(",")?.let {
-                    Pair(it[0].toDouble(), it[1].toDouble())
-                }
+                val geo = record.getJSONObject("geo_point_2d")
+                val lat = geo.optDouble("lat")
+                val lon = geo.optDouble("lon")
+                val coordenadas = Pair(lat, lon)
 
-                var falla = Falla(id, nombre, seccion, premio, premioE, fallera, presidente, artista, lema, boceto, experim, coordenadas)
+                val falla = Falla(id, nombre, seccion, premio, premioE, fallera, presidente, artista, lema, boceto, experim, coordenadas)
 
                 listaFallas.add(falla)
             }
         }
 
-        return listaFallas
+        callback(listaFallas)
+    }
+
+    fun ordenarPorSeccion(originalFallasData: ArrayList<Falla>): List<List<Any>> {
+        val fallasPorSeccion: Map<String, List<Falla>> = originalFallasData.groupBy { it.seccion.toString() }
+
+        val matriz = fallasPorSeccion.map { (seccion, fallas) ->
+            val fila = mutableListOf<Any>()
+            if(seccion == "IE"){
+                fila.add("Sección Especial")
+            }
+            else {
+                fila.add("Sección $seccion") // Se añade el nombre de la sección a la fila
+            }
+            fila.addAll(fallas.map { it.nombre ?: "Sin nombre" })
+            fila
+        }
+
+        val matrizIE = matriz.filter { it[0] == "Sección Especial" }
+        val matrizNoIE = matriz.filter { it[0] != "Sección Especial" }.sortedBy {
+            val seccion = it[0].toString().removePrefix("Sección ").toIntOrNull() ?: Int.MAX_VALUE
+            seccion
+        }
+
+        val matrizOrdenada = matrizIE + matrizNoIE
+
+        /*val fila = matrizOrdenada[2]
+        for (i in 1 until fila.size) {
+            val falla = fila[i] as Falla
+            val nombreFalla = falla.nombre ?: "Sin nombre"
+            val seccion = falla.seccion ?: "Sin sección"
+            Log.d("Falla", "Sección $seccion - $nombreFalla")
+        }*/
+
+        return matrizOrdenada
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    class CustomArrayAdapter(context: Context, resource: Int, objects: MutableList<Any>) : ArrayAdapter<Any>(context, resource, objects) {
+        override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+            val view = super.getView(position, convertView, parent)
+            val textView = view as TextView
+
+            if (position == 0) {
+                // Si es el primer elemento, cambia el estilo a negrita y aumenta el tamaño de letra
+                textView.setTypeface(null, Typeface.BOLD)
+                textView.textSize = 20f
+            } else {
+                // Para los demás elementos, usa el estilo normal y el tamaño de letra predeterminado
+                textView.setTypeface(null, Typeface.NORMAL)
+                textView.textSize = 16f
+            }
+
+            return view
+        }
+
+        override fun isEnabled(position: Int): Boolean {
+            return true // Deshabilita la interacción con todos los elementos
+        }
+
+        override fun getCount(): Int {
+            return super.getCount()  // Muestra todos los elementos
+        }
     }
 }
