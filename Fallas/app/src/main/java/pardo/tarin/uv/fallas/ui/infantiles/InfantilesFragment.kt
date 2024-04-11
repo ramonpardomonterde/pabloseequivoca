@@ -3,11 +3,14 @@ package pardo.tarin.uv.fallas.ui.infantiles
 import android.content.Context
 import android.graphics.Typeface
 import android.os.Bundle
+import android.text.Layout
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Spinner
 import android.widget.TextView
@@ -52,7 +55,7 @@ class InfantilesFragment : Fragment() {
                 fallasPorSeccion = ordenarPorSeccion(originalFallasData)
             }
 
-            val spinners: List<Spinner> = listOf(
+            /*val spinners: List<Spinner> = listOf(
                 binding.spinnerSeccionE,
                 binding.spinnerSeccion1,
                 binding.spinnerSeccion2,
@@ -76,9 +79,9 @@ class InfantilesFragment : Fragment() {
                 binding.spinnerSeccion20,
                 binding.spinnerSeccion21,
                 binding.spinnerSeccion22
-            )
+            )*/
 
-            for ((index, fila) in fallasPorSeccion.withIndex()) {
+            /*for ((index, fila) in fallasPorSeccion.withIndex()) {
                 // Asegúrate de no salirte del rango de los Spinners
                 if (index >= spinners.size) break
 
@@ -110,7 +113,54 @@ class InfantilesFragment : Fragment() {
                         // No hacer nada
                     }
                 }
+            }*/
+
+            val linearLayout = binding.linearLayoutSecciones // Asegúrate de tener un LinearLayout con este id en tu fragment_infantiles.xml
+
+            for (i in fallasPorSeccion) {
+                val inflater = LayoutInflater.from(context)
+                val seccionView = inflater.inflate(R.layout.seccion_view, linearLayout, false)
+
+                // Aquí puedes configurar los datos de tu seccion_view
+                // Por ejemplo, si tienes un TextView en tu seccion_view, puedes hacer algo como esto:
+                val name = seccionView.findViewById<TextView>(R.id.seccion_name)
+                name.text = i[0].toString()
+
+                val layoutFallasSeccion = seccionView.findViewById<LinearLayout>(R.id.linear_layoutSecciones)
+
+                for (falla in i.drop(1)) {
+                    //if(falla is Falla) {
+                        Log.d("Falla", "Nombre: $falla")
+                        val fallaView = inflater.inflate(R.layout.falla_view, layoutFallasSeccion, false)
+
+                        // Aquí puedes configurar los datos de tu falla_view
+                        // Por ejemplo, si tienes un TextView en tu falla_view, puedes hacer algo como esto:
+                        val nombre = fallaView.findViewById<TextView>(R.id.falla_name)
+                        nombre.text = falla.toString()
+                        /*val premio = fallaView.findViewById<TextView>(R.id.falla_prize)
+                        premio.text = falla.premio.toString()*/
+
+                        layoutFallasSeccion.addView(fallaView)
+                        layoutFallasSeccion.visibility = View.GONE
+                    //}
+                }
+                Log.d("Falla", "-------------------")
+                linearLayout.addView(seccionView)
+                val plusmenos = seccionView.findViewById<ImageView>(R.id.plusminus)
+                seccionView.setOnClickListener {
+                    val tag = plusmenos.tag
+                    if (tag == null || tag == "plus") {
+                        plusmenos.setImageResource(R.drawable.menos) // Asegúrate de tener un recurso de imagen llamado 'minus'
+                        plusmenos.tag = "minus"
+                        layoutFallasSeccion.visibility = View.VISIBLE
+                    } else {
+                        plusmenos.setImageResource(R.drawable.plus) // Asegúrate de tener un recurso de imagen llamado 'plus'
+                        plusmenos.tag = "plus"
+                        layoutFallasSeccion.visibility = View.GONE
+                    }
+                }
             }
+
         }
 
         /*val textView: TextView = binding.textGallery
