@@ -26,11 +26,22 @@
         <action
             android:id="@+id/action_nav_infantiles_to_nav_adultas"
             app:destination="@id/nav_adultas" />
+        <action
+            android:id="@+id/action_nav_infantiles_to_fallaDetails"
+            app:destination="@id/fallaDetails" />
     </fragment>
 
     <fragment
         android:id="@+id/nav_adultas"
         android:name="pardo.tarin.uv.fallas.ui.adultas.AdultasFragment"
         android:label="Fallas Adultas"
-        tools:layout="@layout/fragment_adultas" />
+        tools:layout="@layout/fragment_adultas" >
+        <action
+            android:id="@+id/action_nav_adultas_to_fallaDetails"
+            app:destination="@id/fallaDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fallaDetails"
+        android:name="pardo.tarin.uv.fallas.FallaDetails"
+        android:label="FallaDetails" />
 </navigation>

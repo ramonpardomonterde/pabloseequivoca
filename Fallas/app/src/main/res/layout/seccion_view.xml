@@ -23,10 +23,10 @@
                 android:id="@+id/seccion_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_weight="1"
                 android:textColor="#000000"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/plusminus"

@@ -1,39 +1,24 @@
-package pardo.tarin.uv.fallas.ui.infantiles
+package pardo.tarin.uv.fallas
 
 import android.util.Log
-import android.view.View
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.fragment.app.Fragment
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
-import pardo.tarin.uv.fallas.Falla
 import java.io.IOException
 
-class InfantilesViewModel : ViewModel() {
+open class FallasGeneral: Fragment() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is gallery Fragment"
-    }
-    val text: LiveData<String> = _text
+    lateinit var originalFallasData: ArrayList<Falla>
+    var fallasPorSeccion: List<List<Any>> = listOf()
 
-    var _view: View? = null
-
-    lateinit var originalfallasInfantiles: ArrayList<Falla>
-    //var infantilesPorSeccion: List<List<Any>> = listOf()
-    private val _infantilesPorSeccion = MutableStateFlow<List<List<Any>>>(listOf())
-
-    // Usa StateFlow para exponer los datos de manera segura
-    val infantilesPorSeccion: StateFlow<List<List<Any>>> = _infantilesPorSeccion
-
-    suspend fun getFallas(_url: String) {
+    suspend fun getFallas(_url: String, callback: (ArrayList<Falla>) -> Unit) = withContext(Dispatchers.IO) {
         val url = _url
-        var listaFallas = ArrayList<Falla>()
+        val listaFallas = ArrayList<Falla>()
+        var bocetomaslargo: String = ""
 
         val request = Request.Builder().url(url).addHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36")
             .addHeader("Accept", "application/json").addHeader("Accept-Charset", "es").build()
@@ -68,15 +53,17 @@ class InfantilesViewModel : ViewModel() {
                 val coordenadas = Pair(lat, lon)
 
                 val falla = Falla(id, nombre, seccion, premio, premioE, fallera, presidente, artista, lema, boceto, experim, coordenadas)
-
+                if(lema.length > bocetomaslargo.length){
+                    bocetomaslargo = lema
+                }
                 listaFallas.add(falla)
             }
         }
 
+        Log.d("Falla", "Cargando fallas infantiles")
+        Log.d("BocetoMasLargo", "Boceto más largo: $bocetomaslargo con tamaño ${bocetomaslargo.length}")
 
-        //callback(listaFallas)
-        _infantilesPorSeccion.value = ordenarPorSeccion(listaFallas)
-        Log.d("FallaInf", _infantilesPorSeccion.value.toString())
+        callback(listaFallas)
     }
 
     fun ordenarPorSeccion(originalFallasData: ArrayList<Falla>): List<List<Any>> {

@@ -6,7 +6,7 @@ data class Falla(
     val id: Int,
     val nombre: String?,
     val seccion: String?,
-    val premio: Int,
+    val premio: String?,
     val premioE: Int,
     val fallera: String?,
     val presidente: String?,
