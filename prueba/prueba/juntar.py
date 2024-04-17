@@ -19,8 +19,12 @@ with open('formateado_premiosIngenioAdultas.json', 'r', encoding='utf-8') as f:
 with open('fallas_infantiles_sinPremios.json', 'r', encoding='utf-8') as f:
     fallasInfantiles = json.load(f)
 
+fallasInfantiles = sorted(fallasInfantiles, key=lambda x: x['id_falla'] if x['id_falla'] is not None else 1000)
+
 with open('fallas_adultas_sinPremios.json', 'r', encoding='utf-8') as f:
     fallasAdultas = json.load(f)
+
+fallasAdultas = sorted(fallasAdultas, key=lambda x: x['id_falla'] if x['id_falla'] is not None else 1000)
 
 # Para cada objeto en el archivo JSON, buscar su ID en los archivos JSON de premios
 for falla in fallasInfantiles:

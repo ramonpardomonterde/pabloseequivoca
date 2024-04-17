@@ -25,153 +25,102 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <!--<include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccionEspecial" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion1" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion2" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion3" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion4" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion5" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion6" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion7" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion8" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion9" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion10" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion11" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion12" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion13" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion14" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion15" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion16" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion17" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion18" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion19" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion20" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion21" />
+
+            <include
+                layout="@layout/seccion_view"
+                android:id="@+id/seccion22" />-->
+
         </LinearLayout>
     </ScrollView>
-    <!--<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="gone"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <Spinner
-            android:id="@+id/spinner_seccionE"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccionE" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion1" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion2" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion3" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion4" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion5" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion6" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion7" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion8" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion9" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion10" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion11" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion13"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion12" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion14"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion13" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion15"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion14" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion16"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion15" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion17"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion16" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion18"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion17" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion19"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion18" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion20"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion19" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion21"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion20" />
-
-        <Spinner
-            android:id="@+id/spinner_seccion22"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/spinner_seccion21" />
-
-    </LinearLayout>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
