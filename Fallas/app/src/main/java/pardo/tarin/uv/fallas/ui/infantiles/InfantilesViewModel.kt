@@ -17,7 +17,7 @@ import java.io.IOException
 
 class InfantilesViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
+    /*private val _text = MutableLiveData<String>().apply {
         value = "This is gallery Fragment"
     }
     val text: LiveData<String> = _text
@@ -117,5 +117,5 @@ class InfantilesViewModel : ViewModel() {
         }*/
 
         return matrizOrdenada
-    }
+    }*/
 }

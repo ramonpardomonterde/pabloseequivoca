@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.appBarMain.toolbar)
 
 
-        val infantilesViewModel =
+        /*val infantilesViewModel =
             ViewModelProvider(this).get(InfantilesViewModel::class.java)
 
         coroutineScope.launch(Dispatchers.IO) {
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                 Log.d("FallaInf", infantilesViewModel.infantilesPorSeccion.toString())
             }*/
             infantilesViewModel.getFallas("https://mural.uv.es/pajotape/fallas_infantiles")
-        }
+        }*/
 
         /* binding.appBarMain.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)

@@ -39,23 +39,24 @@ class AdultasFragment : FallasGeneral() {
         _binding = FragmentAdultasBinding.inflate(inflater, container, false)
 
         coroutineScope.launch {
-            binding.loadingSpinnerAdultas.visibility = View.VISIBLE
-            getFallas("https://mural.uv.es/pajotape/fallas_adultas") { fallas ->
-                originalFallasData = fallas
-                fallasPorSeccion = ordenarPorSeccion(originalFallasData)
+            try {
+                binding.loadingSpinnerAdultas.visibility = View.VISIBLE
+                getFallas("https://mural.uv.es/pajotape/fallas_adultas") { fallas ->
+                    originalFallasData = fallas
+                    fallasPorSeccion = ordenarPorSeccion(originalFallasData)
+                }
+
+                binding.loadingSpinnerAdultas.visibility = View.GONE
+                crearVista()
+            } catch (e: Exception) {
+                Log.e("AdultasFragment", "Error al cargar las fallas", e)
             }
-            binding.loadingSpinnerAdultas.visibility = View.GONE
-            crearVista()
         }
 
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
-
-    suspend fun crearVista() {
+    private suspend fun crearVista() {
         val linearLayout = binding.linearLayoutSeccionesAdultas // Asegúrate de tener un LinearLayout con este id en tu fragment_infantiles.xml
 
         for (i in fallasPorSeccion) {

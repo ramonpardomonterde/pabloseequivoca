@@ -15,6 +15,8 @@ import kotlinx.coroutines.flow.collect
 import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import pardo.tarin.uv.fallas.Falla
@@ -33,13 +35,6 @@ class InfantilesFragment: FallasGeneral() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        Log.d("OnCreate", "Creando fragmento infantiles")
-
-        _binding = FragmentInfantilesBinding.inflate(layoutInflater)
-        infantilesViewModel = ViewModelProvider(requireActivity()).get(InfantilesViewModel::class.java)
-    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -51,14 +46,62 @@ class InfantilesFragment: FallasGeneral() {
         //infantilesViewModel = ViewModelProvider(requireActivity()).get(InfantilesViewModel::class.java)
 
         coroutineScope.launch {
-            binding.loadingSpinner.visibility = View.VISIBLE
-            getFallas("https://mural.uv.es/pajotape/fallas_infantiles") { fallas ->
-                originalFallasData = fallas
-                fallasPorSeccion = ordenarPorSeccion(originalFallasData)
+            try {
+                binding.loadingSpinner.visibility = View.VISIBLE
+                // Temporizador para mostrar el botón de reintentar si la carga de datos tarda más de 5 segundos
+                val job = launch {
+                    delay(10000) // espera 10 segundos
+                    if (isActive) {
+                        binding.buttonRecargarInf.visibility = View.VISIBLE
+                        binding.textoRecargarInf.visibility = View.VISIBLE
+                        binding.loadingSpinner.visibility = View.GONE
+                    }
+                }
+                getFallas("https://mural.uv.es/pajotape/fallas_adultas") { fallas ->
+                    job.cancel() // cancela el temporizador si los datos se cargan correctamente
+                    originalFallasData = fallas
+                    fallasPorSeccion = ordenarPorSeccion(originalFallasData)
+                }
+                binding.loadingSpinner.visibility = View.GONE
+                crearVista()
+            } catch (e: Exception) {
+                binding.buttonRecargarInf.visibility = View.VISIBLE
+                binding.textoRecargarInf.visibility = View.VISIBLE
+                binding.loadingSpinner.visibility = View.GONE// muestra el botón de reintentar si ocurre una excepción
             }
-            crearVista()
-            binding.loadingSpinner.visibility = View.GONE
         }
+
+        //Reintentar cargar los datos
+        binding.buttonRecargarInf.setOnClickListener {
+            binding.buttonRecargarInf.visibility = View.GONE
+            binding.textoRecargarInf.visibility = View.GONE
+            // vuelve a cargar los datos
+            coroutineScope.launch {
+                try {
+                    binding.loadingSpinner.visibility = View.VISIBLE
+                    val job = launch {
+                        delay(10000) // espera 10 segundos
+                        if (isActive) {
+                            binding.buttonRecargarInf.visibility = View.VISIBLE
+                            binding.textoRecargarInf.visibility = View.VISIBLE
+                            binding.loadingSpinner.visibility = View.GONE
+                        }
+                    }
+                    getFallas("https://mural.uv.es/pajotape/fallas_adultas") { fallas ->
+                        job.cancel() // cancela el temporizador si los datos se cargan correctamente
+                        originalFallasData = fallas
+                        fallasPorSeccion = ordenarPorSeccion(originalFallasData)
+                    }
+                    binding.loadingSpinner.visibility = View.GONE
+                    crearVista()
+                } catch (e: Exception) {
+                    binding.buttonRecargarInf.visibility = View.VISIBLE
+                    binding.textoRecargarInf.visibility = View.VISIBLE
+                    binding.loadingSpinner.visibility = View.GONE
+                }
+            }
+        }
+
         /*lifecycleScope.launchWhenStarted {
             infantilesViewModel?.infantilesPorSeccion?.collect { fallas ->
                 // Este bloque de código se ejecutará cuando los datos estén listos
@@ -92,7 +135,7 @@ class InfantilesFragment: FallasGeneral() {
         return binding.root
     }
 
-    fun crearVista(/*fallas : List<List<Any>>*/) {
+    private suspend fun crearVista(/*fallas : List<List<Any>>*/) {
         val linearLayout = binding.linearLayoutSecciones // Asegúrate de tener un LinearLayout con este id en tu fragment_infantiles.xml
         Log.d("Falla", fallasPorSeccion.toString())
         for (i in fallasPorSeccion) {
