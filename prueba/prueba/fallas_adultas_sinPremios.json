@@ -10139,5 +10139,209 @@
             "lon": -0.41320247664708254,
             "lat": 39.47753120815125
         }
+    },
+    {
+        "id_falla": 103,
+        "nombre": "València-Teodor Llorente ",
+        "seccion": "2B",
+        "fallera": "Iris Bartual Jordán",
+        "presidente": "Carmen Gómez Martínez",
+        "artista": "Sergio Lis Abril",
+        "lema": "No Cal Perdre El Camí",
+        "anyo_fundacion": 1971,
+        "distintivo": null,
+        "boceto": "http://www.fallaelcano.com/wp-content/uploads/2023/10/BocetoFallaGrande_2023-819x1024.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.423467986529227,
+            "lat": 39.46372480751368
+        }
+    },
+    {
+        "id_falla": 136,
+        "nombre": "Felip Bellver-Mare Ràfols",
+        "seccion": "6C",
+        "fallera": "Celia Melenchón Pons",
+        "presidente": "Óscar Martínez García",
+        "artista": "Francisco José Santonja Peni (Arte Efímero S.l.)",
+        "lema": "¿I tú, a qué jugues?",
+        "anyo_fundacion": null,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/15869-1708640006-1508036-med.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.415115038134103,
+            "lat": 39.476800237099695
+        }
+    },
+    {
+        "id_falla": 175,
+        "nombre": "Barri Mont de Pietat",
+        "seccion": "8C",
+        "fallera": "Alejandra Peranio González",
+        "presidente": "Jesús Gónzalez García",
+        "artista": "Pascual Ramón Montes Carrasco y la Comisión",
+        "lema": "Entreteniments",
+        "anyo_fundacion": 1955,
+        "distintivo": "Brillants (2000)",
+        "boceto": "https://bdfallas.com/fotos-fallas/15916-1708712584-749814-med.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.43587113289128354,
+            "lat": 39.46447986152766
+        }
+    },
+    {
+        "id_falla": 206,
+        "nombre": "Doctor Gómez Ferrer",
+        "seccion": "8B",
+        "fallera": "Tamara Tormo Rubiño",
+        "presidente": "Jonatan García Carretero",
+        "artista": "Javier Gómez Morollón",
+        "lema": "Con este precio a oscuras nos vemos",
+        "anyo_fundacion": 1968,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/14988-1698272101-5021816-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.4275459665565909,
+            "lat": 39.46833941302582
+        }
+    },
+    {
+        "id_falla": 207,
+        "nombre": "Mestre Lope-Josep Carsí",
+        "seccion": "8A",
+        "fallera": "Eva Rabadán Pérez",
+        "presidente": "Nuria Hernández Araque",
+        "artista": "Vicente Espeleta García",
+        "lema": "M'he quedat gelat",
+        "anyo_fundacion": 1969,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/15901-1708704341-7022812-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.4098511132197091,
+            "lat": 39.509742186840874
+        }
+    },
+    {
+        "id_falla": 209,
+        "nombre": "Sant Antoni",
+        "seccion": "4C",
+        "fallera": "Carme Montes Ortí",
+        "presidente": "Pablo Barberá Correa",
+        "artista": "Javier Álvarez - Sala Salinas",
+        "lema": "En Joc",
+        "anyo_fundacion": 1969,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/15002-1698316378-5940571-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.4262237871837227,
+            "lat": 39.465070691418504
+        }
+    },
+    {
+        "id_falla": 210,
+        "nombre": "Alacant",
+        "seccion": "5C",
+        "fallera": "Marta Segade Borja",
+        "presidente": "Juan Carlos Clavijo Berlanga",
+        "artista": "Francisco Martos Sánchez",
+        "lema": "Sempre amb un Somriure",
+        "anyo_fundacion": 1967,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/15850-1708621073-4322404-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.4446759226838108,
+            "lat": 39.481784100324354
+        }
+    },
+    {
+        "id_falla": 214,
+        "nombre": "Cristòfol Sorní-Mestre Martín",
+        "seccion": "3A",
+        "fallera": "Leonor Garzón Valero",
+        "presidente": "Borja Beltrán Escuriola",
+        "artista": "Fernando Llopis Torres (Ferni)",
+        "lema": "Una vesprada en la fira",
+        "anyo_fundacion": 1969,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/15813-1712680480-1686386-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.40862333829631203,
+            "lat": 39.504382792785385
+        }
+    },
+    {
+        "id_falla": 217,
+        "nombre": "Espartero-Músic Plasència",
+        "seccion": "3A",
+        "fallera": "Azahara López González",
+        "presidente": "Cristina López Blasco y Luis López Blasco",
+        "artista": "Javier Álvarez - Sala Salinas",
+        "lema": "Ciber Falla",
+        "anyo_fundacion": 1970,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/15814-1708528317-3516706-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.41577686059224034,
+            "lat": 39.50253785821129
+        }
+    },
+    {
+        "id_falla": 220,
+        "nombre": "Fermín Galán i García Hernández-Primavera",
+        "seccion": "7B",
+        "fallera": "Esther Fernández Giner",
+        "presidente": "Daniel Pérez Moris",
+        "artista": "José Miguel Micó Martí - Vicente Micó Martí (Gotes de Foc)",
+        "lema": "Al'Che'Mist",
+        "anyo_fundacion": 1971,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/15885-1708644821-2647775-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.4148590324408392,
+            "lat": 39.51089322172576
+        }
+    },
+    {
+        "id_falla": 221,
+        "nombre": "Llibertat-Teodor Llorente",
+        "seccion": "5C",
+        "fallera": "Eva María Ruiz Molinas",
+        "presidente": null,
+        "artista": "Isidro Martínez Aparicio (Isidro Ventiscas)",
+        "lema": "Rural d'Or",
+        "anyo_fundacion": null,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/15851-1708621137-3007057-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.4140637871330518,
+            "lat": 39.50830844108936
+        }
+    },
+    {
+        "id_falla": 222,
+        "nombre": "Doctor Domingo Orozco-Bailén",
+        "seccion": "8A",
+        "fallera": "Pilar San Andrés Alonso",
+        "presidente": "Kike Coll Lldeó",
+        "artista": "Juan Jesús García Pérez",
+        "lema": "Asertiu",
+        "anyo_fundacion": 1961,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/15902-1708704409-9835900-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.41599419504185636,
+            "lat": 39.510053595254156
+        }
     }
 ]

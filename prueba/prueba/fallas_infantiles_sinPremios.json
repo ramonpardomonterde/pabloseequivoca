@@ -10136,5 +10136,209 @@
             "lon": -0.4113357926613912,
             "lat": 39.473173905544655
         }
+    },
+    {
+        "id_falla": 103,
+        "nombre": "València-Teodor Llorente ",
+        "seccion": "5",
+        "fallera": "Salud Alabau Alcalá",
+        "presidente": "Lucas Rodrigo Meritén",
+        "artista": "Santiago Muñoz Girón - Francisco Tarazona García",
+        "lema": "Saborea",
+        "anyo_fundacion": null,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/14949-1696779701-8472085-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.423467986529227,
+            "lat": 39.46372480751368
+        }
+    },
+    {
+        "id_falla": 136,
+        "nombre": "Felip Bellver-Mare Ràfols",
+        "seccion": "15",
+        "fallera": "Marta Jiménez Vallés",
+        "presidente": "Arturo Conejo Benigno",
+        "artista": "Francisco José Santonja Peni (Arte Efímero S.l.)",
+        "lema": "Zapatero, a tus zapatos",
+        "anyo_fundacion": null,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/15985-1708972421-2635968-med.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.415115038134103,
+            "lat": 39.476800237099695
+        }
+    },
+    {
+        "id_falla": 175,
+        "nombre": "Barri Mont de Pietat",
+        "seccion": "21",
+        "fallera": "Marta Valls LLácer",
+        "presidente": "Pau Villena Benlloch",
+        "artista": "Pascual Ramón Montes Carrasco y la Comisión",
+        "lema": "Equilibris",
+        "anyo_fundacion": null,
+        "distintivo": null,
+        "boceto": "https://www.fallamont.es/images/Equilibris%20Infantil%202024.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.43587113289128354,
+            "lat": 39.46447986152766
+        }
+    },
+    {
+        "id_falla": 206,
+        "nombre": "Doctor Gómez Ferrer",
+        "seccion": "21",
+        "fallera": "Ainara Alcaine Blanco",
+        "presidente": "Héctor Santiago Díaz",
+        "artista": "Adrián Alcaraz Grao",
+        "lema": "Historias dulces de juguetes",
+        "anyo_fundacion": 1968,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/14987-1698271972-5901509-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.4275459665565909,
+            "lat": 39.46833941302582
+        }
+    },
+    {
+        "id_falla": 207,
+        "nombre": "Mestre Lope-Josep Carsí",
+        "seccion": "14",
+        "fallera": "NO HAY",
+        "presidente": "NO HAY",
+        "artista": "Vicente Espeleta García",
+        "lema": "Així és la vida",
+        "anyo_fundacion": 1969,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/15980-1708969549-1854407-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.4098511132197091,
+            "lat": 39.509742186840874
+        }
+    },
+    {
+        "id_falla": 209,
+        "nombre": "Sant Antoni",
+        "seccion": "12",
+        "fallera": "Carla Ferrando Asensio",
+        "presidente": "Lucas Miravet Marco",
+        "artista": "Javier Álvarez - Sala Salinas",
+        "lema": "¡¡ Qué monstruo de mascota...!!",
+        "anyo_fundacion": 1969,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/15001-1698316317-2414932-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.4262237871837227,
+            "lat": 39.465070691418504
+        }
+    },
+    {
+        "id_falla": 210,
+        "nombre": "Alacant",
+        "seccion": "13",
+        "fallera": "Daniela Salcedo del Arco",
+        "presidente": "Alejandro Torrent de la Rosa",
+        "artista": "Santiago Parrado Dobón",
+        "lema": "Eureka'24",
+        "anyo_fundacion": null,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/15970-1708967512-5109550-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.4446759226838108,
+            "lat": 39.481784100324354
+        }
+    },
+    {
+        "id_falla": 214,
+        "nombre": "Cristòfol Sorní-Mestre Martín",
+        "seccion": "3",
+        "fallera": "Nathalia Martínez Insa",
+        "presidente": "NO HAY",
+        "artista": "Samuel Martínez López - María Esteban Fornés - Manuel Martínez (Kuebien Valencia, S.l.u.)",
+        "lema": "Últim Soroll",
+        "anyo_fundacion": 1969,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/15928-1708795402-4452118-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.40862333829631203,
+            "lat": 39.504382792785385
+        }
+    },
+    {
+        "id_falla": 217,
+        "nombre": "Espartero-Músic Plasència",
+        "seccion": "7",
+        "fallera": "Lara Rozalén Morant",
+        "presidente": "Marc Amate Soria",
+        "artista": "Rodrigo Núñez López",
+        "lema": "El Minibosc",
+        "anyo_fundacion": 1970,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/14894-1694365617-8340089-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.41577686059224034,
+            "lat": 39.50253785821129
+        }
+    },
+    {
+        "id_falla": 220,
+        "nombre": "Fermín Galán i García Hernández-Primavera",
+        "seccion": "8",
+        "fallera": "Aitana Hortelano García",
+        "presidente": "Moacyr Álvarez Angulo",
+        "artista": "Alfonso Vicente Díaz Lucas",
+        "lema": "Horóscopo",
+        "anyo_fundacion": 1971,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/15943-1708888256-1487762-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.4148590324408392,
+            "lat": 39.51089322172576
+        }
+    },
+    {
+        "id_falla": 221,
+        "nombre": "Llibertat-Teodor Llorente",
+        "seccion": "13",
+        "fallera": "Aitana Villanueva Pitarch",
+        "presidente": "Hugo Martín Angulo",
+        "artista": "Francisco José Dauder Estopiñá",
+        "lema": "Había un bombero, tilín tilín tilero",
+        "anyo_fundacion": null,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/15971-1708967591-6620845-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.4140637871330518,
+            "lat": 39.50830844108936
+        }
+    },
+    {
+        "id_falla": 222,
+        "nombre": "Doctor Domingo Orozco-Bailén",
+        "seccion": "18",
+        "fallera": "Lucía Muriel Arjona",
+        "presidente": "NO HAY",
+        "artista": "Juan Jesús García Pérez",
+        "lema": "Fent Falla",
+        "anyo_fundacion": 1961,
+        "distintivo": null,
+        "boceto": "https://bdfallas.com/fotos-fallas/16005-1709028609-1820254-gr.jpg",
+        "experim": null,
+        "geo_point_2d": {
+            "lon": -0.41599419504185636,
+            "lat": 39.510053595254156
+        }
     }
 ]
