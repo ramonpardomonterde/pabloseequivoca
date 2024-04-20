@@ -1,4 +1,4 @@
-package pardo.tarin.uv.fallas.ui.infantiles
+package pardo.tarin.uv.fallas
 
 import android.os.Bundle
 import android.util.Log
@@ -8,32 +8,27 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
-import androidx.lifecycle.Observer
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
-import kotlinx.coroutines.flow.collect
 import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import pardo.tarin.uv.fallas.Falla
-import pardo.tarin.uv.fallas.FallasGeneral
-import pardo.tarin.uv.fallas.R
-import pardo.tarin.uv.fallas.databinding.FragmentInfantilesBinding
+import pardo.tarin.uv.fallas.databinding.FragmentFallasBinding
+import java.net.SocketTimeoutException
 
-class InfantilesFragment: FallasGeneral() {
+class FallasFragment: FallasGeneral() {
 
-    /*private var _binding: FragmentInfantilesBinding? = null
+    private lateinit var binding: FragmentFallasBinding
     val coroutineScope = CoroutineScope(Dispatchers.Main)
     private var dataloaded = false
+    var tipo: String = ""
+    var _view: View? = null
+    var fallasViewModel: FallasViewModel? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
-    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,19 +36,31 @@ class InfantilesFragment: FallasGeneral() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentInfantilesBinding.inflate(inflater, container, false)
+        if(_view != null) {
+            Log.d("ViewNoNull", "View no es null")
+            return _view!!
+        }
+
+        binding = FragmentFallasBinding.inflate(inflater, container, false)
+        _view = binding.root
+        tipo = arguments?.getString("tipo").toString()
+
+        (activity as AppCompatActivity).supportActionBar?.title = "Fallas $tipo"
 
         //infantilesViewModel = ViewModelProvider(requireActivity()).get(InfantilesViewModel::class.java)
+        fallasViewModel = ViewModelProvider(requireActivity()).get(FallasViewModel::class.java)
 
-        cargarFallas()
+        cargarFallas(tipo)
 
         //Reintentar cargar los datos
-        binding.buttonRecargarInf.setOnClickListener {
-            binding.buttonRecargarInf.visibility = View.GONE
-            binding.textoRecargarInf.visibility = View.GONE
+        binding.buttonRecargar.setOnClickListener {
+            binding.buttonRecargar.visibility = View.GONE
+            binding.textoRecargar.visibility = View.GONE
 
-            cargarFallas()
+            cargarFallas(tipo)
         }
+
+
 
         /*lifecycleScope.launchWhenStarted {
             infantilesViewModel?.infantilesPorSeccion?.collect { fallas ->
@@ -85,15 +92,16 @@ class InfantilesFragment: FallasGeneral() {
 
         /*val textView: TextView = binding.textGallery
         textView.text = "This is infantiles Fragment"*/
-        return binding.root
+        return _view!!
     }
 
-    private fun cargarFallas(){
+    private fun cargarFallas(tipo: String){
+
         if (!isNetworkAvailable(requireContext())) {
             // Mostrar un mensaje al usuario indicando que no hay conexión a Internet
-            binding.textoRecargarInf.text = "No hay conexión a Internet"
-            binding.textoRecargarInf.visibility = View.VISIBLE
-            binding.buttonRecargarInf.visibility = View.VISIBLE
+            binding.textoRecargar.text = "No hay conexión a Internet"
+            binding.textoRecargar.visibility = View.VISIBLE
+            binding.buttonRecargar.visibility = View.VISIBLE
             return
         }
         coroutineScope.launch {
@@ -103,21 +111,62 @@ class InfantilesFragment: FallasGeneral() {
                 launch {
                     delay(10000) // espera 10 segundos
                     if (!dataloaded) {
-                        binding.buttonRecargarInf.visibility = View.VISIBLE
-                        binding.textoRecargarInf.visibility = View.VISIBLE
+                        binding.buttonRecargar.visibility = View.VISIBLE
+                        binding.textoRecargar.visibility = View.VISIBLE
                         binding.loadingSpinner.visibility = View.GONE
                     }
                 }
-                getFallas("https://mural.uv.es/pajotape/fallas_infantiles") { fallas ->
+                /*getFallas("https://mural.uv.es/pajotape/fallas_$tipo") { fallas ->
                     dataloaded = true// cancela el temporizador si los datos se cargan correctamente
-                    originalFallasData = fallas
-                    fallasPorSeccion = ordenarPorSeccion(originalFallasData)
+                    //originalFallasData = fallas
+                    fallasPorSeccion = fallas
+                }*/
+
+                when (tipo) {
+                    "infantiles" -> {
+                        fallasViewModel?._fallasInfantiles?.observe(viewLifecycleOwner) { fallasInfantiles ->
+                            if(fallasInfantiles != null){
+                                dataloaded = true
+                                fallasPorSeccion = fallasInfantiles
+                                CoroutineScope(Dispatchers.Main).launch {
+                                    crearVista()
+                                }
+                            } else {
+                                throw Exception("Error al cargar las fallas infantiles")
+                            }
+                        }
+                    }
+
+                    "adultas" -> {
+                        fallasViewModel?._fallasAdultas?.observe(viewLifecycleOwner) { fallasAdultas ->
+                            if(fallasAdultas != null){
+
+                                dataloaded = true
+                                fallasPorSeccion = fallasAdultas
+                                CoroutineScope(Dispatchers.Main).launch {
+                                    crearVista()
+                                }
+                            } else {
+                                throw Exception("Error al cargar las fallas adultas")
+                            }
+                        }
+                    }
+                }
+                //crearVista()
+
+            }catch (e: SocketTimeoutException) {
+                Log.d("FallaFragment", e.toString())
+                binding.textoRecargar.text = "La conexión ha tardado demasiado. Por favor, inténtalo de nuevo."
+                binding.textoRecargar.visibility = View.VISIBLE
+                binding.buttonRecargar.visibility = View.VISIBLE
+                binding.buttonRecargar.setOnClickListener {
+                    cargarFallas(tipo)
                 }
                 binding.loadingSpinner.visibility = View.GONE
-                crearVista()
             } catch (e: Exception) {
-                binding.buttonRecargarInf.visibility = View.VISIBLE
-                binding.textoRecargarInf.visibility = View.VISIBLE
+                Log.d("FallaFragment", e.toString())
+                binding.buttonRecargar.visibility = View.VISIBLE
+                binding.textoRecargar.visibility = View.VISIBLE
                 binding.loadingSpinner.visibility = View.GONE// muestra el botón de reintentar si ocurre una excepción
             }
         }
@@ -125,7 +174,7 @@ class InfantilesFragment: FallasGeneral() {
 
     private suspend fun crearVista(/*fallas : List<List<Any>>*/) {
         val linearLayout = binding.linearLayoutSecciones // Asegúrate de tener un LinearLayout con este id en tu fragment_infantiles.xml
-        Log.d("Falla", fallasPorSeccion.toString())
+        //Log.d("Falla", fallasPorSeccion.toString())
         for (i in fallasPorSeccion) {
             val inflater = LayoutInflater.from(context)
             val seccionView = inflater.inflate(R.layout.seccion_view, linearLayout, false)
@@ -140,7 +189,7 @@ class InfantilesFragment: FallasGeneral() {
             for (j in i.drop(1).sortedBy { (it as Falla).premio?.toIntOrNull() ?: Int.MAX_VALUE}) {
                 //if(falla is Falla) {
                 val falla = j as Falla
-                Log.d("Falla", "Nombre: $falla")
+                //Log.d("Falla", "Nombre: $falla")
                 val fallaView = inflater.inflate(R.layout.falla_view, layoutFallasSeccion, false)
 
                 // Aquí puedes configurar los datos de tu falla_view
@@ -159,7 +208,7 @@ class InfantilesFragment: FallasGeneral() {
                         premio.visibility = View.VISIBLE
                     }
                 }
-                if(falla.premioE != 0) {
+                if(falla.premioE != "Sin premio") {
                     val premioE = fallaView.findViewById<TextView>(R.id.fallaEG_prize)
                     premioE.visibility = View.VISIBLE
                     premioE.text = "Premio Ingenio y Gracia: ${falla.premioE}"
@@ -168,9 +217,9 @@ class InfantilesFragment: FallasGeneral() {
                 fallaView.setOnClickListener(){
                     if(isAdded) {
                         val bundle = Bundle()
-                        bundle.putSerializable("falla", falla)
+                        bundle.putSerializable(tipo, falla)
                         findNavController().navigate(
-                            R.id.action_nav_infantiles_to_fallaDetails,
+                            R.id.action_fallasFragment_to_fallaDetails2,
                             bundle
                         )
                     }
@@ -180,7 +229,7 @@ class InfantilesFragment: FallasGeneral() {
                 layoutFallasSeccion.visibility = View.GONE
                 //}
             }
-            Log.d("Falla", "-------------------")
+            //Log.d("Falla", "-------------------")
             linearLayout.addView(seccionView)
             val plusmenos = seccionView.findViewById<ImageView>(R.id.plusminus)
             plusmenos.setOnClickListener {
@@ -197,12 +246,6 @@ class InfantilesFragment: FallasGeneral() {
             }
         }
 
-
-        Log.d("Falla", "Creando vista fallas infantiles")
+        binding.loadingSpinner.visibility = View.GONE
     }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }*/
 }

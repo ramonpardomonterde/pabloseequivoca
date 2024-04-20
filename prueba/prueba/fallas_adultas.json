@@ -1,6 +1,7 @@
 {
-    "result": {
-        "records": [
+    "result":
+    {
+        "records":[
             {
                 "objectid": 5025,
                 "id_falla": 1,
@@ -752,15 +753,15 @@
             {
                 "objectid": 5049,
                 "id_falla": 26,
-                "nombre": null,
-                "seccion": null,
-                "fallera": null,
-                "presidente": null,
-                "artista": null,
-                "lema": null,
+                "nombre": "Ciutat de l'Artista Faller",
+                "seccion": "5B",
+                "fallera": "Natalia Fayos Cano",
+                "presidente": "Mari Carmen Saiz García",
+                "artista": "Juan Jesús García Pérez",
+                "lema": "Se'm porten els dimonis",
                 "anyo_fundacion": 1971,
                 "distintivo": "Brillants (2015)",
-                "boceto": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_026_bm.jpg",
                 "experim": 0,
                 "geo_shape": {
                     "type": "Feature",
@@ -1142,15 +1143,15 @@
             {
                 "objectid": 4984,
                 "id_falla": 39,
-                "nombre": null,
-                "seccion": null,
-                "fallera": null,
-                "presidente": null,
-                "artista": null,
-                "lema": null,
+                "nombre": "Castelló-Sogorb",
+                "seccion": "3A",
+                "fallera": "Laura Aparicio Terradez",
+                "presidente": "Francisco Pérez Cucó",
+                "artista": "Carlos Carsí García",
+                "lema": "Mítics i paralímpics",
                 "anyo_fundacion": 1935,
                 "distintivo": "Brillants (1998)",
-                "boceto": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_039_bm.jpg",
                 "experim": 0,
                 "geo_shape": {
                     "type": "Feature",
@@ -1420,7 +1421,7 @@
                 "lema": "De Locos",
                 "anyo_fundacion": null,
                 "distintivo": null,
-                "boceto": "https://bdfallas.com/fotos-fallas/15094-1699814501-7971900-gr.jpg",
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_048_bm.jpg",
                 "experim": null,
                 "geo_point_2d": {
                     "lon": -0.41320247664708254,
@@ -1554,15 +1555,15 @@
             {
                 "objectid": 4901,
                 "id_falla": 53,
-                "nombre": null,
-                "seccion": null,
-                "fallera": null,
-                "presidente": null,
-                "artista": null,
-                "lema": null,
+                "nombre": "Pintor Segrelles, pl.",
+                "seccion": "1B",
+                "fallera": "Julia Melià Semper",
+                "presidente": "Juanjo Soler Bas",
+                "artista": "Devís Creaciones",
+                "lema": "Última funció",
                 "anyo_fundacion": 1932,
                 "distintivo": "Brillants (2000)",
-                "boceto": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_053_bm.jpg",
                 "experim": 0,
                 "geo_shape": {
                     "type": "Feature",
@@ -1854,15 +1855,15 @@
             {
                 "objectid": 5029,
                 "id_falla": 63,
-                "nombre": null,
-                "seccion": null,
-                "fallera": null,
-                "presidente": null,
-                "artista": null,
-                "lema": null,
+                "nombre": "Ripalda-Soguers",
+                "seccion": "7A",
+                "fallera": "NO HAY",
+                "presidente": "Vicente Martínez Zahonero",
+                "artista": "IGNACIO FERRANDO TAMARIT",
+                "lema": "El Carme Resort",
                 "anyo_fundacion": 1872,
                 "distintivo": "Brillants (1992)",
-                "boceto": null,
+                "boceto": "http://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_063_bm.jpg",
                 "experim": 0,
                 "geo_shape": {
                     "type": "Feature",
@@ -2032,15 +2033,15 @@
             {
                 "objectid": 5083,
                 "id_falla": 69,
-                "nombre": null,
-                "seccion": null,
-                "fallera": null,
-                "presidente": null,
-                "artista": null,
-                "lema": null,
+                "nombre": "Sant Josep de Pignatelli-Doctor Peset Aleixandre",
+                "seccion": "6C",
+                "fallera": "Jenny Ruiz Molina",
+                "presidente": "Francisco López Romero",
+                "artista": "Fernando Marzo Dasí",
+                "lema": "Ludopatia",
                 "anyo_fundacion": 1968,
                 "distintivo": "Brillants (2013)",
-                "boceto": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_069_bm.jpg",
                 "experim": 0,
                 "geo_shape": {
                     "type": "Feature",
@@ -2658,15 +2659,15 @@
             {
                 "objectid": 5143,
                 "id_falla": 90,
-                "nombre": null,
-                "seccion": null,
-                "fallera": null,
-                "presidente": null,
-                "artista": null,
-                "lema": null,
+                "nombre": "Nador-Miraculosa",
+                "seccion": "4C",
+                "fallera": "Ana Sancho Dolz",
+                "presidente": "Nacho García",
+                "artista": "Fernando Marzo Dasí",
+                "lema": "Continuem creixent",
                 "anyo_fundacion": 1950,
                 "distintivo": "Brillants (1994)",
-                "boceto": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_090_bm.jpg",
                 "experim": 0,
                 "geo_shape": {
                     "type": "Feature",
@@ -2808,15 +2809,15 @@
             {
                 "objectid": 5008,
                 "id_falla": 95,
-                "nombre": null,
-                "seccion": null,
-                "fallera": null,
-                "presidente": null,
-                "artista": null,
-                "lema": null,
+                "nombre": "Camí de Barcelona-Travessera i Camí de Montcada",
+                "seccion": "6B",
+                "fallera": "María José Marín Sanchis",
+                "presidente": "Jose Miguel Avivar Ortega",
+                "artista": "ARTDEFOC CREACIONES ARTISTICAS SL (VICENTE GARCIA PEREZ)",
+                "lema": "Aniversari en Venécia",
                 "anyo_fundacion": 1948,
                 "distintivo": "Brillants (1997)",
-                "boceto": null,
+                "boceto": "http://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_095_bm.jpg",
                 "experim": 0,
                 "geo_shape": {
                     "type": "Feature",
@@ -3056,7 +3057,7 @@
                 "lema": "No Cal Perdre El Camí",
                 "anyo_fundacion": 1971,
                 "distintivo": null,
-                "boceto": "http://www.fallaelcano.com/wp-content/uploads/2023/10/BocetoFallaGrande_2023-819x1024.jpg",
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_103_bm.jpg",
                 "experim": null,
                 "geo_point_2d": {
                     "lon": -0.423467986529227,
@@ -3332,15 +3333,15 @@
             {
                 "objectid": 5052,
                 "id_falla": 113,
-                "nombre": null,
-                "seccion": null,
-                "fallera": null,
-                "presidente": null,
-                "artista": null,
-                "lema": null,
+                "nombre": "República Argentina-Doctor Pallarés Iranzo",
+                "seccion": "5A",
+                "fallera": "Pilar Pizarro Quesada",
+                "presidente": "Juan Rabadán Arocas",
+                "artista": "José Luís Cardells Martínez",
+                "lema": "Les dos gracioses",
                 "anyo_fundacion": 1947,
                 "distintivo": "Brillants (1995)",
-                "boceto": null,
+                "boceto": "http://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_113_bm.jpg",
                 "experim": 0,
                 "geo_shape": {
                     "type": "Feature",
@@ -3631,15 +3632,15 @@
             {
                 "objectid": 5014,
                 "id_falla": 123,
-                "nombre": null,
-                "seccion": null,
-                "fallera": null,
-                "presidente": null,
-                "artista": null,
-                "lema": null,
+                "nombre": "L'Alguer-Enginyer Rafael Janini",
+                "seccion": "2B",
+                "fallera": "Mar García Mañez",
+                "presidente": "Xema Martínez Correcher",
+                "artista": "Mauricio Moreira Santos",
+                "lema": "Bravo...Bravíssim!",
                 "anyo_fundacion": 1965,
                 "distintivo": "Brillants (2010)",
-                "boceto": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_123_bm.jpg",
                 "experim": 0,
                 "geo_shape": {
                     "type": "Feature",
@@ -3751,15 +3752,15 @@
             {
                 "objectid": 4844,
                 "id_falla": 127,
-                "nombre": null,
-                "seccion": null,
-                "fallera": null,
-                "presidente": null,
-                "artista": null,
-                "lema": null,
+                "nombre": "Doctor Sanchis Bergón-Túria",
+                "seccion": "6A",
+                "fallera": "Marcel·la Sáez Folch",
+                "presidente": "Francisco Javier García Marco",
+                "artista": "Raúl Martínez Ruíz (Chuky, Estudio Chuky)",
+                "lema": "Co",
                 "anyo_fundacion": 1927,
                 "distintivo": "Brillants (2000)",
-                "boceto": null,
+                "boceto": "http://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_127_bm.jpg",
                 "experim": 0,
                 "geo_shape": {
                     "type": "Feature",
@@ -3810,15 +3811,15 @@
             {
                 "objectid": 5123,
                 "id_falla": 129,
-                "nombre": null,
-                "seccion": null,
-                "fallera": null,
-                "presidente": null,
-                "artista": null,
-                "lema": null,
+                "nombre": "Ramiro de Maeztu-Els Lleons",
+                "seccion": "1B",
+                "fallera": "Mayte Belda Badia",
+                "presidente": "Rafael Moreno Ripoll",
+                "artista": "Carlos Carsí García",
+                "lema": "Tragèdies o comèdies",
                 "anyo_fundacion": 1964,
                 "distintivo": "Brillants (2008)",
-                "boceto": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_129_bm.jpg",
                 "experim": 0,
                 "geo_shape": {
                     "type": "Feature",
@@ -4021,7 +4022,7 @@
                 "lema": "¿I tú, a qué jugues?",
                 "anyo_fundacion": null,
                 "distintivo": null,
-                "boceto": "https://bdfallas.com/fotos-fallas/15869-1708640006-1508036-med.jpg",
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_136_bm.jpg",
                 "experim": null,
                 "geo_point_2d": {
                     "lon": -0.415115038134103,
@@ -4060,15 +4061,15 @@
             {
                 "objectid": 4833,
                 "id_falla": 138,
-                "nombre": null,
-                "seccion": null,
-                "fallera": null,
-                "presidente": null,
-                "artista": null,
-                "lema": null,
+                "nombre": "Pare Viñas-Agustín Lara",
+                "seccion": "6A",
+                "fallera": "María Lluch Ortega",
+                "presidente": "Carlos Domínguez y Ana Fernández",
+                "artista": "Miguel Banaclocha Marín",
+                "lema": "Naufragi",
                 "anyo_fundacion": 1967,
                 "distintivo": "Brillants (2011)",
-                "boceto": null,
+                "boceto": "http://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_138_bm.jpg",
                 "experim": 0,
                 "geo_shape": {
                     "type": "Feature",
@@ -4719,15 +4720,15 @@
             {
                 "objectid": 4900,
                 "id_falla": 160,
-                "nombre": null,
-                "seccion": null,
-                "fallera": null,
-                "presidente": null,
-                "artista": null,
-                "lema": null,
+                "nombre": "Sant Ignasi de Loiola-Jesús i Maria",
+                "seccion": "3C",
+                "fallera": "María Martínez Utrillas",
+                "presidente": "Juan Martínez Albuixech",
+                "artista": "Vicente Albert García (Fusta I Cartó)",
+                "lema": "A l'est de l'oest",
                 "anyo_fundacion": 1956,
                 "distintivo": "Brillants (2006)",
-                "boceto": null,
+                "boceto": "http://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_160_bm.jpg",
                 "experim": 0,
                 "geo_shape": {
                     "type": "Feature",
@@ -5048,15 +5049,15 @@
             {
                 "objectid": 5105,
                 "id_falla": 171,
-                "nombre": null,
-                "seccion": null,
+                "nombre": "Ramon de Rocafull-Comte d'Alaquàs",
+                "seccion": "4B",
                 "fallera": null,
                 "presidente": null,
-                "artista": null,
-                "lema": null,
+                "artista": "Enrique Cardells Martinez",
+                "lema": "En l'aigua al coll",
                 "anyo_fundacion": 1963,
                 "distintivo": "Brillants (2007)",
-                "boceto": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_171_bm.jpg",
                 "experim": 0,
                 "geo_shape": {
                     "type": "Feature",
@@ -5176,7 +5177,7 @@
                 "lema": "Entreteniments",
                 "anyo_fundacion": 1955,
                 "distintivo": "Brillants (2000)",
-                "boceto": "https://bdfallas.com/fotos-fallas/15916-1708712584-749814-med.jpg",
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_175_bm.jpg",
                 "experim": null,
                 "geo_point_2d": {
                     "lon": -0.43587113289128354,
@@ -5280,7 +5281,7 @@
                 "seccion": "3B",
                 "fallera": "Patricia Montero Carretero",
                 "presidente": "Ricardo Hernández Arocas",
-                "artista": "Mauricio Morerira Santos",
+                "artista": "Mauricio Moreira Santos",
                 "lema": "EL CANVI CLIMÀTIC",
                 "anyo_fundacion": 1967,
                 "distintivo": "Brillants (2011)",
@@ -6090,7 +6091,7 @@
                 "lema": "Con este precio a oscuras nos vemos",
                 "anyo_fundacion": 1968,
                 "distintivo": null,
-                "boceto": "https://bdfallas.com/fotos-fallas/14988-1698272101-5021816-gr.jpg",
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_206_bm.jpg",
                 "experim": null,
                 "geo_point_2d": {
                     "lon": -0.4275459665565909,
@@ -6108,7 +6109,7 @@
                 "lema": "M'he quedat gelat",
                 "anyo_fundacion": 1969,
                 "distintivo": null,
-                "boceto": "https://bdfallas.com/fotos-fallas/15901-1708704341-7022812-gr.jpg",
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_207_bm.jpg",
                 "experim": null,
                 "geo_point_2d": {
                     "lon": -0.4098511132197091,
@@ -6154,7 +6155,7 @@
                 "lema": "En Joc",
                 "anyo_fundacion": 1969,
                 "distintivo": null,
-                "boceto": "https://bdfallas.com/fotos-fallas/15002-1698316378-5940571-gr.jpg",
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_209_bm.jpg",
                 "experim": null,
                 "geo_point_2d": {
                     "lon": -0.4262237871837227,
@@ -6171,7 +6172,7 @@
                 "lema": "Sempre amb un Somriure",
                 "anyo_fundacion": 1967,
                 "distintivo": null,
-                "boceto": "https://bdfallas.com/fotos-fallas/15850-1708621073-4322404-gr.jpg",
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_210_bm.jpg",
                 "experim": null,
                 "geo_point_2d": {
                     "lon": -0.4446759226838108,
@@ -6277,7 +6278,7 @@
                 "lema": "Una vesprada en la fira",
                 "anyo_fundacion": 1969,
                 "distintivo": null,
-                "boceto": "https://bdfallas.com/fotos-fallas/15813-1712680480-1686386-gr.jpg",
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_214_bm.jpg",
                 "experim": null,
                 "geo_point_2d": {
                     "lon": -0.40862333829631203,
@@ -6354,7 +6355,7 @@
                 "lema": "Ciber Falla",
                 "anyo_fundacion": 1970,
                 "distintivo": null,
-                "boceto": "https://bdfallas.com/fotos-fallas/15814-1708528317-3516706-gr.jpg",
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_217_bm.jpg",
                 "experim": null,
                 "geo_point_2d": {
                     "lon": -0.41577686059224034,
@@ -6396,12 +6397,12 @@
             {
                 "objectid": 4831,
                 "id_falla": 219,
-                "nombre": null,
-                "seccion": null,
-                "fallera": null,
+                "nombre": "Falla Municipal de València",
+                "seccion": "FC",
+                "fallera": "María Estela Arlandis Ferrando",
                 "presidente": null,
-                "artista": null,
-                "lema": null,
+                "artista": "Pedro Vicente Baenas García",
+                "lema": "Dos coloms, una branca",
                 "anyo_fundacion": null,
                 "distintivo": null,
                 "boceto": "http://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_219_bm.jpg",
@@ -6432,7 +6433,7 @@
                 "lema": "Al'Che'Mist",
                 "anyo_fundacion": 1971,
                 "distintivo": null,
-                "boceto": "https://bdfallas.com/fotos-fallas/15885-1708644821-2647775-gr.jpg",
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_220_bm.jpg",
                 "experim": null,
                 "geo_point_2d": {
                     "lon": -0.4148590324408392,
@@ -6450,7 +6451,7 @@
                 "lema": "Rural d'Or",
                 "anyo_fundacion": null,
                 "distintivo": null,
-                "boceto": "https://bdfallas.com/fotos-fallas/15851-1708621137-3007057-gr.jpg",
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_221_bm.jpg",
                 "experim": null,
                 "geo_point_2d": {
                     "lon": -0.4140637871330518,
@@ -6467,7 +6468,7 @@
                 "lema": "Asertiu",
                 "anyo_fundacion": 1961,
                 "distintivo": null,
-                "boceto": "https://bdfallas.com/fotos-fallas/15902-1708704409-9835900-gr.jpg",
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_222_bm.jpg",
                 "experim": null,
                 "geo_point_2d": {
                     "lon": -0.41599419504185636,
@@ -6652,6 +6653,24 @@
                     "lat": 39.463638415411694
                 },
                 "Premio": "3"
+            },
+            {
+                "id_falla": 229,
+                "nombre": "Antonio Molle-Gregori Gea",
+                "seccion": "6B",
+                "fallera": "Patricia Ortega Sanabria",
+                "presidente": "María Teresa Martínez Bellver",
+                "artista": "Francisco José Santonja Peni (Arte Efímero S.l.)",
+                "lema": "Prediccions",
+                "anyo_fundacion": 1972,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_229_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.42092934928454406,
+                    "lat": 39.47472227854971
+                },
+                "Premio": "1"
             },
             {
                 "objectid": 4875,
@@ -6867,7 +6886,7 @@
                 "seccion": "8B",
                 "fallera": "Mónica Vaquero Ibañez",
                 "presidente": "Jesús Fajardo Muñoz",
-                "artista": "FERNANDO MARINEZ HERNANDEZ",
+                "artista": "FERNANDO MARTINEZ HERNANDEZ",
                 "lema": "JA ESTEM EN ESTIU",
                 "anyo_fundacion": 1998,
                 "distintivo": "Argent (2012)",
@@ -7303,6 +7322,76 @@
                 }
             },
             {
+                "id_falla": 252,
+                "nombre": "Maria Ros-Sant Tomeu",
+                "seccion": "7C",
+                "fallera": "Mónica Tribaldos Segura",
+                "presidente": "Andrés Izquierdo Gallart",
+                "artista": "José Antonio Marco Gómez",
+                "lema": "Supersticions",
+                "anyo_fundacion": 1973,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_252_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.41311782067610375,
+                    "lat": 39.51465961479854
+                },
+                "Premio": "1",
+                "PremioE": "2"
+            },
+            {
+                "id_falla": 253,
+                "nombre": "Pi i Margall-Arturo Cervellera",
+                "seccion": "7B",
+                "fallera": "Rocío Ruiz Suárez",
+                "presidente": "Francisco Navarro",
+                "artista": "Francisco José Dauder Estopiñá",
+                "lema": "El circ en Montroi",
+                "anyo_fundacion": null,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_253_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.41633110557270664,
+                    "lat": 39.51558796083886
+                }
+            },
+            {
+                "id_falla": 254,
+                "nombre": "Pare Santonja-Cardenal Benlloch",
+                "seccion": "2B",
+                "fallera": "Blanca Romero Daniel",
+                "presidente": "Juan Francisco Romero Navarro",
+                "artista": "Carlos Carsí García",
+                "lema": "¡Che, quin xou!",
+                "anyo_fundacion": 1973,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_254_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.4171119393935893,
+                    "lat": 39.47210177206403
+                }
+            },
+            {
+                "id_falla": 255,
+                "nombre": "Barri Quint-Pizarro",
+                "seccion": "4A",
+                "fallera": "Lydia Mingo Martínez",
+                "presidente": "Iván Almela Rodríguez",
+                "artista": "Cristian García Carrasco (Fent Flama)",
+                "lema": "A l'abordage",
+                "anyo_fundacion": 1973,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_255_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.42376195112828763,
+                    "lat": 39.478782352008125
+                }
+            },
+            {
                 "objectid": 4852,
                 "id_falla": 256,
                 "nombre": "Blasco Ibáñez-Mestre Ripoll",
@@ -7511,6 +7600,41 @@
                 }
             },
             {
+                "id_falla": 263,
+                "nombre": "Salvador Giner-Gregori Gea",
+                "seccion": "7C",
+                "fallera": "Nadia Muñóz Gálvez",
+                "presidente": "Esther Cabanes García",
+                "artista": "Francisco Xavier Bonilla Silvestre (Artixavi)",
+                "lema": "Vacacions en la Terra",
+                "anyo_fundacion": 1973,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_263_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.4153096624515568,
+                    "lat": 39.47346478491602
+                }
+            },
+            {
+                "id_falla": 264,
+                "nombre": "Lepanto-En Joan d'Àustria",
+                "seccion": "7C",
+                "fallera": "Evelyn Patiño Rus",
+                "presidente": "Mariano Sánchez Lorenzo",
+                "artista": "Francisco Javier Ribes López",
+                "lema": "La màgia de l'estalvi faller",
+                "anyo_fundacion": 1975,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_264_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.4193959186337785,
+                    "lat": 39.470685682072904
+                },
+                "Premio": "4"
+            },
+            {
                 "objectid": 4975,
                 "id_falla": 265,
                 "nombre": "Riu Segura-Forn d'Alcedo",
@@ -7537,6 +7661,76 @@
                 "geo_point_2d": {
                     "lon": -0.374884347501508,
                     "lat": 39.432173663583576
+                }
+            },
+            {
+                "id_falla": 266,
+                "nombre": "Mendizàbal",
+                "seccion": "3B",
+                "fallera": "Laura López Ramos",
+                "presidente": "Enrique Saoria Mascaros",
+                "artista": "Fernando Marzo Dasí",
+                "lema": "50 Anys...¡I encara en ganes de festa!",
+                "anyo_fundacion": 1974,
+                "distintivo": "Brillants (2019)",
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_266_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.41272265903468286,
+                    "lat": 39.51049145527254
+                },
+                "Premio": "4"
+            },
+            {
+                "id_falla": 267,
+                "nombre": "Marià Benlliure-Séquia de Tormos",
+                "seccion": "3C",
+                "fallera": "Carla Marcos García",
+                "presidente": "Sergio Verdejo i Chicharro",
+                "artista": "Mario Cardells Solves",
+                "lema": "Érase una vez...",
+                "anyo_fundacion": 1974,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_267_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.40403941296629303,
+                    "lat": 39.50254558900849
+                },
+                "Premio": "12"
+            },
+            {
+                "id_falla": 268,
+                "nombre": "Isaac Peral-Misser Domingo Mascó",
+                "seccion": "8B",
+                "fallera": "Marta Romero Ruesca",
+                "presidente": "Sergi Andrés López",
+                "artista": "José Ricardo Carrasco Chiva",
+                "lema": "Història d'una falla",
+                "anyo_fundacion": null,
+                "distintivo": null,
+                "boceto": "https://bdfallas.com/fotos-fallas/15910-1708710077-6397698-gr.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.4189344503116291,
+                    "lat": 39.5163455248432
+                }
+            },
+            {
+                "id_falla": 269,
+                "nombre": "Nàquera-Lauri Volpi",
+                "seccion": "4C",
+                "fallera": "Jennifer Ruiz García",
+                "presidente": "Ricardo Zorio Orduña",
+                "artista": "Francisco Javier Tur Ortiz",
+                "lema": "50 anys, esforç i evolució",
+                "anyo_fundacion": 1974,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_269_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.4126126925037021,
+                    "lat": 39.51703606433828
                 }
             },
             {
@@ -7688,6 +7882,23 @@
                     "lat": 39.49746987963352
                 },
                 "Premio": "11"
+            },
+            {
+                "id_falla": 275,
+                "nombre": "Pouet, pl.",
+                "seccion": "8B",
+                "fallera": "Mercedes Esplugues Rodríguez",
+                "presidente": "Arlinda Luzi Luzi",
+                "artista": "Alejandro Martínez Fernández",
+                "lema": "Tinc el cor encés en flama",
+                "anyo_fundacion": 1975,
+                "distintivo": "Brillants (2020)",
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_275_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.4049705413343069,
+                    "lat": 39.505075561436044
+                }
             },
             {
                 "objectid": 5097,
@@ -9266,6 +9477,94 @@
                 "Premio": "12"
             },
             {
+                "id_falla": 331,
+                "nombre": "Marqués de Solferit",
+                "seccion": "3A",
+                "fallera": "Irene Burgos Gutiérrez",
+                "presidente": "Rubén Corredor Moya",
+                "artista": "José Miguel Gasent González",
+                "lema": "La vida és pur teatre",
+                "anyo_fundacion": 1978,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_331_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.43829879649420844,
+                    "lat": 39.48267191759362
+                },
+                "Premio": "10"
+            },
+            {
+                "id_falla": 332,
+                "nombre": "Poeta Llorente",
+                "seccion": "4C",
+                "fallera": "aula Muñoz Cámara",
+                "presidente": "Miguel Murcia",
+                "artista": "Luís Espinosa Olmos",
+                "lema": "Oink Oink Cua Cua Mu",
+                "anyo_fundacion": null,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_332_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.443574541640798,
+                    "lat": 39.48258655468999
+                },
+                "Premio": "9"
+            },
+            {
+                "id_falla": 333,
+                "nombre": "Mestre Serrano-Alacant",
+                "seccion": "6C",
+                "fallera": "Alba Jordán Pozuelo",
+                "presidente": "Javier Cabeza Mena",
+                "artista": "Roberto Climent Cremades",
+                "lema": "Regalando una sonrisa",
+                "anyo_fundacion": 1981,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_333_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.4233198608907854,
+                    "lat": 39.467187744884335
+                }
+            },
+            {
+                "id_falla": 334,
+                "nombre": "Doctor Marañón-Mestre Palau",
+                "seccion": "3A",
+                "fallera": "Azahara del Río Catalán",
+                "presidente": "Miguel Ángel Mares Sanchís",
+                "artista": "Joaquín Esteve Mares",
+                "lema": "Amor i odi",
+                "anyo_fundacion": 1980,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_334_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.4206411221493122,
+                    "lat": 39.472778588281614
+                },
+                "Premio": "2"
+            },
+            {
+                "id_falla": 335,
+                "nombre": "L'Eliana-El Cid",
+                "seccion": "4B",
+                "fallera": "Lorena Moreno Alegre",
+                "presidente": "María José Criado Pizarro",
+                "artista": "Isidro Martínez Aparicio (Isidro Ventiscas)",
+                "lema": "¡Per Deu Fallers!",
+                "anyo_fundacion": 1981,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_335_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.4190139804464063,
+                    "lat": 39.47905837478399
+                }
+            },
+            {
                 "objectid": 4857,
                 "id_falla": 336,
                 "nombre": "Serra Martés-Miguel Servet",
@@ -9622,6 +9921,23 @@
                 "Premio": "6"
             },
             {
+                "id_falla": 350,
+                "nombre": "Tribunal de les Aigües",
+                "seccion": "3B",
+                "fallera": "Alba Castillo Ruiz",
+                "presidente": "Santiago Melero Sebastián",
+                "artista": "Federico Alonso Andreu",
+                "lema": "Titans",
+                "anyo_fundacion": null,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_350_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.44838352362411255,
+                    "lat": 39.48524974362388
+                }
+            },
+            {
                 "objectid": 4854,
                 "id_falla": 351,
                 "nombre": "Doctor Álvaro López-Sant Joan de Déu",
@@ -9739,6 +10055,23 @@
                 }
             },
             {
+                "id_falla": 355,
+                "nombre": "Sant Joan, pl.",
+                "seccion": "8C",
+                "fallera": "Carme Montes Ortí",
+                "presidente": "Pablo Barberá Correa",
+                "artista": "La Comisión",
+                "lema": "Netejant el desastre estel·lar",
+                "anyo_fundacion": 1969,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_355_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.4279811474064103,
+                    "lat": 39.463558731763484
+                }
+            },
+            {
                 "objectid": 4993,
                 "id_falla": 356,
                 "nombre": "Evarist Bas-Cullera",
@@ -9766,6 +10099,24 @@
                     "lon": -0.4191242078180465,
                     "lat": 39.50486614317032
                 }
+            },
+            {
+                "id_falla": 357,
+                "nombre": "Moreira, pl.",
+                "seccion": "7B",
+                "fallera": "Ángela Ferrer Picazo",
+                "presidente": "Nacho Carrasco Vallés",
+                "artista": "Vicente Albert García (Fusta I Cartó)",
+                "lema": "A l'est de l'oest",
+                "anyo_fundacion": null,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_357_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.41553938629885356,
+                    "lat": 39.47532662700009
+                },
+                "Premio": "4"
             },
             {
                 "objectid": 4994,
@@ -9884,6 +10235,58 @@
                 "geo_point_2d": {
                     "lon": -0.4048301514353266,
                     "lat": 39.49469301474271
+                }
+            },
+            {
+                "id_falla": 362,
+                "nombre": "Luz Casanova-Pare Espasa",
+                "seccion": "8B",
+                "fallera": "Lydia Albarañez Zorrilla",
+                "presidente": "Mari Fe Jarque Cano",
+                "artista": "Vicente Albert García (Fusta I Cartó)",
+                "lema": "A la taula i al llit, al primer crit!",
+                "anyo_fundacion": null,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_362_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.4608552672858819,
+                    "lat": 39.47617283431102
+                },
+                "Premio": "2"
+            },
+            {
+                "id_falla": 363,
+                "nombre": "L'Alcota-Sagunt",
+                "seccion": "8A",
+                "fallera": "María Carmen Carretero Izquierdo",
+                "presidente": "María José Torralba Artés",
+                "artista": "Cristian García Carrasco (Fent Flama)",
+                "lema": "Sapiens!",
+                "anyo_fundacion": null,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_363_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.4458575760979205,
+                    "lat": 39.484826804081344
+                }
+            },
+            {
+                "id_falla": 364,
+                "nombre": "Pius XII-Jaume Roig",
+                "seccion": "6C",
+                "fallera": "Luisa Cabrera Sánchez",
+                "presidente": "NO HAY",
+                "artista": "Pascual Ramón Montes Carrasco",
+                "lema": "Un mosset",
+                "anyo_fundacion": null,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_364_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.4399681030309641,
+                    "lat": 39.48093365934474
                 }
             },
             {
@@ -10420,6 +10823,23 @@
                 }
             },
             {
+                "id_falla": 387,
+                "nombre": "Jesús Morante i Borràs-Caminot (La Punta)",
+                "seccion": "8C",
+                "fallera": "Teodoro Montolio Monfort",
+                "presidente": "Carlos Sanz Gil",
+                "artista": "Alberto Ferrer García",
+                "lema": "Monadologia",
+                "anyo_fundacion": 2011,
+                "distintivo": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_387_bm.jpg",
+                "experim": null,
+                "geo_point_2d": {
+                    "lon": -0.3440165538503665,
+                    "lat": 39.44462981440439
+                }
+            },
+            {
                 "objectid": 4879,
                 "id_falla": 388,
                 "nombre": "Manuel Melià i Fuster-Carles Cortina",
@@ -10541,15 +10961,15 @@
             {
                 "objectid": 4991,
                 "id_falla": 393,
-                "nombre": null,
-                "seccion": null,
-                "fallera": null,
-                "presidente": null,
-                "artista": null,
-                "lema": null,
-                "anyo_fundacion": null,
+                "nombre": "Rafael Alberti - Serra Calderona",
+                "seccion": "5A",
+                "fallera": "Mar Montañez Santamaría",
+                "presidente": "Vicente Montañez",
+                "artista": "Francisco Javier Martínez Albiñana",
+                "lema": "Valencians en Peu Alcem - Se",
+                "anyo_fundacion": 2019,
                 "distintivo": null,
-                "boceto": null,
+                "boceto": "http://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_393_bm.jpg",
                 "experim": null,
                 "geo_shape": {
                     "type": "Feature",
@@ -10570,16 +10990,16 @@
             {
                 "objectid": 4811,
                 "id_falla": 394,
-                "nombre": null,
-                "seccion": null,
-                "fallera": null,
-                "presidente": null,
-                "artista": null,
-                "lema": null,
-                "anyo_fundacion": null,
+                "nombre": "Doctor García Brustenga - Vicente Barrera Cambra",
+                "seccion": "3C",
+                "fallera": "María Murcia López",
+                "presidente": "José Miguel Navarro Coll",
+                "artista": "Xavier Herrero Martínez",
+                "lema": "Nostres tribus",
+                "anyo_fundacion": 2022,
                 "distintivo": null,
-                "boceto": null,
-                "experim": null,
+                "boceto": "https://mapas.valencia.es/WebsMunicipales/layar/img/fallasvalencia/2024_394_bm.jpg",
+                "experim": 0,
                 "geo_shape": {
                     "type": "Feature",
                     "geometry": {

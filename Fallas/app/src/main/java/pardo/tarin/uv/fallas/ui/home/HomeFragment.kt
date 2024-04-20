@@ -39,7 +39,8 @@ class HomeFragment : Fragment() {
         infButton.setText("MONUMENTOS INFANTILES")
 
         infButton.setOnClickListener {
-            findNavController().navigate(R.id.action_nav_home_to_nav_infantiles)
+            val action = HomeFragmentDirections.actionNavHomeToFallasFragment("infantiles")
+            findNavController().navigate(action)
         }
 
         val adultosButton = binding.monumentosAdultosButton
@@ -48,13 +49,18 @@ class HomeFragment : Fragment() {
         adultosButton.setText("MONUMENTOS ADULTOS")
 
         adultosButton.setOnClickListener {
-            findNavController().navigate(R.id.action_nav_home_to_nav_adultas)
+            val action = HomeFragmentDirections.actionNavHomeToFallasFragment("adultas")
+            findNavController().navigate(action)
         }
 
         val mapaButton = binding.mapaButton
         scaledDrawable = scaleDrawable(R.drawable.mapa, 80, 80)
         mapaButton.setCompoundDrawablesWithIntrinsicBounds(null, scaledDrawable, null, null)
         mapaButton.setText("MAPA")
+
+        mapaButton.setOnClickListener {
+            findNavController().navigate(R.id.action_nav_home_to_mapaFragment)
+        }
 
         val eventosButton = binding.eventosButton
         scaledDrawable = scaleDrawable(R.drawable.calendario, 80, 80)

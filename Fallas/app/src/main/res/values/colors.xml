@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="crema">#FAF1F1</color>
+    <color name="colorChecked">#000080</color> <!-- Rojo para el estado seleccionado -->
 </resources>

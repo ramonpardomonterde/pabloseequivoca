@@ -20,7 +20,7 @@ import pardo.tarin.uv.fallas.R
 import pardo.tarin.uv.fallas.databinding.FragmentAdultasBinding
 
 class AdultasFragment : FallasGeneral() {
-
+/*
     private var _binding: FragmentAdultasBinding? = null
     val coroutineScope = CoroutineScope(Dispatchers.Main)
 
@@ -92,7 +92,7 @@ class AdultasFragment : FallasGeneral() {
                         premio.visibility = View.VISIBLE
                     }
                 }
-                if(falla.premioE != 0) {
+                if(falla.premioE != "Sin premio") {
                     val premioE = fallaView.findViewById<TextView>(R.id.fallaEG_prize)
                     premioE.visibility = View.VISIBLE
                     premioE.text = "Premio Ingenio y Gracia: ${falla.premioE}"
@@ -101,7 +101,7 @@ class AdultasFragment : FallasGeneral() {
                 fallaView.setOnClickListener(){
                     val bundle = Bundle()
                     bundle.putSerializable("falla", falla)
-                    findNavController().navigate(R.id.action_nav_adultas_to_fallaDetails, bundle)
+                    //findNavController().navigate(R.id.action_nav_adultas_to_fallaDetails, bundle)
                 }
 
                 layoutFallasSeccion.addView(fallaView)
@@ -129,5 +129,5 @@ class AdultasFragment : FallasGeneral() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
+    }*/
 }

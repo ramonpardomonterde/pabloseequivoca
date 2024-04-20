@@ -1,5 +1,9 @@
 package pardo.tarin.uv.fallas
 
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
+import android.os.Build
 import android.util.Log
 import androidx.fragment.app.Fragment
 import kotlinx.coroutines.CoroutineScope
@@ -15,9 +19,10 @@ open class FallasGeneral: Fragment() {
     lateinit var originalFallasData: ArrayList<Falla>
     var fallasPorSeccion: List<List<Any>> = listOf()
 
-    suspend fun getFallas(_url: String, callback: (ArrayList<Falla>) -> Unit) = withContext(Dispatchers.IO) {
+    suspend fun getFallas(_url: String, callback: (List<List<Any>>) -> Unit) = withContext(Dispatchers.IO) {
         val url = _url
         val listaFallas = ArrayList<Falla>()
+        val fallasOrdenadas: List<List<Any>>
         var bocetomaslargo: String = ""
 
         val request = Request.Builder().url(url).addHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36")
@@ -40,7 +45,7 @@ open class FallasGeneral: Fragment() {
                 val nombre = record.optString("nombre", null)
                 val seccion = record.optString("seccion", null)
                 val premio = record.optString("Premio", "Sin premio")
-                val premioE = record.optInt("PremioE")
+                val premioE = record.optString("PremioE", "Sin premio")
                 val fallera = record.optString("fallera", null)
                 val presidente = record.optString("presidente", null)
                 val artista = record.optString("artista", null)
@@ -60,10 +65,9 @@ open class FallasGeneral: Fragment() {
             }
         }
 
-        Log.d("Falla", "Cargando fallas infantiles")
-        Log.d("BocetoMasLargo", "Boceto más largo: $bocetomaslargo con tamaño ${bocetomaslargo.length}")
+        fallasOrdenadas = ordenarPorSeccion(listaFallas)
 
-        callback(listaFallas)
+        callback(fallasOrdenadas)
     }
 
     fun ordenarPorSeccion(originalFallasData: ArrayList<Falla>): List<List<Any>> {
@@ -73,6 +77,9 @@ open class FallasGeneral: Fragment() {
             val fila = mutableListOf<Any>()
             if(seccion == "IE" || seccion == "E"){
                 fila.add("Sección Especial")
+            }
+            else if (seccion == "FC"){
+                fila.add("Sección Fuera de Concurso")
             }
             else {
                 fila.add("Sección $seccion") // Se añade el nombre de la sección a la fila
@@ -104,5 +111,17 @@ open class FallasGeneral: Fragment() {
         }*/
 
         return matrizOrdenada
+    }
+
+    fun isNetworkAvailable(context: Context): Boolean {
+        val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val network = connectivityManager.activeNetwork ?: return false
+        val activeNetwork = connectivityManager.getNetworkCapabilities(network) ?: return false
+        return when {
+            activeNetwork.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true
+            activeNetwork.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> true
+            activeNetwork.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> true
+            else -> false
+        }
     }
 }

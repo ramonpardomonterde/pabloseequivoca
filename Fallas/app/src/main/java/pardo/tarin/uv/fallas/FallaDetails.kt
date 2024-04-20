@@ -1,9 +1,12 @@
 package pardo.tarin.uv.fallas
 
+import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.drawable.Drawable
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -26,38 +29,55 @@ class FallaDetails : Fragment() {
 
     private lateinit var binding: FragmentFallaDetailsBinding
     private lateinit var falla: Falla
+    private var tipo: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        falla = arguments?.getSerializable("falla") as Falla
+    ): View {
+        try {
+            falla = arguments?.getSerializable("adultas") as Falla
+            tipo = "adultas"
+        }
+        catch (e: Exception)
+        {
+            falla = arguments?.getSerializable("infantiles") as Falla
+            tipo = "infantiles"
+        }
+        //falla = arguments?.getSerializable("falla") as Falla
 
         binding = FragmentFallaDetailsBinding.inflate(inflater, container, false)
 
-        return binding.root
-    }
-
-    fun downloadImage(url: String): Bitmap? {
-        val request = Request.Builder().url(url).build()
-        val client = OkHttpClient()
-
-        try {
-            val response = client.newCall(request).execute()
-            if (response.isSuccessful) {
-                val inputStream = response.body?.byteStream()
-                val bitmap = BitmapFactory.decodeStream(inputStream)
-                inputStream?.close()
-                return bitmap
-            } else {
-                Log.e("DownloadImage", "Failed to download image: ${response.code}")
-            }
-        } catch (e: Exception) {
-            Log.e("DownloadImage", "Error: ${e.message}")
+        binding.mapaButton.setOnClickListener {
+            AlertDialog.Builder(requireContext())
+                .setTitle("Abrir Maps")
+                .setMessage("¿Quieres abrir Google Maps para obtener la ruta?")
+                .setPositiveButton("Sí") { _, _ ->
+                    val uri = Uri.parse("geo:0,0?q=${falla.coordenadas?.first},${falla.coordenadas?.second}(${falla.nombre})")
+                    val intent = Intent(Intent.ACTION_VIEW, uri)
+                    intent.setPackage("com.google.android.apps.maps")
+                    startActivity(intent)
+                }
+                .setNegativeButton("No", null)
+                .show()
         }
 
-        return null
+        binding.boceto.setOnClickListener {
+            AlertDialog.Builder(requireContext())
+                .setTitle("Abrir boceto")
+                .setMessage("¿Quieres abrir el boceto en internet?")
+                .setPositiveButton("Sí") { _, _ ->
+                    val searchTerm = falla.boceto // reemplaza con el término de búsqueda que quieras
+                    val uri = Uri.parse(searchTerm)
+                    val intent = Intent(Intent.ACTION_VIEW, uri)
+                    startActivity(intent)
+                }
+                .setNegativeButton("No", null)
+                .show()
+        }
+
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -94,22 +114,45 @@ class FallaDetails : Fragment() {
             .into(imageview)
         binding.progressBarBoceto.visibility = View.GONE
         binding.nombreBoceto.text = falla.lema
-        binding.nombreFallera.text = falla.fallera
-        binding.nombrePresidente.text = falla.presidente
+        binding.nombreArtista.text = "Artista: ${falla.artista}"
+        if(tipo == "adultas")
+        {
+            binding.nombreFallera.text = "Fallera Mayor:\n     ${falla.fallera}"
+            binding.nombrePresidente.text = "Presidente:\n     ${falla.presidente}"
+        }
+        else
+        {
+            binding.nombreFallera.text = "Fallera Mayor Infantil:\n     ${falla.fallera}"
+            binding.nombrePresidente.text = "Presidente Infantil:\n     ${falla.presidente}"
+        }
         if(falla.seccion == "IE" || falla.seccion == "E")
         {
             binding.seccionText.text = "SECCIÓN ESPECIAL"
         }
+        else if(falla.seccion == "FC")
+        {
+            binding.seccionText.text = "SECCIÓN FUERA CONCURSO"
+            binding.premios.visibility = View.GONE
+        }
         else
             binding.seccionText.text = "SECCIÓN ${falla.seccion}"
-        if(falla.premio != "0")
-        {
-            binding.numeroPremio.text = "${falla.premio}º"
-        }
 
-        if(falla.premioE != 0)
+        if(falla.premio == "Sin premio" && falla.premioE == "Sin premio")
         {
-            binding.numeroIE.text = "${falla.premioE}º"
+            binding.premios.visibility = View.GONE
+        }
+        else {
+            if (falla.premio != "Sin premio") {
+                binding.numeroPremio.text = "${falla.premio}º"
+            } else {
+                binding.PremioSeccion.visibility = View.GONE
+            }
+
+            if (falla.premioE != "Sin premio") {
+                binding.numeroIE.text = "${falla.premioE}º"
+            } else {
+                binding.PremioIE.visibility = View.GONE
+            }
         }
         (activity as AppCompatActivity).supportActionBar?.title = falla.nombre
     }

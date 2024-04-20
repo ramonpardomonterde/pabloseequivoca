@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapaFragment">
+
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapa"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<HorizontalScrollView
+        android:id="@+id/secciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/divider"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:showDividers="middle">
+
+            <ToggleButton
+                android:id="@+id/toggleButton_SE"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="E"
+                android:textOn="E" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="1ª"
+                android:textOn="1ª" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="2ª"
+                android:textOn="2ª" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="3ª"
+                android:textOn="3ª" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="4ª"
+                android:textOn="4ª" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="5ª"
+                android:textOn="5ª" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="E"
+                android:textOn="E" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S7"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="E"
+                android:textOn="E" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S8"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="E"
+                android:textOn="E" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S9"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="E"
+                android:textOn="E" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S10"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="E"
+                android:textOn="E" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S11"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="E"
+                android:textOn="E" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S12"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="E"
+                android:textOn="E" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S13"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="E"
+                android:textOn="E" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S14"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="E"
+                android:textOn="E" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S15"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="E"
+                android:textOn="E" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S16"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="E"
+                android:textOn="E" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S17"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="E"
+                android:textOn="E" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S18"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="E"
+                android:textOn="E" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S19"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="E"
+                android:textOn="E" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S20"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="E"
+                android:textOn="E" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S21"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="E"
+                android:textOn="E" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_S22"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="E"
+                android:textOn="E" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton_SFC"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector"
+                android:textColor="@drawable/toggle_text_selector"
+                android:textOff="FC"
+                android:textOn="FC" />
+
+
+        </LinearLayout>
+    </HorizontalScrollView>-->
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filtrar por secciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/filtrosSecciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-180dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#80888888"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mayores: "
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@android:drawable/btn_dropdown"
+                android:gravity="center_vertical"
+                android:spinnerMode="dialog" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#80888888"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Infantiles:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@android:drawable/btn_dropdown"
+                android:gravity="center_vertical"
+                android:spinnerMode="dialog" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_fallaMapa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nombre_fallaMapa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:padding="8dp"
+                android:textAlignment="textStart"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/boton_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@android:drawable/ic_menu_close_clear_cancel" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/seccion_fallaMapa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:text="TextView"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/botonMasDetalle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="MÁS DETALLES" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
