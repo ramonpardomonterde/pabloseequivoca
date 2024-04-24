@@ -61,8 +61,8 @@
     <fragment
         android:id="@+id/fallasFragment"
         android:name="pardo.tarin.uv.fallas.FallasFragment"
-        android:label="Fallas"
-        tools:layout="@layout/fragment_fallas" >
+        android:label="@string/menu_adultas"
+        tools:layout="@layout/fragment_fallas">
         <action
             android:id="@+id/action_fallasFragment_to_fallaDetails2"
             app:destination="@id/fallaDetails" />
@@ -76,7 +76,7 @@
     <fragment
         android:id="@+id/mapaFragment"
         android:name="pardo.tarin.uv.fallas.MapaFragment"
-        android:label="Mapa" >
+        android:label="@string/home_mapa">
         <action
             android:id="@+id/action_mapaFragment_to_fallaDetails"
             app:destination="@id/fallaDetails">

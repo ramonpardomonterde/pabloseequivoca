@@ -16,7 +16,19 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.Fallas.PopupOverlay" />
+            app:popupTheme="@style/Theme.Fallas.PopupOverlay">
+
+            <ImageButton
+                android:id="@+id/botonIdioma"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="8dp"
+                android:background="#00FFFFFF"
+                android:src="@drawable/espanya"
+                android:text="Mi Botón" />
+
+        </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 

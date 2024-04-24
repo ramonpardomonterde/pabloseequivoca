@@ -29,7 +29,8 @@
                 "geo_point_2d": {
                     "lon": -0.37826449710814597,
                     "lat": 39.47344194460842
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/001.jpg"
             },
             {
                 "objectid": 4840,
@@ -59,6 +60,7 @@
                     "lon": -0.37157428483459604,
                     "lat": 39.46240126998927
                 },
+                "escudo": "https://bdfallas.com/img/escudos/002.jpg",
                 "Premio": "3"
             },
             {
@@ -89,6 +91,7 @@
                     "lon": -0.37781072398274007,
                     "lat": 39.47434156217726
                 },
+                "escudo": "https://bdfallas.com/img/escudos/003.jpg",
                 "Premio": "12"
             },
             {
@@ -118,7 +121,8 @@
                 "geo_point_2d": {
                     "lon": -0.3785618783122072,
                     "lat": 39.47753152338547
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/004.jpg"
             },
             {
                 "objectid": 4998,
@@ -148,6 +152,7 @@
                     "lon": -0.38061375175443984,
                     "lat": 39.48408384548054
                 },
+                "escudo": "https://bdfallas.com/img/escudos/005.jpg",
                 "Premio": "13"
             },
             {
@@ -178,6 +183,7 @@
                     "lon": -0.3797308036438255,
                     "lat": 39.472402895172
                 },
+                "escudo": "https://bdfallas.com/img/escudos/006.jpg",
                 "PremioE": "3"
             },
             {
@@ -208,6 +214,7 @@
                     "lon": -0.3853699267753799,
                     "lat": 39.474642818854825
                 },
+                "escudo": "https://bdfallas.com/img/escudos/007.jpg",
                 "Premio": "8",
                 "PremioE": "2"
             },
@@ -238,7 +245,8 @@
                 "geo_point_2d": {
                     "lon": -0.38204603705016693,
                     "lat": 39.47526444476464
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/008.jpg"
             },
             {
                 "objectid": 5035,
@@ -268,6 +276,7 @@
                     "lon": -0.3801110157807973,
                     "lat": 39.48100415750942
                 },
+                "escudo": "https://bdfallas.com/img/escudos/009.jpg",
                 "Premio": "8"
             },
             {
@@ -298,6 +307,7 @@
                     "lon": -0.37958649271837014,
                     "lat": 39.471170302164104
                 },
+                "escudo": "https://bdfallas.com/img/escudos/010.jpg",
                 "Premio": "2"
             },
             {
@@ -328,6 +338,7 @@
                     "lon": -0.3778696561312386,
                     "lat": 39.47271011716038
                 },
+                "escudo": "https://bdfallas.com/img/escudos/011.jpg",
                 "Premio": "9"
             },
             {
@@ -358,6 +369,7 @@
                     "lon": -0.37951592968874953,
                     "lat": 39.46643844060057
                 },
+                "escudo": "https://bdfallas.com/img/escudos/012.jpg",
                 "Premio": "6"
             },
             {
@@ -387,7 +399,8 @@
                 "geo_point_2d": {
                     "lon": -0.3779630963965322,
                     "lat": 39.48638260551808
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/013.jpg"
             },
             {
                 "objectid": 5078,
@@ -417,6 +430,7 @@
                     "lon": -0.36841578049487167,
                     "lat": 39.46583740509804
                 },
+                "escudo": "https://bdfallas.com/img/escudos/014.jpg",
                 "Premio": "9"
             },
             {
@@ -447,6 +461,7 @@
                     "lon": -0.3803071851986936,
                     "lat": 39.47614264033041
                 },
+                "escudo": "https://bdfallas.com/img/escudos/015.jpg",
                 "Premio": "5"
             },
             {
@@ -476,7 +491,8 @@
                 "geo_point_2d": {
                     "lon": -0.38117718726790945,
                     "lat": 39.47922421759747
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/016.jpg"
             },
             {
                 "objectid": 5010,
@@ -505,7 +521,8 @@
                 "geo_point_2d": {
                     "lon": -0.3836670718731066,
                     "lat": 39.47592039770595
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/017.jpg"
             },
             {
                 "objectid": 5063,
@@ -535,6 +552,7 @@
                     "lon": -0.3808785937650569,
                     "lat": 39.476824536112765
                 },
+                "escudo": "https://bdfallas.com/img/escudos/018.jpg",
                 "Premio": "7",
                 "PremioE": "1"
             },
@@ -566,6 +584,7 @@
                     "lon": -0.37051485117174027,
                     "lat": 39.47503212429119
                 },
+                "escudo": "https://bdfallas.com/img/escudos/019.jpg",
                 "Premio": "1"
             },
             {
@@ -596,6 +615,7 @@
                     "lon": -0.3649831083279868,
                     "lat": 39.467294788582635
                 },
+                "escudo": "https://bdfallas.com/img/escudos/020.jpg",
                 "Premio": "2"
             },
             {
@@ -626,6 +646,7 @@
                     "lon": -0.386723811653312,
                     "lat": 39.474605642732996
                 },
+                "escudo": "https://bdfallas.com/img/escudos/021.jpg",
                 "Premio": "9",
                 "PremioE": "1"
             },
@@ -658,6 +679,7 @@
                     "lon": -0.36202199835634036,
                     "lat": 39.475304228431845
                 },
+                "escudo": "https://bdfallas.com/img/escudos/022.jpg",
                 "Premio": "2"
             },
             {
@@ -688,6 +710,7 @@
                     "lon": -0.3727828734589119,
                     "lat": 39.46161231113529
                 },
+                "escudo": "https://bdfallas.com/img/escudos/023.jpg",
                 "Premio": "5",
                 "PremioE": "1"
             },
@@ -719,6 +742,7 @@
                     "lon": -0.37301236364374346,
                     "lat": 39.4609293063527
                 },
+                "escudo": "https://bdfallas.com/img/escudos/024.jpg",
                 "Premio": "6"
             },
             {
@@ -748,7 +772,8 @@
                 "geo_point_2d": {
                     "lon": -0.39163049524260024,
                     "lat": 39.43534090287222
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/025.jpg"
             },
             {
                 "objectid": 5049,
@@ -777,7 +802,8 @@
                 "geo_point_2d": {
                     "lon": -0.3937892995302449,
                     "lat": 39.49849886623569
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/026.jpg"
             },
             {
                 "objectid": 4871,
@@ -807,6 +833,7 @@
                     "lon": -0.372139180133711,
                     "lat": 39.45964542332738
                 },
+                "escudo": "https://bdfallas.com/img/escudos/027.jpg",
                 "Premio": "11"
             },
             {
@@ -837,6 +864,7 @@
                     "lon": -0.3755240079146528,
                     "lat": 39.4598465668497
                 },
+                "escudo": "https://bdfallas.com/img/escudos/028.jpg",
                 "Premio": "5",
                 "PremioE": "3"
             },
@@ -868,6 +896,7 @@
                     "lon": -0.38375923190475575,
                     "lat": 39.474073376412036
                 },
+                "escudo": "https://bdfallas.com/img/escudos/029.jpg",
                 "Premio": "5"
             },
             {
@@ -898,6 +927,7 @@
                     "lon": -0.3843671031891744,
                     "lat": 39.48250077060857
                 },
+                "escudo": "https://bdfallas.com/img/escudos/030.jpg",
                 "Premio": "7"
             },
             {
@@ -928,6 +958,7 @@
                     "lon": -0.3539397451678329,
                     "lat": 39.46588765777108
                 },
+                "escudo": "https://bdfallas.com/img/escudos/031.jpg",
                 "Premio": "4",
                 "PremioE": "2"
             },
@@ -959,6 +990,7 @@
                     "lon": -0.37277134695863196,
                     "lat": 39.4624912312956
                 },
+                "escudo": "https://bdfallas.com/img/escudos/032.jpg",
                 "Premio": "1"
             },
             {
@@ -989,6 +1021,7 @@
                     "lon": -0.3756507780432564,
                     "lat": 39.49237680382123
                 },
+                "escudo": "https://bdfallas.com/img/escudos/033.jpg",
                 "Premio": "11"
             },
             {
@@ -1020,6 +1053,7 @@
                     "lon": -0.3829647012506613,
                     "lat": 39.47135704324243
                 },
+                "escudo": "https://bdfallas.com/img/escudos/034.jpg",
                 "Premio": "3"
             },
             {
@@ -1049,7 +1083,8 @@
                 "geo_point_2d": {
                     "lon": -0.3905502203747801,
                     "lat": 39.45662692644401
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/035.jpg"
             },
             {
                 "objectid": 5122,
@@ -1079,6 +1114,7 @@
                     "lon": -0.3838569305448312,
                     "lat": 39.47273001915721
                 },
+                "escudo": "https://bdfallas.com/img/escudos/036.jpg",
                 "Premio": "4"
             },
             {
@@ -1108,7 +1144,8 @@
                 "geo_point_2d": {
                     "lon": -0.38008367344273974,
                     "lat": 39.478239766521654
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/037.jpg"
             },
             {
                 "objectid": 5006,
@@ -1138,6 +1175,7 @@
                     "lon": -0.38962108542024043,
                     "lat": 39.45439730907497
                 },
+                "escudo": "https://bdfallas.com/img/escudos/038.jpg",
                 "Premio": "8"
             },
             {
@@ -1168,6 +1206,7 @@
                     "lon": -0.37610776569143606,
                     "lat": 39.46541706874882
                 },
+                "escudo": "https://bdfallas.com/img/escudos/039.jpg",
                 "PremioE": "3"
             },
             {
@@ -1197,7 +1236,8 @@
                 "geo_point_2d": {
                     "lon": -0.3787288315664735,
                     "lat": 39.47300373620803
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/040.jpg"
             },
             {
                 "objectid": 4952,
@@ -1227,6 +1267,7 @@
                     "lon": -0.3763943028061851,
                     "lat": 39.46105582277257
                 },
+                "escudo": "https://bdfallas.com/img/escudos/041.jpg",
                 "Premio": "7",
                 "PremioE": "1"
             },
@@ -1258,6 +1299,7 @@
                     "lon": -0.3315859880032733,
                     "lat": 39.46801715082672
                 },
+                "escudo": "https://bdfallas.com/img/escudos/042.jpg",
                 "Premio": "6"
             },
             {
@@ -1288,6 +1330,7 @@
                     "lon": -0.3755461515680367,
                     "lat": 39.49441494097684
                 },
+                "escudo": "https://bdfallas.com/img/escudos/043.jpg",
                 "Premio": "2"
             },
             {
@@ -1318,6 +1361,7 @@
                     "lon": -0.36941727808852726,
                     "lat": 39.465421124639285
                 },
+                "escudo": "https://bdfallas.com/img/escudos/044.jpg",
                 "Premio": "2"
             },
             {
@@ -1348,6 +1392,7 @@
                     "lon": -0.37309611399724774,
                     "lat": 39.48897072711106
                 },
+                "escudo": "https://bdfallas.com/img/escudos/045.jpg",
                 "Premio": "4"
             },
             {
@@ -1378,6 +1423,7 @@
                     "lon": -0.3794835192595184,
                     "lat": 39.477540303774745
                 },
+                "escudo": "https://bdfallas.com/img/escudos/046.jpg",
                 "Premio": "4",
                 "PremioE": "3"
             },
@@ -1409,6 +1455,7 @@
                     "lon": -0.3895853267769159,
                     "lat": 39.46868311625134
                 },
+                "escudo": "https://bdfallas.com/img/escudos/047.jpg",
                 "Premio": "6"
             },
             {
@@ -1427,6 +1474,7 @@
                     "lon": -0.41320247664708254,
                     "lat": 39.47753120815125
                 },
+                "escudo": "https://bdfallas.com/img/escudos/048.jpg",
                 "Premio": "7"
             },
             {
@@ -1457,6 +1505,7 @@
                     "lon": -0.3282611407518631,
                     "lat": 39.47192818142817
                 },
+                "escudo": "https://bdfallas.com/img/escudos/049.jpg",
                 "Premio": "1",
                 "PremioE": "2"
             },
@@ -1488,6 +1537,7 @@
                     "lon": -0.37670245719812756,
                     "lat": 39.475389399096265
                 },
+                "escudo": "https://bdfallas.com/img/escudos/050.jpg",
                 "Premio": "5"
             },
             {
@@ -1518,6 +1568,7 @@
                     "lon": -0.3847567600086444,
                     "lat": 39.45792290397415
                 },
+                "escudo": "https://bdfallas.com/img/escudos/051.jpg",
                 "Premio": "5",
                 "PremioE": "3"
             },
@@ -1549,6 +1600,7 @@
                     "lon": -0.3882830028388083,
                     "lat": 39.45752291034988
                 },
+                "escudo": "https://bdfallas.com/img/escudos/052.jpg",
                 "Premio": "5",
                 "PremioE": "1"
             },
@@ -1580,6 +1632,7 @@
                     "lon": -0.38528533570549606,
                     "lat": 39.464285028304666
                 },
+                "escudo": "https://bdfallas.com/img/escudos/053.jpg",
                 "Premio": "7"
             },
             {
@@ -1610,6 +1663,7 @@
                     "lon": -0.3664877643152533,
                     "lat": 39.465244970923855
                 },
+                "escudo": "https://bdfallas.com/img/escudos/054.jpg",
                 "Premio": "7"
             },
             {
@@ -1640,6 +1694,7 @@
                     "lon": -0.36898602983539497,
                     "lat": 39.458852118489084
                 },
+                "escudo": "https://bdfallas.com/img/escudos/055.jpg",
                 "Premio": "6"
             },
             {
@@ -1670,6 +1725,7 @@
                     "lon": -0.3883870931489558,
                     "lat": 39.474570466711036
                 },
+                "escudo": "https://bdfallas.com/img/escudos/056.jpg",
                 "Premio": "8"
             },
             {
@@ -1700,6 +1756,7 @@
                     "lon": -0.37883658497576084,
                     "lat": 39.46626507696817
                 },
+                "escudo": "https://bdfallas.com/img/escudos/057.jpg",
                 "Premio": "3"
             },
             {
@@ -1730,6 +1787,7 @@
                     "lon": -0.37378872671948105,
                     "lat": 39.46333807919075
                 },
+                "escudo": "https://bdfallas.com/img/escudos/058.jpg",
                 "Premio": "1",
                 "PremioE": "1"
             },
@@ -1761,6 +1819,7 @@
                     "lon": -0.3333018650210224,
                     "lat": 39.44814866367574
                 },
+                "escudo": "https://bdfallas.com/img/escudos/059.jpg",
                 "Premio": "10"
             },
             {
@@ -1790,7 +1849,8 @@
                 "geo_point_2d": {
                     "lon": -0.39118522395647115,
                     "lat": 39.486352192277835
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/060.jpg"
             },
             {
                 "objectid": 5058,
@@ -1820,6 +1880,7 @@
                     "lon": -0.3759723486426317,
                     "lat": 39.49567581324469
                 },
+                "escudo": "https://bdfallas.com/img/escudos/061.jpg",
                 "Premio": "9"
             },
             {
@@ -1850,6 +1911,7 @@
                     "lon": -0.3834459693878556,
                     "lat": 39.4782686510498
                 },
+                "escudo": "https://bdfallas.com/img/escudos/062.jpg",
                 "Premio": "12"
             },
             {
@@ -1879,7 +1941,8 @@
                 "geo_point_2d": {
                     "lon": -0.38066231341555273,
                     "lat": 39.47841951139677
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/063.jpg"
             },
             {
                 "objectid": 5130,
@@ -1908,7 +1971,8 @@
                 "geo_point_2d": {
                     "lon": -0.3867744977991217,
                     "lat": 39.48875636136932
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/064.jpg"
             },
             {
                 "objectid": 4886,
@@ -1938,6 +2002,7 @@
                     "lon": -0.37606705183017275,
                     "lat": 39.4789440633792
                 },
+                "escudo": "https://bdfallas.com/img/escudos/065.jpg",
                 "Premio": "4",
                 "PremioE": "2"
             },
@@ -1969,6 +2034,7 @@
                     "lon": -0.3787031910225065,
                     "lat": 39.478546834368935
                 },
+                "escudo": "https://bdfallas.com/img/escudos/066.jpg",
                 "PremioE": "2"
             },
             {
@@ -1999,6 +2065,7 @@
                     "lon": -0.40145133554004403,
                     "lat": 39.47099581853792
                 },
+                "escudo": "https://bdfallas.com/img/escudos/067.jpg",
                 "Premio": "2"
             },
             {
@@ -2028,7 +2095,8 @@
                 "geo_point_2d": {
                     "lon": -0.3446305973370022,
                     "lat": 39.46508403330851
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/068.jpg"
             },
             {
                 "objectid": 5083,
@@ -2058,6 +2126,7 @@
                     "lon": -0.38388938944398227,
                     "lat": 39.49108213042409
                 },
+                "escudo": "https://bdfallas.com/img/escudos/069.jpg",
                 "Premio": "8"
             },
             {
@@ -2087,7 +2156,8 @@
                 "geo_point_2d": {
                     "lon": -0.3340952974155169,
                     "lat": 39.470898729883
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/070.jpg"
             },
             {
                 "objectid": 4842,
@@ -2117,6 +2187,7 @@
                     "lon": -0.3703718162476261,
                     "lat": 39.48216349442592
                 },
+                "escudo": "https://bdfallas.com/img/escudos/071.jpg",
                 "Premio": "6"
             },
             {
@@ -2147,6 +2218,7 @@
                     "lon": -0.38692476532345454,
                     "lat": 39.45285577758091
                 },
+                "escudo": "https://bdfallas.com/img/escudos/072.jpg",
                 "Premio": "2"
             },
             {
@@ -2177,6 +2249,7 @@
                     "lon": -0.37796089639106206,
                     "lat": 39.47870902830696
                 },
+                "escudo": "https://bdfallas.com/img/escudos/073.jpg",
                 "Premio": "1",
                 "PremioE": "2"
             },
@@ -2207,7 +2280,8 @@
                 "geo_point_2d": {
                     "lon": -0.39486263355254964,
                     "lat": 39.49216943127674
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/074.jpg"
             },
             {
                 "objectid": 5111,
@@ -2236,7 +2310,8 @@
                 "geo_point_2d": {
                     "lon": -0.37477015290572724,
                     "lat": 39.484030015347805
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/075.jpg"
             },
             {
                 "objectid": 4862,
@@ -2265,7 +2340,8 @@
                 "geo_point_2d": {
                     "lon": -0.32875701687514536,
                     "lat": 39.4742678497239
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/076.jpg"
             },
             {
                 "objectid": 4905,
@@ -2295,6 +2371,7 @@
                     "lon": -0.34863203864841114,
                     "lat": 39.476113155733195
                 },
+                "escudo": "https://bdfallas.com/img/escudos/077.jpg",
                 "Premio": "3"
             },
             {
@@ -2325,6 +2402,7 @@
                     "lon": -0.3864793234797861,
                     "lat": 39.46654741432958
                 },
+                "escudo": "https://bdfallas.com/img/escudos/078.jpg",
                 "Premio": "5"
             },
             {
@@ -2355,6 +2433,7 @@
                     "lon": -0.38614064985348234,
                     "lat": 39.46902068609314
                 },
+                "escudo": "https://bdfallas.com/img/escudos/079.jpg",
                 "Premio": "8"
             },
             {
@@ -2384,7 +2463,8 @@
                 "geo_point_2d": {
                     "lon": -0.3822463177606689,
                     "lat": 39.47866804150547
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/080.jpg"
             },
             {
                 "objectid": 5067,
@@ -2414,6 +2494,7 @@
                     "lon": -0.3987727019103844,
                     "lat": 39.4719160994899
                 },
+                "escudo": "https://bdfallas.com/img/escudos/081.jpg",
                 "Premio": "8"
             },
             {
@@ -2443,7 +2524,8 @@
                 "geo_point_2d": {
                     "lon": -0.3962536392244285,
                     "lat": 39.47410130908976
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/082.jpg"
             },
             {
                 "objectid": 4931,
@@ -2473,6 +2555,7 @@
                     "lon": -0.3653829545001309,
                     "lat": 39.46569776037665
                 },
+                "escudo": "https://bdfallas.com/img/escudos/083.jpg",
                 "Premio": "6"
             },
             {
@@ -2503,6 +2586,7 @@
                     "lon": -0.366450419860437,
                     "lat": 39.46944772376713
                 },
+                "escudo": "https://bdfallas.com/img/escudos/084.jpg",
                 "Premio": "3"
             },
             {
@@ -2533,6 +2617,7 @@
                     "lon": -0.37719204417357244,
                     "lat": 39.46214391685996
                 },
+                "escudo": "https://bdfallas.com/img/escudos/085.jpg",
                 "Premio": "1",
                 "PremioE": "3"
             },
@@ -2564,6 +2649,7 @@
                     "lon": -0.3266735260947662,
                     "lat": 39.46581100145378
                 },
+                "escudo": "https://bdfallas.com/img/escudos/086.jpg",
                 "Premio": "3",
                 "PremioE": "2"
             },
@@ -2595,6 +2681,7 @@
                     "lon": -0.3947707565357127,
                     "lat": 39.4661152568831
                 },
+                "escudo": "https://bdfallas.com/img/escudos/087.jpg",
                 "Premio": "13"
             },
             {
@@ -2624,7 +2711,8 @@
                 "geo_point_2d": {
                     "lon": -0.3776125925314483,
                     "lat": 39.467585191647224
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/088.jpg"
             },
             {
                 "objectid": 4920,
@@ -2654,6 +2742,7 @@
                     "lon": -0.379439155329058,
                     "lat": 39.470110088863635
                 },
+                "escudo": "https://bdfallas.com/img/escudos/089.jpg",
                 "Premio": "10"
             },
             {
@@ -2684,6 +2773,7 @@
                     "lon": -0.3735688802301487,
                     "lat": 39.483913498954564
                 },
+                "escudo": "https://bdfallas.com/img/escudos/090.jpg",
                 "Premio": "7"
             },
             {
@@ -2714,6 +2804,7 @@
                     "lon": -0.37951578966779664,
                     "lat": 39.47438553541575
                 },
+                "escudo": "https://bdfallas.com/img/escudos/091.jpg",
                 "Premio": "5",
                 "PremioE": "1"
             },
@@ -2745,6 +2836,7 @@
                     "lon": -0.3818656189399902,
                     "lat": 39.47473297889326
                 },
+                "escudo": "https://bdfallas.com/img/escudos/092.jpg",
                 "Premio": "2"
             },
             {
@@ -2775,6 +2867,7 @@
                     "lon": -0.3855026620048148,
                     "lat": 39.49051982054972
                 },
+                "escudo": "https://bdfallas.com/img/escudos/093.jpg",
                 "PremioE": "3"
             },
             {
@@ -2804,7 +2897,8 @@
                 "geo_point_2d": {
                     "lon": -0.36130260918637747,
                     "lat": 39.45962441767419
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/094.jpg"
             },
             {
                 "objectid": 5008,
@@ -2834,6 +2928,7 @@
                     "lon": -0.37691843175762624,
                     "lat": 39.488275643332265
                 },
+                "escudo": "https://bdfallas.com/img/escudos/095.jpg",
                 "Premio": "7"
             },
             {
@@ -2863,7 +2958,8 @@
                 "geo_point_2d": {
                     "lon": -0.4015348180518823,
                     "lat": 39.4728086186131
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/096.jpg"
             },
             {
                 "objectid": 5045,
@@ -2893,6 +2989,7 @@
                     "lon": -0.35007997461738655,
                     "lat": 39.47271514928657
                 },
+                "escudo": "https://bdfallas.com/img/escudos/097.jpg",
                 "Premio": "2",
                 "PremioE": "2"
             },
@@ -2924,6 +3021,7 @@
                     "lon": -0.3697157721572177,
                     "lat": 39.4606143491609
                 },
+                "escudo": "https://bdfallas.com/img/escudos/098.jpg",
                 "Premio": "6"
             },
             {
@@ -2954,6 +3052,7 @@
                     "lon": -0.3862969354958782,
                     "lat": 39.471634104155
                 },
+                "escudo": "https://bdfallas.com/img/escudos/099.jpg",
                 "Premio": "9"
             },
             {
@@ -2984,6 +3083,7 @@
                     "lon": -0.3908599970392952,
                     "lat": 39.443772005105956
                 },
+                "escudo": "https://bdfallas.com/img/escudos/100.jpg",
                 "Premio": "5",
                 "PremioE": "1"
             },
@@ -3015,6 +3115,7 @@
                     "lon": -0.3782139038499347,
                     "lat": 39.45410196666526
                 },
+                "escudo": "https://bdfallas.com/img/escudos/101.jpg",
                 "Premio": "13"
             },
             {
@@ -3045,6 +3146,7 @@
                     "lon": -0.37292688026949616,
                     "lat": 39.466737906140914
                 },
+                "escudo": "https://bdfallas.com/img/escudos/102.jpg",
                 "Premio": "5"
             },
             {
@@ -3063,6 +3165,7 @@
                     "lon": -0.423467986529227,
                     "lat": 39.46372480751368
                 },
+                "escudo": "https://bdfallas.com/img/escudos/103.jpg",
                 "Premio": "12"
             },
             {
@@ -3092,7 +3195,8 @@
                 "geo_point_2d": {
                     "lon": -0.38521059950761277,
                     "lat": 39.47277557519841
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/104.jpg"
             },
             {
                 "objectid": 5068,
@@ -3121,7 +3225,8 @@
                 "geo_point_2d": {
                     "lon": -0.3590975049515964,
                     "lat": 39.488340555754284
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/105.jpg"
             },
             {
                 "objectid": 5102,
@@ -3150,7 +3255,8 @@
                 "geo_point_2d": {
                     "lon": -0.3694846799876428,
                     "lat": 39.489826251421505
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/106.jpg"
             },
             {
                 "objectid": 4882,
@@ -3180,6 +3286,7 @@
                     "lon": -0.3724451464993009,
                     "lat": 39.487390757327496
                 },
+                "escudo": "https://bdfallas.com/img/escudos/107.jpg",
                 "Premio": "14"
             },
             {
@@ -3209,7 +3316,8 @@
                 "geo_point_2d": {
                     "lon": -0.3992068415348189,
                     "lat": 39.47041391338216
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/108.jpg"
             },
             {
                 "objectid": 5121,
@@ -3238,7 +3346,8 @@
                 "geo_point_2d": {
                     "lon": -0.32871006805430697,
                     "lat": 39.47653775630954
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/109.jpg"
             },
             {
                 "objectid": 5030,
@@ -3268,6 +3377,7 @@
                     "lon": -0.37680881968192065,
                     "lat": 39.473984997897055
                 },
+                "escudo": "https://bdfallas.com/img/escudos/110.jpg",
                 "Premio": "8",
                 "PremioE": "3"
             },
@@ -3299,6 +3409,7 @@
                     "lon": -0.3927055613298509,
                     "lat": 39.493548539741205
                 },
+                "escudo": "https://bdfallas.com/img/escudos/111.jpg",
                 "Premio": "7"
             },
             {
@@ -3328,7 +3439,8 @@
                 "geo_point_2d": {
                     "lon": -0.32814144785635796,
                     "lat": 39.48233615987615
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/112.jpg"
             },
             {
                 "objectid": 5052,
@@ -3357,7 +3469,8 @@
                 "geo_point_2d": {
                     "lon": -0.35123440210435797,
                     "lat": 39.47337290307147
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/113.jpg"
             },
             {
                 "objectid": 5018,
@@ -3386,7 +3499,8 @@
                 "geo_point_2d": {
                     "lon": -0.37166030348986734,
                     "lat": 39.45607372505492
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/114.jpg"
             },
             {
                 "objectid": 5119,
@@ -3416,6 +3530,7 @@
                     "lon": -0.35785045869929083,
                     "lat": 39.48610683337672
                 },
+                "escudo": "https://bdfallas.com/img/escudos/115.jpg",
                 "Premio": "14"
             },
             {
@@ -3446,6 +3561,7 @@
                     "lon": -0.40483137007986786,
                     "lat": 39.467031511410894
                 },
+                "escudo": "https://bdfallas.com/img/escudos/116.jpg",
                 "PremioE": "2"
             },
             {
@@ -3476,6 +3592,7 @@
                     "lon": -0.3668622360507284,
                     "lat": 39.495140236791634
                 },
+                "escudo": "https://bdfallas.com/img/escudos/117.jpg",
                 "Premio": "1",
                 "PremioE": "2"
             },
@@ -3507,6 +3624,7 @@
                     "lon": -0.38827057385365543,
                     "lat": 39.49099752242869
                 },
+                "escudo": "https://bdfallas.com/img/escudos/118.jpg",
                 "Premio": "4",
                 "PremioE": "1"
             },
@@ -3538,6 +3656,7 @@
                     "lon": -0.3881400186958512,
                     "lat": 39.487424515096926
                 },
+                "escudo": "https://bdfallas.com/img/escudos/119.jpg",
                 "Premio": "7"
             },
             {
@@ -3568,6 +3687,7 @@
                     "lon": -0.3690045875007099,
                     "lat": 39.485029347825304
                 },
+                "escudo": "https://bdfallas.com/img/escudos/120.jpg",
                 "Premio": "9"
             },
             {
@@ -3598,6 +3718,7 @@
                     "lon": -0.41975454574939064,
                     "lat": 39.50278906654451
                 },
+                "escudo": "https://bdfallas.com/img/escudos/121.jpg",
                 "Premio": "5"
             },
             {
@@ -3627,7 +3748,8 @@
                 "geo_point_2d": {
                     "lon": -0.3814834673941599,
                     "lat": 39.46774043076786
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/122.jpg"
             },
             {
                 "objectid": 5014,
@@ -3657,6 +3779,7 @@
                     "lon": -0.33936808191609164,
                     "lat": 39.46995896900919
                 },
+                "escudo": "https://bdfallas.com/img/escudos/123.jpg",
                 "Premio": "9"
             },
             {
@@ -3687,6 +3810,7 @@
                     "lon": -0.3645273596874645,
                     "lat": 39.46029501955045
                 },
+                "escudo": "https://bdfallas.com/img/escudos/124.jpg",
                 "Premio": "6"
             },
             {
@@ -3717,6 +3841,7 @@
                     "lon": -0.36040966256810064,
                     "lat": 39.48541765267115
                 },
+                "escudo": "https://bdfallas.com/img/escudos/125.jpg",
                 "PremioE": "3"
             },
             {
@@ -3747,6 +3872,7 @@
                     "lon": -0.3697881186556139,
                     "lat": 39.462404020462785
                 },
+                "escudo": "https://bdfallas.com/img/escudos/126.jpg",
                 "Premio": "9"
             },
             {
@@ -3777,6 +3903,7 @@
                     "lon": -0.38548799488016167,
                     "lat": 39.47842901093516
                 },
+                "escudo": "https://bdfallas.com/img/escudos/127.jpg",
                 "Premio": "7"
             },
             {
@@ -3806,7 +3933,8 @@
                 "geo_point_2d": {
                     "lon": -0.34200305145928683,
                     "lat": 39.46457381688759
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/128.jpg"
             },
             {
                 "objectid": 5123,
@@ -3835,7 +3963,8 @@
                 "geo_point_2d": {
                     "lon": -0.347866127628359,
                     "lat": 39.467398718101094
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/129.jpg"
             },
             {
                 "objectid": 4821,
@@ -3865,6 +3994,7 @@
                     "lon": -0.39243996563591305,
                     "lat": 39.46300851929425
                 },
+                "escudo": "https://bdfallas.com/img/escudos/130.jpg",
                 "Premio": "6"
             },
             {
@@ -3894,7 +4024,8 @@
                 "geo_point_2d": {
                     "lon": -0.35396008611612534,
                     "lat": 39.47166911653631
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/131.jpg"
             },
             {
                 "objectid": 5043,
@@ -3923,7 +4054,8 @@
                 "geo_point_2d": {
                     "lon": -0.36573952392145254,
                     "lat": 39.42443686966368
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/132.jpg"
             },
             {
                 "objectid": 4945,
@@ -3952,7 +4084,8 @@
                 "geo_point_2d": {
                     "lon": -0.3279891629167065,
                     "lat": 39.47323469853482
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/133.jpg"
             },
             {
                 "objectid": 5109,
@@ -3981,7 +4114,8 @@
                 "geo_point_2d": {
                     "lon": -0.379922034444319,
                     "lat": 39.48847376882573
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/134.jpg"
             },
             {
                 "objectid": 4802,
@@ -4010,7 +4144,8 @@
                 "geo_point_2d": {
                     "lon": -0.38532362703324047,
                     "lat": 39.48499664981252
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/135.jpg"
             },
             {
                 "id_falla": 136,
@@ -4027,7 +4162,8 @@
                 "geo_point_2d": {
                     "lon": -0.415115038134103,
                     "lat": 39.476800237099695
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/136.jpg"
             },
             {
                 "objectid": 4877,
@@ -4056,7 +4192,8 @@
                 "geo_point_2d": {
                     "lon": -0.3852955868424629,
                     "lat": 39.47559866222997
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/137.jpg"
             },
             {
                 "objectid": 4833,
@@ -4086,6 +4223,7 @@
                     "lon": -0.3710988159255096,
                     "lat": 39.49344736202629
                 },
+                "escudo": "https://bdfallas.com/img/escudos/138.jpg",
                 "Premio": "9"
             },
             {
@@ -4116,6 +4254,7 @@
                     "lon": -0.38509602527484094,
                     "lat": 39.487110385693036
                 },
+                "escudo": "https://bdfallas.com/img/escudos/139.jpg",
                 "Premio": "7"
             },
             {
@@ -4146,6 +4285,7 @@
                     "lon": -0.39212598459609016,
                     "lat": 39.474632406927945
                 },
+                "escudo": "https://bdfallas.com/img/escudos/140.jpg",
                 "Premio": "8"
             },
             {
@@ -4176,6 +4316,7 @@
                     "lon": -0.3916678806495576,
                     "lat": 39.45439573111787
                 },
+                "escudo": "https://bdfallas.com/img/escudos/141.jpg",
                 "Premio": "1"
             },
             {
@@ -4206,6 +4347,7 @@
                     "lon": -0.37676044759049965,
                     "lat": 39.46159199683606
                 },
+                "escudo": "https://bdfallas.com/img/escudos/142.jpg",
                 "Premio": "12"
             },
             {
@@ -4235,7 +4377,8 @@
                 "geo_point_2d": {
                     "lon": -0.37550347733393286,
                     "lat": 39.473880838304645
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/143.jpg"
             },
             {
                 "objectid": 5142,
@@ -4265,6 +4408,7 @@
                     "lon": -0.3301930417603211,
                     "lat": 39.46747466862137
                 },
+                "escudo": "https://bdfallas.com/img/escudos/144.jpg",
                 "Premio": "4"
             },
             {
@@ -4295,6 +4439,7 @@
                     "lon": -0.3487833644862564,
                     "lat": 39.46873409945521
                 },
+                "escudo": "https://bdfallas.com/img/escudos/145.jpg",
                 "Premio": "1"
             },
             {
@@ -4325,6 +4470,7 @@
                     "lon": -0.3883555203598957,
                     "lat": 39.46392550964067
                 },
+                "escudo": "https://bdfallas.com/img/escudos/146.jpg",
                 "Premio": "5",
                 "PremioE": "1"
             },
@@ -4356,6 +4502,7 @@
                     "lon": -0.36117128122587977,
                     "lat": 39.428005165021204
                 },
+                "escudo": "https://bdfallas.com/img/escudos/147.jpg",
                 "Premio": "6"
             },
             {
@@ -4386,6 +4533,7 @@
                     "lon": -0.37085888779983467,
                     "lat": 39.47206282199894
                 },
+                "escudo": "https://bdfallas.com/img/escudos/148.jpg",
                 "Premio": "6"
             },
             {
@@ -4416,6 +4564,7 @@
                     "lon": -0.3677151406950975,
                     "lat": 39.46893079659118
                 },
+                "escudo": "https://bdfallas.com/img/escudos/149.jpg",
                 "Premio": "7"
             },
             {
@@ -4446,6 +4595,7 @@
                     "lon": -0.3489820005091375,
                     "lat": 39.466547227943146
                 },
+                "escudo": "https://bdfallas.com/img/escudos/150.jpg",
                 "Premio": "5"
             },
             {
@@ -4475,7 +4625,8 @@
                 "geo_point_2d": {
                     "lon": -0.33323440488049083,
                     "lat": 39.467230501200184
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/151.jpg"
             },
             {
                 "objectid": 4928,
@@ -4505,6 +4656,7 @@
                     "lon": -0.38381322394965184,
                     "lat": 39.45504189363206
                 },
+                "escudo": "https://bdfallas.com/img/escudos/152.jpg",
                 "Premio": "9",
                 "PremioE": "2"
             },
@@ -4535,7 +4687,8 @@
                 "geo_point_2d": {
                     "lon": -0.3310569137319714,
                     "lat": 39.472035748204654
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/153.jpg"
             },
             {
                 "objectid": 4947,
@@ -4565,6 +4718,7 @@
                     "lon": -0.3817761955401804,
                     "lat": 39.463745466652206
                 },
+                "escudo": "https://bdfallas.com/img/escudos/154.jpg",
                 "Premio": "1",
                 "PremioE": "2"
             },
@@ -4595,7 +4749,8 @@
                 "geo_point_2d": {
                     "lon": -0.32963461177405284,
                     "lat": 39.465794889357774
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/155.jpg"
             },
             {
                 "objectid": 5139,
@@ -4625,6 +4780,7 @@
                     "lon": -0.3602447548118345,
                     "lat": 39.47319951840402
                 },
+                "escudo": "https://bdfallas.com/img/escudos/156.jpg",
                 "Premio": "4",
                 "PremioE": "3"
             },
@@ -4656,6 +4812,7 @@
                     "lon": -0.3710398884674534,
                     "lat": 39.49481764948125
                 },
+                "escudo": "https://bdfallas.com/img/escudos/157.jpg",
                 "Premio": "7"
             },
             {
@@ -4685,7 +4842,8 @@
                 "geo_point_2d": {
                     "lon": -0.38393547485670376,
                     "lat": 39.46356125621929
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/158.jpg"
             },
             {
                 "objectid": 4866,
@@ -4715,6 +4873,7 @@
                     "lon": -0.3493109917710112,
                     "lat": 39.47172162513898
                 },
+                "escudo": "https://bdfallas.com/img/escudos/159.jpg",
                 "Premio": "6"
             },
             {
@@ -4745,6 +4904,7 @@
                     "lon": -0.38914092827422275,
                     "lat": 39.47387374928242
                 },
+                "escudo": "https://bdfallas.com/img/escudos/160.jpg",
                 "Premio": "7"
             },
             {
@@ -4775,6 +4935,7 @@
                     "lon": -0.36360127883959475,
                     "lat": 39.46321283556124
                 },
+                "escudo": "https://bdfallas.com/img/escudos/161.jpg",
                 "Premio": "1",
                 "PremioE": "1"
             },
@@ -4806,6 +4967,7 @@
                     "lon": -0.3362372941081122,
                     "lat": 39.47549359600609
                 },
+                "escudo": "https://bdfallas.com/img/escudos/162.jpg",
                 "Premio": "7"
             },
             {
@@ -4835,7 +4997,8 @@
                 "geo_point_2d": {
                     "lon": -0.37597989049484126,
                     "lat": 39.48695663931614
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/163.jpg"
             },
             {
                 "objectid": 4932,
@@ -4865,6 +5028,7 @@
                     "lon": -0.39092072921271404,
                     "lat": 39.47044236098282
                 },
+                "escudo": "https://bdfallas.com/img/escudos/164.jpg",
                 "Premio": "5"
             },
             {
@@ -4895,6 +5059,7 @@
                     "lon": -0.3719490931032086,
                     "lat": 39.467123406936295
                 },
+                "escudo": "https://bdfallas.com/img/escudos/165.jpg",
                 "Premio": "10"
             },
             {
@@ -4924,7 +5089,8 @@
                 "geo_point_2d": {
                     "lon": -0.3999838836784349,
                     "lat": 39.468065842002645
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/166.jpg"
             },
             {
                 "objectid": 4881,
@@ -4954,6 +5120,7 @@
                     "lon": -0.3840070640457518,
                     "lat": 39.47529403862051
                 },
+                "escudo": "https://bdfallas.com/img/escudos/167.jpg",
                 "Premio": "5"
             },
             {
@@ -4983,7 +5150,8 @@
                 "geo_point_2d": {
                     "lon": -0.3307482531076747,
                     "lat": 39.46623488747877
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/168.jpg"
             },
             {
                 "objectid": 4963,
@@ -5013,6 +5181,7 @@
                     "lon": -0.33347762771092826,
                     "lat": 39.45026327279821
                 },
+                "escudo": "https://bdfallas.com/img/escudos/169.jpg",
                 "Premio": "6"
             },
             {
@@ -5043,6 +5212,7 @@
                     "lon": -0.37172878277946253,
                     "lat": 39.46444424722499
                 },
+                "escudo": "https://bdfallas.com/img/escudos/170.jpg",
                 "Premio": "3",
                 "PremioE": "1"
             },
@@ -5074,6 +5244,7 @@
                     "lon": -0.33215088858166697,
                     "lat": 39.47238779638831
                 },
+                "escudo": "https://bdfallas.com/img/escudos/171.jpg",
                 "Premio": "2",
                 "PremioE": "3"
             },
@@ -5104,7 +5275,8 @@
                 "geo_point_2d": {
                     "lon": -0.38808417340727086,
                     "lat": 39.46295128211806
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/172.jpg"
             },
             {
                 "objectid": 5136,
@@ -5134,6 +5306,7 @@
                     "lon": -0.38534648627645585,
                     "lat": 39.46523632073423
                 },
+                "escudo": "https://bdfallas.com/img/escudos/173.jpg",
                 "Premio": "8"
             },
             {
@@ -5164,6 +5337,7 @@
                     "lon": -0.36835161017455764,
                     "lat": 39.460209638830186
                 },
+                "escudo": "https://bdfallas.com/img/escudos/174.jpg",
                 "Premio": "1",
                 "PremioE": "1"
             },
@@ -5182,7 +5356,8 @@
                 "geo_point_2d": {
                     "lon": -0.43587113289128354,
                     "lat": 39.46447986152766
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/175.jpg"
             },
             {
                 "objectid": 4913,
@@ -5211,7 +5386,8 @@
                 "geo_point_2d": {
                     "lon": -0.39012063625978444,
                     "lat": 39.4871258438645
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/176.jpg"
             },
             {
                 "objectid": 4847,
@@ -5241,6 +5417,7 @@
                     "lon": -0.3743065517691463,
                     "lat": 39.46035936819095
                 },
+                "escudo": "https://bdfallas.com/img/escudos/177.jpg",
                 "Premio": "4",
                 "PremioE": "1"
             },
@@ -5272,6 +5449,7 @@
                     "lon": -0.3469409259361088,
                     "lat": 39.46248531292707
                 },
+                "escudo": "https://bdfallas.com/img/escudos/178.jpg",
                 "PremioE": "2"
             },
             {
@@ -5302,6 +5480,7 @@
                     "lon": -0.3390197788263815,
                     "lat": 39.46268570402985
                 },
+                "escudo": "https://bdfallas.com/img/escudos/179.jpg",
                 "Premio": "3"
             },
             {
@@ -5332,6 +5511,7 @@
                     "lon": -0.3807050382177141,
                     "lat": 39.46529990666118
                 },
+                "escudo": "https://bdfallas.com/img/escudos/180.jpg",
                 "Premio": "5"
             },
             {
@@ -5362,6 +5542,7 @@
                     "lon": -0.3343299880767387,
                     "lat": 39.47289848389419
                 },
+                "escudo": "https://bdfallas.com/img/escudos/181.jpg",
                 "Premio": "9"
             },
             {
@@ -5391,7 +5572,8 @@
                 "geo_point_2d": {
                     "lon": -0.3898486667363017,
                     "lat": 39.47003991500788
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/182.jpg"
             },
             {
                 "objectid": 4872,
@@ -5421,6 +5603,7 @@
                     "lon": -0.34306338304685524,
                     "lat": 39.46228212072669
                 },
+                "escudo": "https://bdfallas.com/img/escudos/183.jpg",
                 "Premio": "8"
             },
             {
@@ -5451,6 +5634,7 @@
                     "lon": -0.341797345121452,
                     "lat": 39.46778267486452
                 },
+                "escudo": "https://bdfallas.com/img/escudos/184.jpg",
                 "Premio": "7"
             },
             {
@@ -5481,6 +5665,7 @@
                     "lon": -0.36475176248483837,
                     "lat": 39.48625755500238
                 },
+                "escudo": "https://bdfallas.com/img/escudos/185.jpg",
                 "Premio": "3"
             },
             {
@@ -5511,6 +5696,7 @@
                     "lon": -0.36662713240429057,
                     "lat": 39.459612232474804
                 },
+                "escudo": "https://bdfallas.com/img/escudos/186.jpg",
                 "Premio": "5"
             },
             {
@@ -5541,6 +5727,7 @@
                     "lon": -0.36696480895598893,
                     "lat": 39.4637036789513
                 },
+                "escudo": "https://bdfallas.com/img/escudos/187.jpg",
                 "Premio": "7",
                 "PremioE": "2"
             },
@@ -5572,6 +5759,7 @@
                     "lon": -0.3652351258713155,
                     "lat": 39.48780326855104
                 },
+                "escudo": "https://bdfallas.com/img/escudos/188.jpg",
                 "Premio": "7"
             },
             {
@@ -5602,6 +5790,7 @@
                     "lon": -0.3830761808637824,
                     "lat": 39.45998088872869
                 },
+                "escudo": "https://bdfallas.com/img/escudos/189.jpg",
                 "Premio": "7"
             },
             {
@@ -5631,7 +5820,8 @@
                 "geo_point_2d": {
                     "lon": -0.4080213128225596,
                     "lat": 39.46577630453772
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/190.jpg"
             },
             {
                 "objectid": 4941,
@@ -5661,6 +5851,7 @@
                     "lon": -0.3938388314882098,
                     "lat": 39.47939715709402
                 },
+                "escudo": "https://bdfallas.com/img/escudos/191.jpg",
                 "Premio": "2",
                 "PremioE": "1"
             },
@@ -5692,6 +5883,7 @@
                     "lon": -0.3453857243157899,
                     "lat": 39.46666367757254
                 },
+                "escudo": "https://bdfallas.com/img/escudos/192.jpg",
                 "Premio": "8"
             },
             {
@@ -5722,6 +5914,7 @@
                     "lon": -0.38657959709267087,
                     "lat": 39.44786421875481
                 },
+                "escudo": "https://bdfallas.com/img/escudos/193.jpg",
                 "Premio": "1"
             },
             {
@@ -5751,7 +5944,8 @@
                 "geo_point_2d": {
                     "lon": -0.3769284575294549,
                     "lat": 39.48472319406416
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/194.jpg"
             },
             {
                 "objectid": 4864,
@@ -5780,7 +5974,8 @@
                 "geo_point_2d": {
                     "lon": -0.3672899284724234,
                     "lat": 39.44339565398936
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/195.jpg"
             },
             {
                 "objectid": 5057,
@@ -5810,6 +6005,7 @@
                     "lon": -0.3823005116139993,
                     "lat": 39.4725340594487
                 },
+                "escudo": "https://bdfallas.com/img/escudos/196.jpg",
                 "Premio": "8"
             },
             {
@@ -5841,6 +6037,7 @@
                     "lon": -0.3970309454529852,
                     "lat": 39.483874436007554
                 },
+                "escudo": "https://bdfallas.com/img/escudos/197.jpg",
                 "Premio": "1"
             },
             {
@@ -5870,7 +6067,8 @@
                 "geo_point_2d": {
                     "lon": -0.37733954379343254,
                     "lat": 39.478125223089975
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/198.jpg"
             },
             {
                 "objectid": 5141,
@@ -5899,7 +6097,8 @@
                 "geo_point_2d": {
                     "lon": -0.3880532496615205,
                     "lat": 39.45528771924896
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/199.jpg"
             },
             {
                 "objectid": 5042,
@@ -5929,6 +6128,7 @@
                     "lon": -0.38823533497749685,
                     "lat": 39.45957313401032
                 },
+                "escudo": "https://bdfallas.com/img/escudos/200.jpg",
                 "Premio": "4",
                 "PremioE": "2"
             },
@@ -5960,6 +6160,7 @@
                     "lon": -0.38750473341092323,
                     "lat": 39.47066618257236
                 },
+                "escudo": "https://bdfallas.com/img/escudos/201.jpg",
                 "Premio": "10",
                 "PremioE": "3"
             },
@@ -5990,7 +6191,8 @@
                 "geo_point_2d": {
                     "lon": -0.39290680116344257,
                     "lat": 39.46070876276903
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/202.jpg"
             },
             {
                 "objectid": 5131,
@@ -6019,7 +6221,8 @@
                 "geo_point_2d": {
                     "lon": -0.397476296431412,
                     "lat": 39.47060000654007
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/203.jpg"
             },
             {
                 "objectid": 5046,
@@ -6049,6 +6252,7 @@
                     "lon": -0.3826168476826125,
                     "lat": 39.46855013608175
                 },
+                "escudo": "https://bdfallas.com/img/escudos/204.jpg",
                 "Premio": "1"
             },
             {
@@ -6079,6 +6283,7 @@
                     "lon": -0.39119388059648597,
                     "lat": 39.4759901445261
                 },
+                "escudo": "https://bdfallas.com/img/escudos/205.jpg",
                 "PremioE": "2"
             },
             {
@@ -6097,6 +6302,7 @@
                     "lon": -0.4275459665565909,
                     "lat": 39.46833941302582
                 },
+                "escudo": "https://bdfallas.com/img/escudos/206.jpg",
                 "Premio": "3"
             },
             {
@@ -6114,7 +6320,8 @@
                 "geo_point_2d": {
                     "lon": -0.4098511132197091,
                     "lat": 39.509742186840874
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/207.jpg"
             },
             {
                 "objectid": 5019,
@@ -6143,7 +6350,8 @@
                 "geo_point_2d": {
                     "lon": -0.3299935350006616,
                     "lat": 39.472090450497674
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/208.jpg"
             },
             {
                 "id_falla": 209,
@@ -6160,7 +6368,8 @@
                 "geo_point_2d": {
                     "lon": -0.4262237871837227,
                     "lat": 39.465070691418504
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/209.jpg"
             },
             {
                 "id_falla": 210,
@@ -6177,7 +6386,8 @@
                 "geo_point_2d": {
                     "lon": -0.4446759226838108,
                     "lat": 39.481784100324354
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/210.jpg"
             },
             {
                 "objectid": 4914,
@@ -6206,7 +6416,8 @@
                 "geo_point_2d": {
                     "lon": -0.3840948994531567,
                     "lat": 39.47379106025571
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/211.jpg"
             },
             {
                 "objectid": 4907,
@@ -6235,7 +6446,8 @@
                 "geo_point_2d": {
                     "lon": -0.354681514427446,
                     "lat": 39.4684383678488
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/212.jpg"
             },
             {
                 "objectid": 4838,
@@ -6265,6 +6477,7 @@
                     "lon": -0.3717515085287368,
                     "lat": 39.46081230213626
                 },
+                "escudo": "https://bdfallas.com/img/escudos/213.jpg",
                 "Premio": "4",
                 "PremioE": "1"
             },
@@ -6284,6 +6497,7 @@
                     "lon": -0.40862333829631203,
                     "lat": 39.504382792785385
                 },
+                "escudo": "https://bdfallas.com/img/escudos/214.jpg",
                 "Premio": "7"
             },
             {
@@ -6314,6 +6528,7 @@
                     "lon": -0.3901402600898215,
                     "lat": 39.46199328729429
                 },
+                "escudo": "https://bdfallas.com/img/escudos/215.jpg",
                 "Premio": "4"
             },
             {
@@ -6343,7 +6558,8 @@
                 "geo_point_2d": {
                     "lon": -0.3738427251341591,
                     "lat": 39.45648921560952
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/216.jpg"
             },
             {
                 "id_falla": 217,
@@ -6361,6 +6577,7 @@
                     "lon": -0.41577686059224034,
                     "lat": 39.50253785821129
                 },
+                "escudo": "https://bdfallas.com/img/escudos/217.jpg",
                 "Premio": "4",
                 "PremioE": "2"
             },
@@ -6392,6 +6609,7 @@
                     "lon": -0.37282416667587365,
                     "lat": 39.450307061197115
                 },
+                "escudo": "https://bdfallas.com/img/escudos/218.jpg",
                 "Premio": "8"
             },
             {
@@ -6421,7 +6639,8 @@
                 "geo_point_2d": {
                     "lon": -0.37662210436087573,
                     "lat": 39.47020756436468
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/219.jpg"
             },
             {
                 "id_falla": 220,
@@ -6439,6 +6658,7 @@
                     "lon": -0.4148590324408392,
                     "lat": 39.51089322172576
                 },
+                "escudo": "https://bdfallas.com/img/escudos/220.jpg",
                 "Premio": "3"
             },
             {
@@ -6456,7 +6676,8 @@
                 "geo_point_2d": {
                     "lon": -0.4140637871330518,
                     "lat": 39.50830844108936
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/221.jpg"
             },
             {
                 "id_falla": 222,
@@ -6474,6 +6695,7 @@
                     "lon": -0.41599419504185636,
                     "lat": 39.510053595254156
                 },
+                "escudo": "https://bdfallas.com/img/escudos/222.jpg",
                 "Premio": "1"
             },
             {
@@ -6503,7 +6725,8 @@
                 "geo_point_2d": {
                     "lon": -0.39359869668803743,
                     "lat": 39.49052484285274
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/223.jpg"
             },
             {
                 "objectid": 5009,
@@ -6532,7 +6755,8 @@
                 "geo_point_2d": {
                     "lon": -0.31785693491881334,
                     "lat": 39.31000407074395
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/224.jpg"
             },
             {
                 "objectid": 4957,
@@ -6562,6 +6786,7 @@
                     "lon": -0.3317872479289378,
                     "lat": 39.46381729935695
                 },
+                "escudo": "https://bdfallas.com/img/escudos/225.jpg",
                 "Premio": "4",
                 "PremioE": "3"
             },
@@ -6592,7 +6817,8 @@
                 "geo_point_2d": {
                     "lon": -0.33303043696653806,
                     "lat": 39.461572181609505
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/226.jpg"
             },
             {
                 "objectid": 4843,
@@ -6622,6 +6848,7 @@
                     "lon": -0.38086370356302623,
                     "lat": 39.49173387148874
                 },
+                "escudo": "https://bdfallas.com/img/escudos/227.jpg",
                 "Premio": "9"
             },
             {
@@ -6652,6 +6879,7 @@
                     "lon": -0.3351432531121549,
                     "lat": 39.463638415411694
                 },
+                "escudo": "https://bdfallas.com/img/escudos/228.jpg",
                 "Premio": "3"
             },
             {
@@ -6670,6 +6898,7 @@
                     "lon": -0.42092934928454406,
                     "lat": 39.47472227854971
                 },
+                "escudo": "https://bdfallas.com/img/escudos/229.jpg",
                 "Premio": "1"
             },
             {
@@ -6700,6 +6929,7 @@
                     "lon": -0.3397869661332229,
                     "lat": 39.42222368126172
                 },
+                "escudo": "https://bdfallas.com/img/escudos/230.jpg",
                 "Premio": "4"
             },
             {
@@ -6730,6 +6960,7 @@
                     "lon": -0.39466452280721553,
                     "lat": 39.46967902886709
                 },
+                "escudo": "https://bdfallas.com/img/escudos/231.jpg",
                 "Premio": "11"
             },
             {
@@ -6759,7 +6990,8 @@
                 "geo_point_2d": {
                     "lon": -0.3932316582120735,
                     "lat": 39.45900337943647
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/232.jpg"
             },
             {
                 "objectid": 5041,
@@ -6788,7 +7020,8 @@
                 "geo_point_2d": {
                     "lon": -0.36238435457431295,
                     "lat": 39.45703637936282
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/233.jpg"
             },
             {
                 "objectid": 5145,
@@ -6817,7 +7050,8 @@
                 "geo_point_2d": {
                     "lon": -0.33073650805865024,
                     "lat": 39.469174944011
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/234.jpg"
             },
             {
                 "objectid": 5000,
@@ -6847,6 +7081,7 @@
                     "lon": -0.4152655550543899,
                     "lat": 39.46739948966099
                 },
+                "escudo": "https://bdfallas.com/img/escudos/235.jpg",
                 "Premio": "10"
             },
             {
@@ -6877,6 +7112,7 @@
                     "lon": -0.38848795472935727,
                     "lat": 39.46035876884558
                 },
+                "escudo": "https://bdfallas.com/img/escudos/236.jpg",
                 "PremioE": "3"
             },
             {
@@ -6906,7 +7142,8 @@
                 "geo_point_2d": {
                     "lon": -0.40565132037422647,
                     "lat": 39.540459361592085
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/237.jpg"
             },
             {
                 "objectid": 5050,
@@ -6935,7 +7172,8 @@
                 "geo_point_2d": {
                     "lon": -0.3997132445378726,
                     "lat": 39.49747852164597
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/238.jpg"
             },
             {
                 "objectid": 5100,
@@ -6964,7 +7202,8 @@
                 "geo_point_2d": {
                     "lon": -0.3741454897237825,
                     "lat": 39.457701025437906
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/239.jpg"
             },
             {
                 "objectid": 4915,
@@ -6994,6 +7233,7 @@
                     "lon": -0.3919070914269896,
                     "lat": 39.46485423704973
                 },
+                "escudo": "https://bdfallas.com/img/escudos/240.jpg",
                 "Premio": "5",
                 "PremioE": "3"
             },
@@ -7024,7 +7264,8 @@
                 "geo_point_2d": {
                     "lon": -0.3566697905647343,
                     "lat": 39.48430173437475
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/241.jpg"
             },
             {
                 "objectid": 5020,
@@ -7054,6 +7295,7 @@
                     "lon": -0.3773745861466461,
                     "lat": 39.467751689734484
                 },
+                "escudo": "https://bdfallas.com/img/escudos/242.jpg",
                 "Premio": "4"
             },
             {
@@ -7083,7 +7325,8 @@
                 "geo_point_2d": {
                     "lon": -0.3797206784766971,
                     "lat": 39.48497303911221
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/243.jpg"
             },
             {
                 "objectid": 4869,
@@ -7113,6 +7356,7 @@
                     "lon": -0.3390263852116358,
                     "lat": 39.4677940297333
                 },
+                "escudo": "https://bdfallas.com/img/escudos/244.jpg",
                 "Premio": "8"
             },
             {
@@ -7143,6 +7387,7 @@
                     "lon": -0.3996240367825288,
                     "lat": 39.4767807098059
                 },
+                "escudo": "https://bdfallas.com/img/escudos/245.jpg",
                 "Premio": "8"
             },
             {
@@ -7172,7 +7417,8 @@
                 "geo_point_2d": {
                     "lon": -0.3877072642967807,
                     "lat": 39.44017378574481
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/246.jpg"
             },
             {
                 "objectid": 5089,
@@ -7202,6 +7448,7 @@
                     "lon": -0.34665833627610876,
                     "lat": 39.4699483292999
                 },
+                "escudo": "https://bdfallas.com/img/escudos/247.jpg",
                 "Premio": "9"
             },
             {
@@ -7232,6 +7479,7 @@
                     "lon": -0.40718453315638786,
                     "lat": 39.4715515385269
                 },
+                "escudo": "https://bdfallas.com/img/escudos/248.jpg",
                 "PremioE": "3"
             },
             {
@@ -7261,7 +7509,8 @@
                 "geo_point_2d": {
                     "lon": -0.39118506635730355,
                     "lat": 39.44884432878056
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/249.jpg"
             },
             {
                 "objectid": 4978,
@@ -7290,7 +7539,8 @@
                 "geo_point_2d": {
                     "lon": -0.3746039405177908,
                     "lat": 39.463208352054146
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/250.jpg"
             },
             {
                 "objectid": 4813,
@@ -7319,7 +7569,8 @@
                 "geo_point_2d": {
                     "lon": -0.371277675154022,
                     "lat": 39.45246262037355
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/251.jpg"
             },
             {
                 "id_falla": 252,
@@ -7337,6 +7588,7 @@
                     "lon": -0.41311782067610375,
                     "lat": 39.51465961479854
                 },
+                "escudo": "https://bdfallas.com/img/escudos/252.jpg",
                 "Premio": "1",
                 "PremioE": "2"
             },
@@ -7355,7 +7607,8 @@
                 "geo_point_2d": {
                     "lon": -0.41633110557270664,
                     "lat": 39.51558796083886
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/253.jpg"
             },
             {
                 "id_falla": 254,
@@ -7372,7 +7625,8 @@
                 "geo_point_2d": {
                     "lon": -0.4171119393935893,
                     "lat": 39.47210177206403
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/254.jpg"
             },
             {
                 "id_falla": 255,
@@ -7389,7 +7643,8 @@
                 "geo_point_2d": {
                     "lon": -0.42376195112828763,
                     "lat": 39.478782352008125
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/255.jpg"
             },
             {
                 "objectid": 4852,
@@ -7418,7 +7673,8 @@
                 "geo_point_2d": {
                     "lon": -0.3379373810389744,
                     "lat": 39.471492565773
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/256.jpg"
             },
             {
                 "objectid": 5071,
@@ -7448,6 +7704,7 @@
                     "lon": -0.3737189890264384,
                     "lat": 39.49690862008502
                 },
+                "escudo": "https://bdfallas.com/img/escudos/257.jpg",
                 "Premio": "3",
                 "PremioE": "1"
             },
@@ -7478,7 +7735,8 @@
                 "geo_point_2d": {
                     "lon": -0.3905431396733902,
                     "lat": 39.45301536477047
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/258.jpg"
             },
             {
                 "objectid": 5003,
@@ -7507,7 +7765,8 @@
                 "geo_point_2d": {
                     "lon": -0.37472024652913544,
                     "lat": 39.45299133142912
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/259.jpg"
             },
             {
                 "objectid": 4923,
@@ -7537,6 +7796,7 @@
                     "lon": -0.40444333961030704,
                     "lat": 39.453587061853845
                 },
+                "escudo": "https://bdfallas.com/img/escudos/260.jpg",
                 "Premio": "2",
                 "PremioE": "1"
             },
@@ -7568,6 +7828,7 @@
                     "lon": -0.39773155383276465,
                     "lat": 39.46474673453113
                 },
+                "escudo": "https://bdfallas.com/img/escudos/261.jpg",
                 "Premio": "3"
             },
             {
@@ -7597,7 +7858,8 @@
                 "geo_point_2d": {
                     "lon": -0.42694251974195235,
                     "lat": 39.49966059930721
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/262.jpg"
             },
             {
                 "id_falla": 263,
@@ -7614,7 +7876,8 @@
                 "geo_point_2d": {
                     "lon": -0.4153096624515568,
                     "lat": 39.47346478491602
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/263.jpg"
             },
             {
                 "id_falla": 264,
@@ -7632,6 +7895,7 @@
                     "lon": -0.4193959186337785,
                     "lat": 39.470685682072904
                 },
+                "escudo": "https://bdfallas.com/img/escudos/264.jpg",
                 "Premio": "4"
             },
             {
@@ -7661,7 +7925,8 @@
                 "geo_point_2d": {
                     "lon": -0.374884347501508,
                     "lat": 39.432173663583576
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/265.jpg"
             },
             {
                 "id_falla": 266,
@@ -7679,6 +7944,7 @@
                     "lon": -0.41272265903468286,
                     "lat": 39.51049145527254
                 },
+                "escudo": "https://bdfallas.com/img/escudos/266.jpg",
                 "Premio": "4"
             },
             {
@@ -7697,6 +7963,7 @@
                     "lon": -0.40403941296629303,
                     "lat": 39.50254558900849
                 },
+                "escudo": "https://bdfallas.com/img/escudos/267.jpg",
                 "Premio": "12"
             },
             {
@@ -7714,7 +7981,8 @@
                 "geo_point_2d": {
                     "lon": -0.4189344503116291,
                     "lat": 39.5163455248432
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/268.jpg"
             },
             {
                 "id_falla": 269,
@@ -7731,7 +7999,8 @@
                 "geo_point_2d": {
                     "lon": -0.4126126925037021,
                     "lat": 39.51703606433828
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/269.jpg"
             },
             {
                 "objectid": 4873,
@@ -7761,6 +8030,7 @@
                     "lon": -0.3607326806859068,
                     "lat": 39.48293825647196
                 },
+                "escudo": "https://bdfallas.com/img/escudos/270.jpg",
                 "Premio": "6",
                 "PremioE": "3"
             },
@@ -7792,6 +8062,7 @@
                     "lon": -0.3734182352053092,
                     "lat": 39.47553053881567
                 },
+                "escudo": "https://bdfallas.com/img/escudos/271.jpg",
                 "Premio": "3"
             },
             {
@@ -7822,6 +8093,7 @@
                     "lon": -0.3563404758400985,
                     "lat": 39.47700261805716
                 },
+                "escudo": "https://bdfallas.com/img/escudos/272.jpg",
                 "Premio": "4"
             },
             {
@@ -7851,7 +8123,8 @@
                 "geo_point_2d": {
                     "lon": -0.3681322788282425,
                     "lat": 39.46356092517482
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/273.jpg"
             },
             {
                 "objectid": 4867,
@@ -7881,6 +8154,7 @@
                     "lon": -0.4178785752519145,
                     "lat": 39.49746987963352
                 },
+                "escudo": "https://bdfallas.com/img/escudos/274.jpg",
                 "Premio": "11"
             },
             {
@@ -7898,7 +8172,8 @@
                 "geo_point_2d": {
                     "lon": -0.4049705413343069,
                     "lat": 39.505075561436044
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/275.jpg"
             },
             {
                 "objectid": 5097,
@@ -7928,6 +8203,7 @@
                     "lon": -0.37986959172337775,
                     "lat": 39.44915317522933
                 },
+                "escudo": "https://bdfallas.com/img/escudos/276.jpg",
                 "Premio": "1"
             },
             {
@@ -7957,7 +8233,8 @@
                 "geo_point_2d": {
                     "lon": -0.3834250646655532,
                     "lat": 39.489254816493364
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/277.jpg"
             },
             {
                 "objectid": 4888,
@@ -7987,6 +8264,7 @@
                     "lon": -0.36740986607630627,
                     "lat": 39.466282687706006
                 },
+                "escudo": "https://bdfallas.com/img/escudos/278.jpg",
                 "Premio": "10"
             },
             {
@@ -8017,6 +8295,7 @@
                     "lon": -0.36690804986603626,
                     "lat": 39.46182218665583
                 },
+                "escudo": "https://bdfallas.com/img/escudos/279.jpg",
                 "Premio": "6"
             },
             {
@@ -8047,6 +8326,7 @@
                     "lon": -0.40869583327406844,
                     "lat": 39.46704952555757
                 },
+                "escudo": "https://bdfallas.com/img/escudos/280.jpg",
                 "Premio": "1"
             },
             {
@@ -8076,7 +8356,8 @@
                 "geo_point_2d": {
                     "lon": -0.3720636032781886,
                     "lat": 39.48536060474848
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/281.jpg"
             },
             {
                 "objectid": 4955,
@@ -8105,7 +8386,8 @@
                 "geo_point_2d": {
                     "lon": -0.3993194027976139,
                     "lat": 39.462133487937685
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/282.jpg"
             },
             {
                 "objectid": 4824,
@@ -8135,6 +8417,7 @@
                     "lon": -0.3633524959570204,
                     "lat": 39.46503559236648
                 },
+                "escudo": "https://bdfallas.com/img/escudos/283.jpg",
                 "Premio": "2"
             },
             {
@@ -8165,6 +8448,7 @@
                     "lon": -0.40345926033496476,
                     "lat": 39.463542797929584
                 },
+                "escudo": "https://bdfallas.com/img/escudos/284.jpg",
                 "Premio": "6"
             },
             {
@@ -8195,6 +8479,7 @@
                     "lon": -0.35099535537486076,
                     "lat": 39.46799454512464
                 },
+                "escudo": "https://bdfallas.com/img/escudos/285.jpg",
                 "Premio": "1"
             },
             {
@@ -8225,6 +8510,7 @@
                     "lon": -0.41352278127992215,
                     "lat": 39.4703536252716
                 },
+                "escudo": "https://bdfallas.com/img/escudos/286.jpg",
                 "Premio": "2"
             },
             {
@@ -8254,7 +8540,8 @@
                 "geo_point_2d": {
                     "lon": -0.37741928924965046,
                     "lat": 39.498171458274726
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/287.jpg"
             },
             {
                 "objectid": 4950,
@@ -8283,7 +8570,8 @@
                 "geo_point_2d": {
                     "lon": -0.39012458308617143,
                     "lat": 39.492963347730765
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/288.jpg"
             },
             {
                 "objectid": 4966,
@@ -8313,6 +8601,7 @@
                     "lon": -0.36987256054880074,
                     "lat": 39.46802481927411
                 },
+                "escudo": "https://bdfallas.com/img/escudos/289.jpg",
                 "Premio": "3",
                 "PremioE": "3"
             },
@@ -8343,7 +8632,8 @@
                 "geo_point_2d": {
                     "lon": -0.358425326048514,
                     "lat": 39.521355896197555
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/290.jpg"
             },
             {
                 "objectid": 4896,
@@ -8372,7 +8662,8 @@
                 "geo_point_2d": {
                     "lon": -0.39159405472765896,
                     "lat": 39.451570152583095
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/291.jpg"
             },
             {
                 "objectid": 5118,
@@ -8402,6 +8693,7 @@
                     "lon": -0.3953971581406712,
                     "lat": 39.481608702760916
                 },
+                "escudo": "https://bdfallas.com/img/escudos/292.jpg",
                 "Premio": "2"
             },
             {
@@ -8431,7 +8723,8 @@
                 "geo_point_2d": {
                     "lon": -0.4207335930376246,
                     "lat": 39.49926935888376
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/293.jpg"
             },
             {
                 "objectid": 5103,
@@ -8461,6 +8754,7 @@
                     "lon": -0.3909764853881572,
                     "lat": 39.459644712061916
                 },
+                "escudo": "https://bdfallas.com/img/escudos/294.jpg",
                 "Premio": "3"
             },
             {
@@ -8491,6 +8785,7 @@
                     "lon": -0.38125077526855905,
                     "lat": 39.49588544497863
                 },
+                "escudo": "https://bdfallas.com/img/escudos/295.jpg",
                 "PremioE": "1"
             },
             {
@@ -8521,6 +8816,7 @@
                     "lon": -0.34433241671383663,
                     "lat": 39.47429651460324
                 },
+                "escudo": "https://bdfallas.com/img/escudos/296.jpg",
                 "PremioE": "1"
             },
             {
@@ -8550,7 +8846,8 @@
                 "geo_point_2d": {
                     "lon": -0.4033495755875469,
                     "lat": 39.479311833161084
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/297.jpg"
             },
             {
                 "objectid": 5055,
@@ -8580,6 +8877,7 @@
                     "lon": -0.37253284158863637,
                     "lat": 39.49531013667567
                 },
+                "escudo": "https://bdfallas.com/img/escudos/298.jpg",
                 "PremioE": "2"
             },
             {
@@ -8610,6 +8908,7 @@
                     "lon": -0.3926302284069324,
                     "lat": 39.42711859200086
                 },
+                "escudo": "https://bdfallas.com/img/escudos/299.jpg",
                 "Premio": "8"
             },
             {
@@ -8640,6 +8939,7 @@
                     "lon": -0.3917286539946449,
                     "lat": 39.47168631594376
                 },
+                "escudo": "https://bdfallas.com/img/escudos/300.jpg",
                 "Premio": "6"
             },
             {
@@ -8670,6 +8970,7 @@
                     "lon": -0.39069179055456327,
                     "lat": 39.46569756541261
                 },
+                "escudo": "https://bdfallas.com/img/escudos/302.jpg",
                 "Premio": "2",
                 "PremioE": "1"
             },
@@ -8700,7 +9001,8 @@
                 "geo_point_2d": {
                     "lon": -0.3615592745139162,
                     "lat": 39.48171019289159
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/303.jpg"
             },
             {
                 "objectid": 5036,
@@ -8729,7 +9031,8 @@
                 "geo_point_2d": {
                     "lon": -0.3390484374350722,
                     "lat": 39.459911855308036
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/304.jpg"
             },
             {
                 "objectid": 5099,
@@ -8758,7 +9061,8 @@
                 "geo_point_2d": {
                     "lon": -0.3737676386276045,
                     "lat": 39.47186774954473
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/305.jpg"
             },
             {
                 "objectid": 5127,
@@ -8788,6 +9092,7 @@
                     "lon": -0.3469497028937954,
                     "lat": 39.47216687324881
                 },
+                "escudo": "https://bdfallas.com/img/escudos/306.jpg",
                 "Premio": "7"
             },
             {
@@ -8818,6 +9123,7 @@
                     "lon": -0.3673768641582282,
                     "lat": 39.44871221639871
                 },
+                "escudo": "https://bdfallas.com/img/escudos/307.jpg",
                 "Premio": "7"
             },
             {
@@ -8848,6 +9154,7 @@
                     "lon": -0.4028847355135055,
                     "lat": 39.46574816053042
                 },
+                "escudo": "https://bdfallas.com/img/escudos/308.jpg",
                 "Premio": "5"
             },
             {
@@ -8878,6 +9185,7 @@
                     "lon": -0.3774221698567762,
                     "lat": 39.47606471901717
                 },
+                "escudo": "https://bdfallas.com/img/escudos/309.jpg",
                 "Premio": "2",
                 "PremioE": "2"
             },
@@ -8909,6 +9217,7 @@
                     "lon": -0.3804479169630393,
                     "lat": 39.46260763530272
                 },
+                "escudo": "https://bdfallas.com/img/escudos/310.jpg",
                 "Premio": "2"
             },
             {
@@ -8938,7 +9247,8 @@
                 "geo_point_2d": {
                     "lon": -0.3957911890306725,
                     "lat": 39.47852444212378
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/311.jpg"
             },
             {
                 "objectid": 5053,
@@ -8967,7 +9277,8 @@
                 "geo_point_2d": {
                     "lon": -0.3507873043867637,
                     "lat": 39.471130657003656
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/312.jpg"
             },
             {
                 "objectid": 4860,
@@ -8997,6 +9308,7 @@
                     "lon": -0.3780316053508553,
                     "lat": 39.51717437790738
                 },
+                "escudo": "https://bdfallas.com/img/escudos/313.jpg",
                 "Premio": "6",
                 "PremioE": "2"
             },
@@ -9027,7 +9339,8 @@
                 "geo_point_2d": {
                     "lon": -0.3428958715182895,
                     "lat": 39.4315152939176
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/314.jpg"
             },
             {
                 "objectid": 4850,
@@ -9057,6 +9370,7 @@
                     "lon": -0.4003576780791572,
                     "lat": 39.459268438274826
                 },
+                "escudo": "https://bdfallas.com/img/escudos/316.jpg",
                 "Premio": "3",
                 "PremioE": "1"
             },
@@ -9088,6 +9402,7 @@
                     "lon": -0.4031417034602587,
                     "lat": 39.45634263283864
                 },
+                "escudo": "https://bdfallas.com/img/escudos/317.jpg",
                 "Premio": "11"
             },
             {
@@ -9117,7 +9432,8 @@
                 "geo_point_2d": {
                     "lon": -0.3487247982529765,
                     "lat": 39.481324121349914
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/318.jpg"
             },
             {
                 "objectid": 4865,
@@ -9147,6 +9463,7 @@
                     "lon": -0.3691418916563294,
                     "lat": 39.491850685338285
                 },
+                "escudo": "https://bdfallas.com/img/escudos/319.jpg",
                 "Premio": "6"
             },
             {
@@ -9177,6 +9494,7 @@
                     "lon": -0.3898406910079974,
                     "lat": 39.49387795534716
                 },
+                "escudo": "https://bdfallas.com/img/escudos/320.jpg",
                 "Premio": "3",
                 "PremioE": "2"
             },
@@ -9208,6 +9526,7 @@
                     "lon": -0.39994799188087216,
                     "lat": 39.48505060110104
                 },
+                "escudo": "https://bdfallas.com/img/escudos/321.jpg",
                 "Premio": "5"
             },
             {
@@ -9238,6 +9557,7 @@
                     "lon": -0.32912996251536797,
                     "lat": 39.46894951640295
                 },
+                "escudo": "https://bdfallas.com/img/escudos/322.jpg",
                 "Premio": "5"
             },
             {
@@ -9267,7 +9587,8 @@
                 "geo_point_2d": {
                     "lon": -0.3497112392603484,
                     "lat": 39.4633669010947
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/323.jpg"
             },
             {
                 "objectid": 5108,
@@ -9297,6 +9618,7 @@
                     "lon": -0.38070728342626975,
                     "lat": 39.4530471194324
                 },
+                "escudo": "https://bdfallas.com/img/escudos/324.jpg",
                 "PremioE": "3"
             },
             {
@@ -9326,7 +9648,8 @@
                 "geo_point_2d": {
                     "lon": -0.404595594475544,
                     "lat": 39.48322855718786
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/325.jpg"
             },
             {
                 "objectid": 4918,
@@ -9356,6 +9679,7 @@
                     "lon": -0.39052991297316186,
                     "lat": 39.43350870092288
                 },
+                "escudo": "https://bdfallas.com/img/escudos/326.jpg",
                 "Premio": "1"
             },
             {
@@ -9385,7 +9709,8 @@
                 "geo_point_2d": {
                     "lon": -0.39649082294285554,
                     "lat": 39.46205179165831
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/327.jpg"
             },
             {
                 "objectid": 4959,
@@ -9414,7 +9739,8 @@
                 "geo_point_2d": {
                     "lon": -0.33055559683662017,
                     "lat": 39.4826516487807
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/328.jpg"
             },
             {
                 "objectid": 5137,
@@ -9444,6 +9770,7 @@
                     "lon": -0.2971537689519083,
                     "lat": 39.30801699570303
                 },
+                "escudo": "https://bdfallas.com/img/escudos/329.jpg",
                 "Premio": "6"
             },
             {
@@ -9474,6 +9801,7 @@
                     "lon": -0.35675921723112397,
                     "lat": 39.46971704584027
                 },
+                "escudo": "https://bdfallas.com/img/escudos/330.jpg",
                 "Premio": "12"
             },
             {
@@ -9492,6 +9820,7 @@
                     "lon": -0.43829879649420844,
                     "lat": 39.48267191759362
                 },
+                "escudo": "https://bdfallas.com/img/escudos/331.jpg",
                 "Premio": "10"
             },
             {
@@ -9510,6 +9839,7 @@
                     "lon": -0.443574541640798,
                     "lat": 39.48258655468999
                 },
+                "escudo": "https://bdfallas.com/img/escudos/332.jpg",
                 "Premio": "9"
             },
             {
@@ -9527,7 +9857,8 @@
                 "geo_point_2d": {
                     "lon": -0.4233198608907854,
                     "lat": 39.467187744884335
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/333.jpg"
             },
             {
                 "id_falla": 334,
@@ -9545,6 +9876,7 @@
                     "lon": -0.4206411221493122,
                     "lat": 39.472778588281614
                 },
+                "escudo": "https://bdfallas.com/img/escudos/334.jpg",
                 "Premio": "2"
             },
             {
@@ -9562,7 +9894,8 @@
                 "geo_point_2d": {
                     "lon": -0.4190139804464063,
                     "lat": 39.47905837478399
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/335.jpg"
             },
             {
                 "objectid": 4857,
@@ -9592,6 +9925,7 @@
                     "lon": -0.39281340655909247,
                     "lat": 39.488057158784265
                 },
+                "escudo": "https://bdfallas.com/img/escudos/336.jpg",
                 "Premio": "3"
             },
             {
@@ -9621,7 +9955,8 @@
                 "geo_point_2d": {
                     "lon": -0.3333067767609018,
                     "lat": 39.383109188222605
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/338.jpg"
             },
             {
                 "objectid": 4828,
@@ -9650,7 +9985,8 @@
                 "geo_point_2d": {
                     "lon": -0.3772671542038569,
                     "lat": 39.48008514919252
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/339.jpg"
             },
             {
                 "objectid": 4919,
@@ -9680,6 +10016,7 @@
                     "lon": -0.3867734708515959,
                     "lat": 39.455265737447746
                 },
+                "escudo": "https://bdfallas.com/img/escudos/340.jpg",
                 "Premio": "3"
             },
             {
@@ -9709,7 +10046,8 @@
                 "geo_point_2d": {
                     "lon": -0.38938505671853046,
                     "lat": 39.449292699953794
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/341.jpg"
             },
             {
                 "objectid": 5004,
@@ -9739,6 +10077,7 @@
                     "lon": -0.3571350504069377,
                     "lat": 39.488624944043536
                 },
+                "escudo": "https://bdfallas.com/img/escudos/342.jpg",
                 "Premio": "1"
             },
             {
@@ -9769,6 +10108,7 @@
                     "lon": -0.3709931001417475,
                     "lat": 39.44765777458184
                 },
+                "escudo": "https://bdfallas.com/img/escudos/343.jpg",
                 "Premio": "2"
             },
             {
@@ -9799,6 +10139,7 @@
                     "lon": -0.35442051025428367,
                     "lat": 39.47441479319403
                 },
+                "escudo": "https://bdfallas.com/img/escudos/344.jpg",
                 "Premio": "8"
             },
             {
@@ -9828,7 +10169,8 @@
                 "geo_point_2d": {
                     "lon": -0.32741127595698505,
                     "lat": 39.47767532871639
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/346.jpg"
             },
             {
                 "objectid": 5002,
@@ -9858,6 +10200,7 @@
                     "lon": -0.32850237965088286,
                     "lat": 39.47424055884697
                 },
+                "escudo": "https://bdfallas.com/img/escudos/347.jpg",
                 "Premio": "3"
             },
             {
@@ -9888,6 +10231,7 @@
                     "lon": -0.3739215059338786,
                     "lat": 39.46210003770514
                 },
+                "escudo": "https://bdfallas.com/img/escudos/348.jpg",
                 "PremioE": "2"
             },
             {
@@ -9918,6 +10262,7 @@
                     "lon": -0.33654779566390125,
                     "lat": 39.46627553490898
                 },
+                "escudo": "https://bdfallas.com/img/escudos/349.jpg",
                 "Premio": "6"
             },
             {
@@ -9935,7 +10280,8 @@
                 "geo_point_2d": {
                     "lon": -0.44838352362411255,
                     "lat": 39.48524974362388
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/350.jpg"
             },
             {
                 "objectid": 4854,
@@ -9964,7 +10310,8 @@
                 "geo_point_2d": {
                     "lon": -0.3315674545359686,
                     "lat": 39.47782364166739
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/351.jpg"
             },
             {
                 "objectid": 4926,
@@ -9994,6 +10341,7 @@
                     "lon": -0.35844506393542175,
                     "lat": 39.49183166236876
                 },
+                "escudo": "https://bdfallas.com/img/escudos/352.jpg",
                 "Premio": "9"
             },
             {
@@ -10023,7 +10371,8 @@
                 "geo_point_2d": {
                     "lon": -0.4085524358712818,
                     "lat": 39.471768936459604
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/353.jpg"
             },
             {
                 "objectid": 4925,
@@ -10052,7 +10401,8 @@
                 "geo_point_2d": {
                     "lon": -0.35954650200303595,
                     "lat": 39.45466548019984
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/354.jpg"
             },
             {
                 "id_falla": 355,
@@ -10069,7 +10419,8 @@
                 "geo_point_2d": {
                     "lon": -0.4279811474064103,
                     "lat": 39.463558731763484
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/355.jpg"
             },
             {
                 "objectid": 4993,
@@ -10098,7 +10449,8 @@
                 "geo_point_2d": {
                     "lon": -0.4191242078180465,
                     "lat": 39.50486614317032
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/356.jpg"
             },
             {
                 "id_falla": 357,
@@ -10116,6 +10468,7 @@
                     "lon": -0.41553938629885356,
                     "lat": 39.47532662700009
                 },
+                "escudo": "https://bdfallas.com/img/escudos/357.jpg",
                 "Premio": "4"
             },
             {
@@ -10146,6 +10499,7 @@
                     "lon": -0.39502941325215835,
                     "lat": 39.49631468758309
                 },
+                "escudo": "https://bdfallas.com/img/escudos/358.jpg",
                 "Premio": "4"
             },
             {
@@ -10176,6 +10530,7 @@
                     "lon": -0.3918781223702056,
                     "lat": 39.44663089770351
                 },
+                "escudo": "https://bdfallas.com/img/escudos/359.jpg",
                 "Premio": "4"
             },
             {
@@ -10206,6 +10561,7 @@
                     "lon": -0.353724216433461,
                     "lat": 39.47694606123328
                 },
+                "escudo": "https://bdfallas.com/img/escudos/360.jpg",
                 "PremioE": "1"
             },
             {
@@ -10235,7 +10591,8 @@
                 "geo_point_2d": {
                     "lon": -0.4048301514353266,
                     "lat": 39.49469301474271
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/361.jpg"
             },
             {
                 "id_falla": 362,
@@ -10253,6 +10610,7 @@
                     "lon": -0.4608552672858819,
                     "lat": 39.47617283431102
                 },
+                "escudo": "https://bdfallas.com/img/escudos/362.jpg",
                 "Premio": "2"
             },
             {
@@ -10270,7 +10628,8 @@
                 "geo_point_2d": {
                     "lon": -0.4458575760979205,
                     "lat": 39.484826804081344
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/363.jpg"
             },
             {
                 "id_falla": 364,
@@ -10287,7 +10646,8 @@
                 "geo_point_2d": {
                     "lon": -0.4399681030309641,
                     "lat": 39.48093365934474
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/364.jpg"
             },
             {
                 "objectid": 4977,
@@ -10317,6 +10677,7 @@
                     "lon": -0.384560914975047,
                     "lat": 39.491657406622934
                 },
+                "escudo": "https://bdfallas.com/img/escudos/365.jpg",
                 "PremioE": "3"
             },
             {
@@ -10347,6 +10708,7 @@
                     "lon": -0.37065933733266543,
                     "lat": 39.49745257459591
                 },
+                "escudo": "https://bdfallas.com/img/escudos/366.jpg",
                 "Premio": "8"
             },
             {
@@ -10377,6 +10739,7 @@
                     "lon": -0.4019744769216952,
                     "lat": 39.46049617277406
                 },
+                "escudo": "https://bdfallas.com/img/escudos/367.jpg",
                 "Premio": "6"
             },
             {
@@ -10406,7 +10769,8 @@
                 "geo_point_2d": {
                     "lon": -0.3593050941860082,
                     "lat": 39.457030196618064
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/368.jpg"
             },
             {
                 "objectid": 4960,
@@ -10435,7 +10799,8 @@
                 "geo_point_2d": {
                     "lon": -0.35389882888663265,
                     "lat": 39.48604202864177
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/369.jpg"
             },
             {
                 "objectid": 4817,
@@ -10464,7 +10829,8 @@
                 "geo_point_2d": {
                     "lon": -0.3750743192894241,
                     "lat": 39.49088229762195
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/370.jpg"
             },
             {
                 "objectid": 5048,
@@ -10494,6 +10860,7 @@
                     "lon": -0.413282900120297,
                     "lat": 39.46792982172759
                 },
+                "escudo": "https://bdfallas.com/img/escudos/371.jpg",
                 "Premio": "3"
             },
             {
@@ -10524,6 +10891,7 @@
                     "lon": -0.35863690912085333,
                     "lat": 39.46528639211273
                 },
+                "escudo": "https://bdfallas.com/img/escudos/373.jpg",
                 "Premio": "8"
             },
             {
@@ -10554,6 +10922,7 @@
                     "lon": -0.381850084005313,
                     "lat": 39.49367087270659
                 },
+                "escudo": "https://bdfallas.com/img/escudos/374.jpg",
                 "Premio": "4",
                 "PremioE": "3"
             },
@@ -10585,6 +10954,7 @@
                     "lon": -0.3550974321229795,
                     "lat": 39.461834536166066
                 },
+                "escudo": "https://bdfallas.com/img/escudos/375.jpg",
                 "Premio": "5"
             },
             {
@@ -10614,7 +10984,8 @@
                 "geo_point_2d": {
                     "lon": -0.34981762918440623,
                     "lat": 39.45833266721674
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/377.jpg"
             },
             {
                 "objectid": 4971,
@@ -10644,6 +11015,7 @@
                     "lon": -0.40182444701162895,
                     "lat": 39.49219526139716
                 },
+                "escudo": "https://bdfallas.com/img/escudos/379.jpg",
                 "Premio": "8"
             },
             {
@@ -10674,6 +11046,7 @@
                     "lon": -0.3476997788345594,
                     "lat": 39.45799717655648
                 },
+                "escudo": "https://bdfallas.com/img/escudos/380.jpg",
                 "Premio": "2"
             },
             {
@@ -10703,7 +11076,8 @@
                 "geo_point_2d": {
                     "lon": -0.27778532579105064,
                     "lat": 39.28052325606388
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/381.jpg"
             },
             {
                 "objectid": 4859,
@@ -10732,7 +11106,8 @@
                 "geo_point_2d": {
                     "lon": -0.399221002649132,
                     "lat": 39.49331139022875
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/383.jpg"
             },
             {
                 "objectid": 4940,
@@ -10762,6 +11137,7 @@
                     "lon": -0.3650317499096773,
                     "lat": 39.491670787473986
                 },
+                "escudo": "https://bdfallas.com/img/escudos/384.jpg",
                 "Premio": "8"
             },
             {
@@ -10791,7 +11167,8 @@
                 "geo_point_2d": {
                     "lon": -0.41120491370361,
                     "lat": 39.4672035778067
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/385.jpg"
             },
             {
                 "objectid": 5044,
@@ -10837,7 +11214,8 @@
                 "geo_point_2d": {
                     "lon": -0.3440165538503665,
                     "lat": 39.44462981440439
-                }
+                },
+                "escudo": "https://bdfallas.com/img/escudos/387.jpg"
             },
             {
                 "objectid": 4879,

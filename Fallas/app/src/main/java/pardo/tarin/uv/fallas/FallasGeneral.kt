@@ -19,7 +19,7 @@ open class FallasGeneral: Fragment() {
     lateinit var originalFallasData: ArrayList<Falla>
     var fallasPorSeccion: List<List<Any>> = listOf()
 
-    suspend fun getFallas(_url: String, callback: (List<List<Any>>) -> Unit) = withContext(Dispatchers.IO) {
+    /*suspend fun getFallas(_url: String, callback: (List<List<Any>>) -> Unit) = withContext(Dispatchers.IO) {
         val url = _url
         val listaFallas = ArrayList<Falla>()
         val fallasOrdenadas: List<List<Any>>
@@ -111,7 +111,7 @@ open class FallasGeneral: Fragment() {
         }*/
 
         return matrizOrdenada
-    }
+    }*/
 
     fun isNetworkAvailable(context: Context): Boolean {
         val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager

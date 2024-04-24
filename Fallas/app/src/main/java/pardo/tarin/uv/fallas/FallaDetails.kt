@@ -84,35 +84,12 @@ class FallaDetails : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         Log.d("FallaDetails", "${falla.boceto}")
         val imageview = binding.boceto
-        binding.progressBarBoceto.visibility = View.VISIBLE
         Glide.with(this)
             .load("${falla.boceto}")
-            .listener(object : RequestListener<Drawable> {
-                override fun onLoadFailed(
-                    e: GlideException?,
-                    model: Any?,
-                    target: com.bumptech.glide.request.target.Target<Drawable>?,
-                    isFirstResource: Boolean
-                ): Boolean {
-                    // Aquí puedes manejar el caso de que la carga de la imagen falle
-                    return false
-                }
-
-                override fun onResourceReady(
-                    resource: Drawable?,
-                    model: Any?,
-                    target: com.bumptech.glide.request.target.Target<Drawable>?,
-                    dataSource: DataSource?,
-                    isFirstResource: Boolean
-                ): Boolean {
-                    // Aquí puedes manejar el caso de que la imagen se haya cargado correctamente
-                    // Por ejemplo, puedes ocultar la barra de progreso aquí
-                    binding.progressBarBoceto.visibility = View.GONE
-                    return false
-                }
-            })
             .into(imageview)
-        binding.progressBarBoceto.visibility = View.GONE
+        Glide.with(this)
+            .load("${falla.escudo}")
+            .into(binding.escudo)
         binding.nombreBoceto.text = falla.lema
         binding.nombreArtista.text = "Artista: ${falla.artista}"
         if(tipo == "adultas")
