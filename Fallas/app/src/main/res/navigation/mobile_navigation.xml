@@ -56,6 +56,9 @@
         <action
             android:id="@+id/action_nav_home_to_mapaFragment"
             app:destination="@id/mapaFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_calendarioFragment"
+            app:destination="@id/calendarioFragment" />
     </fragment>
 
     <fragment
@@ -85,4 +88,9 @@
                 app:argType="string" />
         </action>
     </fragment>
+    <fragment
+        android:id="@+id/calendarioFragment"
+        android:name="pardo.tarin.uv.fallas.CalendarioFragment"
+        android:label="Calendario"
+        tools:layout="@layout/fragment_calendario" />
 </navigation>
