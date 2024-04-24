@@ -43,12 +43,15 @@ class FallasFragment: FallasGeneral() {
 
         binding = FragmentFallasBinding.inflate(inflater, container, false)
         _view = binding.root
+        fallasViewModel = ViewModelProvider(requireActivity()).get(FallasViewModel::class.java)
         tipo = arguments?.getString("tipo").toString()
 
-        (activity as AppCompatActivity).supportActionBar?.title = "Fallas $tipo"
+        if(tipo == "infantiles")
+            (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.menu_infantiles)
+        else if(tipo == "adultas")
+            (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.menu_adultas)
 
         //infantilesViewModel = ViewModelProvider(requireActivity()).get(InfantilesViewModel::class.java)
-        fallasViewModel = ViewModelProvider(requireActivity()).get(FallasViewModel::class.java)
 
         cargarFallas(tipo)
 
@@ -59,8 +62,6 @@ class FallasFragment: FallasGeneral() {
 
             cargarFallas(tipo)
         }
-
-
 
         /*lifecycleScope.launchWhenStarted {
             infantilesViewModel?.infantilesPorSeccion?.collect { fallas ->

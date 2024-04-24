@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_home">Home</string>
+    <string name="menu_infantiles">CHILDREN\'S MONUMENTS</string>
+    <string name="menu_adultas">ADULT MONUMENTS</string>
+
+    <string name="home_mapa">MAP</string>
+    <string name="home_calendario">CALENDAR</string>
+
+    <string name="filtrar">Filter by sections</string>
+
+    <string name="premioSeccion">Section award</string>
+    <string name="premioIG">Ingenuity and grace award</string>
+</resources>

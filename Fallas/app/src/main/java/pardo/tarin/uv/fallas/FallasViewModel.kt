@@ -79,6 +79,7 @@ class FallasViewModel: ViewModel() {
                     val record = records.getJSONObject(i)
                     val id = record.optInt("id_falla")
                     val nombre = record.optString("nombre", null)
+                    val escudo = record.optString("escudo", null)
                     val seccion = record.optString("seccion", null)
                     val premio = record.optString("Premio", "Sin premio")
                     val premioE = record.optString("PremioE", "Sin premio")
@@ -93,7 +94,7 @@ class FallasViewModel: ViewModel() {
                     val lon = geo.optDouble("lon")
                     val coordenadas = Pair(lat, lon)
 
-                    val falla = Falla(id, nombre, seccion, premio, premioE, fallera, presidente, artista, lema, boceto, experim, coordenadas)
+                    val falla = Falla(id, nombre, escudo, seccion, premio, premioE, fallera, presidente, artista, lema, boceto, experim, coordenadas)
                     listaFallas.add(falla)
                 }
             }

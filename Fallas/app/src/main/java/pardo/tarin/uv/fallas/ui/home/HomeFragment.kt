@@ -36,7 +36,7 @@ class HomeFragment : Fragment() {
         val infButton = binding.monumentosInfButton
         var scaledDrawable = scaleDrawable(R.drawable.pareja_falleros_infantil, 100, 100)
         infButton.setCompoundDrawablesWithIntrinsicBounds(scaledDrawable, null, null, null)
-        infButton.setText("MONUMENTOS INFANTILES")
+        infButton.setText(getString(R.string.menu_infantiles))
 
         infButton.setOnClickListener {
             val action = HomeFragmentDirections.actionNavHomeToFallasFragment("infantiles")
@@ -46,7 +46,7 @@ class HomeFragment : Fragment() {
         val adultosButton = binding.monumentosAdultosButton
         scaledDrawable = scaleDrawable(R.drawable.falla_dibujo_boton, 90, 127)
         adultosButton.setCompoundDrawablesWithIntrinsicBounds(scaledDrawable, null, null, null)
-        adultosButton.setText("MONUMENTOS ADULTOS")
+        adultosButton.setText(getString(R.string.menu_adultas))
 
         adultosButton.setOnClickListener {
             val action = HomeFragmentDirections.actionNavHomeToFallasFragment("adultas")
@@ -56,7 +56,7 @@ class HomeFragment : Fragment() {
         val mapaButton = binding.mapaButton
         scaledDrawable = scaleDrawable(R.drawable.mapa, 80, 80)
         mapaButton.setCompoundDrawablesWithIntrinsicBounds(null, scaledDrawable, null, null)
-        mapaButton.setText("MAPA")
+        mapaButton.setText(getString(R.string.home_mapa))
 
         mapaButton.setOnClickListener {
             findNavController().navigate(R.id.action_nav_home_to_mapaFragment)
@@ -65,7 +65,7 @@ class HomeFragment : Fragment() {
         val eventosButton = binding.eventosButton
         scaledDrawable = scaleDrawable(R.drawable.calendario, 80, 80)
         eventosButton.setCompoundDrawablesWithIntrinsicBounds(null, scaledDrawable, null, null)
-        eventosButton.setText("EVENTOS")
+        eventosButton.setText(getString(R.string.home_calendario))
 
         eventosButton.setOnClickListener {
             findNavController().navigate(R.id.action_nav_home_to_calendarioFragment)

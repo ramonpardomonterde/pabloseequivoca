@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Fallas</string>
+    <string name="app_name" translatable="false">Fallas 2024</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -12,4 +12,13 @@
     <string name="menu_slideshow">Slideshow</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_infantiles">Fallas Infantiles</string>
+    <string name="menu_adultas">Fallas Adultas</string>
+
+    <string name="home_mapa">Mapa</string>
+    <string name="home_calendario">Calendario</string>
+
+    <string name="filtrar">Filtrar por secciones</string>
+    <string name="premioSeccion">Premio Sección</string>
+    <string name="premioIG">Premio Ingenio y Gracia</string>
 </resources>

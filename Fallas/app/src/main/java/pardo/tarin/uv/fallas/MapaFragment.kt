@@ -36,10 +36,10 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
     private lateinit var map: GoogleMap
     private val LOCATION_PERMISSION_REQUEST_CODE = 1
     private val seccionesInfantiles = arrayOf(
-        "--", "Especial", "S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S10", "S11", "S12", "S13", "S14", "S15", "S16", "S17", "S18", "S19", "S20", "S21", "S22", "SFC"
+        "--", "Especial", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "FC"
     )
     private val seccionesAdultas = arrayOf(
-        "--", "Especial", "1A", "1B", "2A", "2B", "3A", "3B", "3C", "4A", "4B", "4C", "5A", "5B", "5C", "6A", "6B", "6C", "7A", "7B", "7C", "8A", "8B", "8C", "SFC"
+        "--", "Especial", "1A", "1B", "2A", "2B", "3A", "3B", "3C", "4A", "4B", "4C", "5A", "5B", "5C", "6A", "6B", "6C", "7A", "7B", "7C", "8A", "8B", "8C", "FC"
     )
     private var mapaModelView: FallasViewModel? = null
     private var _view: View? = null
@@ -52,6 +52,11 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
         if(_view != null) {
             Log.d("ViewNoNull", "View no es null")
             return _view!!
+        }
+
+        for(i in 1 until seccionesAdultas.size){
+            seccionesAdultas[i] = "Sección " + seccionesAdultas[i]
+            seccionesInfantiles[i] = "Sección " + seccionesInfantiles[i]
         }
 
         binding = FragmentMapaBinding.inflate(inflater, container, false)
