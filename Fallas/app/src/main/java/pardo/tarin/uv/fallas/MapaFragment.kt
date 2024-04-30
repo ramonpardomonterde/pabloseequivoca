@@ -2,8 +2,10 @@ package pardo.tarin.uv.fallas
 
 import android.Manifest
 import android.animation.ValueAnimator
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.core.app.ActivityCompat
@@ -15,6 +17,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.RelativeLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.ViewModelProvider
@@ -27,6 +30,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.PolylineOptions
 import pardo.tarin.uv.fallas.databinding.FragmentMapaBinding
 
 class MapaFragment : Fragment(), OnMapReadyCallback {
@@ -220,9 +224,57 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
                         )
                     }
                 }
+
+                binding.botonRuta.setOnClickListener {
+                    val coordenadas = falla.coordenadas
+                    val latLng = LatLng(coordenadas!!.first, coordenadas.second)
+                    val gmmIntentUri = Uri.parse("https://www.google.com/maps/dir/?api=1&destination=${latLng.latitude},${latLng.longitude}")
+                    val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+                    mapIntent.setPackage("com.google.android.apps.maps")
+                    startActivity(mapIntent)
+                }
             }
             true
         }
+
+        /*binding.rutaEspecial.setOnClickListener {
+            val coordFallas: ArrayList<LatLng> = ArrayList()
+            mapaModelView?._fallasAdultas?.observe(viewLifecycleOwner) { fallasAdultas ->
+                if (fallasAdultas != null && fallasAdultas.isNotEmpty()) {
+                    for (i in fallasAdultas[0].drop(1)) {
+                        val falla = i as Falla
+                        val coordenadas = falla.coordenadas
+                        val latLng = LatLng(coordenadas!!.first, coordenadas.second)
+                        coordFallas.add(latLng)
+                    }
+                    // Comprueba si hay coordenadas para crear la ruta
+                    if (coordFallas.size >= 2) {
+                        // Crea una lista de waypoints para las coordenadas intermedias
+                        val waypoints = mutableListOf<String>()
+                        for (i in 1 until coordFallas.size - 1) {
+                            val latLng = coordFallas[i]
+                            waypoints.add("${latLng.latitude},${latLng.longitude}")
+                        }
+
+                        // Construye la URI de la ruta con las coordenadas
+                        val origin = "origin=${coordFallas.first().latitude},${coordFallas.first().longitude}"
+                        val destination = "destination=${coordFallas.last().latitude},${coordFallas.last().longitude}"
+                        val waypointsQuery = if (waypoints.isNotEmpty()) "&waypoints=${waypoints.joinToString("|")}" else ""
+                        val url = "https://www.google.com/maps/dir/?api=1&$origin&$destination$waypointsQuery"
+
+                        // Crea un intent para abrir Google Maps con la ruta óptima
+                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                        intent.`package` = "com.google.android.apps.maps"
+                        startActivity(intent)
+                    } else {
+                        Toast.makeText(context, "Se necesitan al menos dos coordenadas para crear una ruta", Toast.LENGTH_SHORT).show()
+                    }
+                } else {
+                    Toast.makeText(context, "No se encontraron fallas", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }*/
+
 
         binding.botonClose.setOnClickListener {
             binding.layoutFallaMapa.visibility = View.GONE
@@ -231,8 +283,6 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
         map.setOnMapClickListener { _ ->
             binding.layoutFallaMapa.visibility = View.GONE
         }
-
-        val goldIcon = BitmapDescriptorFactory.fromResource(R.drawable.medalla_de_oro)
 
         mapaModelView!!._fallasAdultas.observe(viewLifecycleOwner) { fallasAdultas ->
             if (fallasAdultas != null && fallasAdultas.isNotEmpty()) {
