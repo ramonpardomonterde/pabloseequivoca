@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("androidx.navigation.safeargs.kotlin")
+    id("kotlin-kapt")
 }
 
 android {
@@ -58,4 +59,10 @@ dependencies {
     annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
     implementation("com.squareup.picasso:picasso:2.71828")
     implementation("com.google.android.gms:play-services-location:21.2.0")
+    val room_version = "2.4.1"
+    implementation("androidx.room:room-runtime:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+    testImplementation("androidx.room:room-testing:$room_version")
+    implementation("com.google.firebase:firebase-firestore:25.0.0")
 }

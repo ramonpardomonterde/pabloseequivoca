@@ -217,7 +217,7 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
                 binding.botonMasDetalle.setOnClickListener {
                     if (falla != null) {
                         val bundle = Bundle()
-                        bundle.putSerializable(seleccionado, falla)
+                        bundle.putSerializable("falla", falla)
                         findNavController().navigate(
                             R.id.action_mapaFragment_to_fallaDetails,
                             bundle
@@ -226,8 +226,8 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
                 }
 
                 binding.botonRuta.setOnClickListener {
-                    val coordenadas = falla.coordenadas
-                    val latLng = LatLng(coordenadas!!.first, coordenadas.second)
+                    //val coordenadas = falla.coordenadas
+                    val latLng = LatLng(falla.coordLat!!, falla.coordLong!!)
                     val gmmIntentUri = Uri.parse("https://www.google.com/maps/dir/?api=1&destination=${latLng.latitude},${latLng.longitude}")
                     val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
                     mapIntent.setPackage("com.google.android.apps.maps")
@@ -288,8 +288,8 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
             if (fallasAdultas != null && fallasAdultas.isNotEmpty()) {
                 for (i in fallasAdultas[0].drop(1)) {
                     val falla = i as Falla
-                    val coordenadas = falla.coordenadas
-                    val latLng = LatLng(coordenadas!!.first, coordenadas.second)
+                    //val coordenadas = falla.coordenadas
+                    val latLng = LatLng(falla.coordLat!!, falla.coordLong!!)
                     /*if(falla.premio == "1"){
                         val marker = map.addMarker(MarkerOptions().position(latLng).title(falla.nombre).icon(goldIcon))
                         marker?.tag = falla
@@ -314,8 +314,8 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
                     if (fallasInfantiles != null && position < fallasInfantiles.size + 1) {
                         for (i in fallasInfantiles[position - 1].drop(1)) {
                             val falla = i as Falla
-                            val coordenadas = falla.coordenadas
-                            val latLng = LatLng(coordenadas!!.first, coordenadas.second)
+                            //val coordenadas = falla.coordenadas
+                            val latLng = LatLng(falla.coordLat!!, falla.coordLong!!)
                             val marker = map.addMarker(MarkerOptions().position(latLng).title(falla.nombre))
                             marker?.tag = falla
                         }
@@ -339,8 +339,8 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
                     if (fallasAdultas != null && position < fallasAdultas.size + 1) {
                         for (i in fallasAdultas[position-1].drop(1)) {
                             val falla = i as Falla
-                            val coordenadas = falla.coordenadas
-                            val latLng = LatLng(coordenadas!!.first, coordenadas.second)
+                            //val coordenadas = falla.coordenadas
+                            val latLng = LatLng(falla.coordLat!!, falla.coordLong!!)
                             val marker = map.addMarker(MarkerOptions().position(latLng).title(falla.nombre))
                             marker?.tag = falla
                         }

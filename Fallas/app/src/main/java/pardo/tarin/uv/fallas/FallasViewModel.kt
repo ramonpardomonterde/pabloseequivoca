@@ -92,9 +92,9 @@ class FallasViewModel: ViewModel() {
                     val geo = record.getJSONObject("geo_point_2d")
                     val lat = geo.optDouble("lat")
                     val lon = geo.optDouble("lon")
-                    val coordenadas = Pair(lat, lon)
+                    //val coordenadas = Pair(lat, lon)
 
-                    val falla = Falla(id, nombre, escudo, seccion, premio, premioE, fallera, presidente, artista, lema, boceto, experim, coordenadas)
+                    val falla = Falla(id, nombre, escudo, seccion, premio, premioE, fallera, presidente, artista, lema, boceto, experim, lat, lon)
                     listaFallas.add(falla)
                 }
             }

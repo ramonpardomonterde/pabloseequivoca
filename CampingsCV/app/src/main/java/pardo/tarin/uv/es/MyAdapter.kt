@@ -26,7 +26,13 @@ class MyAdapter(val campings: ArrayList<Camping>, private val listener: CampingI
             binding.apply {
                 textViewNombre.text = camping.nombre
                 textViewDireccion.text = "${camping.direccion}, ${camping.municipio}"
-                ratingBar.rating = camping.categoria.toFloatOrNull() ?: 0.0f
+                if(camping.categoria.toIntOrNull() == null){
+                    apernoctar.text = "A PERNOCTAR"
+                    ratingBar.visibility = View.GONE
+                    apernoctar.visibility = View.VISIBLE
+                } else {
+                    ratingBar.rating = camping.categoria.toFloatOrNull() ?: 0.0f
+                }
             }
         }
     }

@@ -52,6 +52,13 @@
             android:numStars="5"
             android:stepSize="1" />
 
+        <TextView
+            android:id="@+id/apernoctar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="gone" />
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

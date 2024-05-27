@@ -29,13 +29,20 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/falla_section"
+                android:id="@+id/falla_medalla"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
                 android:textSize="16sp" />
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/falla_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/falla_prize"

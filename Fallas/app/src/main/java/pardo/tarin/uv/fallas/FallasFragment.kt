@@ -198,7 +198,7 @@ class FallasFragment: FallasGeneral() {
                 val nombre = fallaView.findViewById<TextView>(R.id.falla_name)
                 nombre.text = falla.nombre
                 val premio = fallaView.findViewById<TextView>(R.id.falla_prize)
-                val medalla = fallaView.findViewById<TextView>(R.id.falla_section)
+                val medalla = fallaView.findViewById<TextView>(R.id.falla_medalla)
                 when(falla.premio) {
                     "1" -> medalla.text = "\uD83E\uDD47"
                     "2" -> medalla.text = "\uD83E\uDD48"
@@ -218,7 +218,7 @@ class FallasFragment: FallasGeneral() {
                 fallaView.setOnClickListener(){
                     if(isAdded) {
                         val bundle = Bundle()
-                        bundle.putSerializable(tipo, falla)
+                        bundle.putSerializable("falla", falla)
                         findNavController().navigate(
                             R.id.action_fallasFragment_to_fallaDetails2,
                             bundle
