@@ -7,7 +7,8 @@ import java.io.Serializable
 
 @Entity(tableName = "fallasFavoritas")
 data class Falla(
-    @PrimaryKey @ColumnInfo(name = "id_f") val id: Int,
+    @PrimaryKey @ColumnInfo(name = "id_f") val objid: Int,
+    val id: Int,
     @ColumnInfo(name = "nombre_f") val nombre: String?,
     val escudo: String?,
     val seccion: String?,

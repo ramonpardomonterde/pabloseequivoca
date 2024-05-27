@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.View
+import android.widget.ImageButton
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -33,49 +34,18 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
-    var fallasAdultas = ArrayList<Falla>()
-    var currentLanguage = "es"
+    lateinit var botonfav: ImageButton
 
     val coroutineScope = CoroutineScope(Dispatchers.Main)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val sharedPref = getSharedPreferences("myPrefs", Context.MODE_PRIVATE)
-        currentLanguage = sharedPref.getString("language", "es").toString()
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        botonfav = binding.appBarMain.botonfav
         setSupportActionBar(binding.appBarMain.toolbar)
 
-        //Configuración idioma
-        val botonIdioma = binding.appBarMain.botonIdioma
-        val initialImage = if (currentLanguage == "es") R.drawable.espanya else R.drawable.ingles
-        var scaledDrawable = scaleDrawable(initialImage, 30, 30)
-        botonIdioma.setImageDrawable(scaledDrawable)
-        // Configura un OnClickListener en el botón de idioma
-        botonIdioma.setOnClickListener {
-            // Cambia el idioma y la imagen del botón cuando se pulse el botón
-            val newLanguage = if (currentLanguage == "es") "en" else "es"
-            val newImage = if (newLanguage == "es") R.drawable.espanya else R.drawable.ingles
-            currentLanguage = newLanguage
-
-            scaledDrawable = scaleDrawable(newImage, 30, 30)
-            botonIdioma.setImageDrawable(scaledDrawable)
-
-            // Guarda el nuevo idioma en las preferencias compartidas
-            with (sharedPref.edit()) {
-                putString("language", newLanguage)
-                apply()
-            }
-            newLanguage != currentLanguage
-            val newLocale = Locale(newLanguage)
-            Locale.setDefault(newLocale)
-            val newConfig = Configuration()
-            newConfig.locale = newLocale
-            resources.updateConfiguration(newConfig, resources.displayMetrics)
-            recreate()
-        }
 
         /*val infantilesViewModel =
             ViewModelProvider(this).get(InfantilesViewModel::class.java)

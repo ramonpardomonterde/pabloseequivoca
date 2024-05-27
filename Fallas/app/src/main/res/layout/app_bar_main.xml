@@ -19,14 +19,15 @@
             app:popupTheme="@style/Theme.Fallas.PopupOverlay">
 
             <ImageButton
-                android:id="@+id/botonIdioma"
+                android:id="@+id/botonfav"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="end"
                 android:layout_marginEnd="8dp"
                 android:background="#00FFFFFF"
-                android:src="@drawable/espanya"
-                android:text="Mi Botón" />
+                android:src="@android:drawable/star_big_on"
+                android:text="Mi Botón"
+                android:visibility="gone" />
 
         </androidx.appcompat.widget.Toolbar>
 

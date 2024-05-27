@@ -13,13 +13,13 @@ interface FallaDao {
     @Query("SELECT * FROM fallasFavoritas")
     fun getAll(): List<Falla>
     @Query("SELECT * FROM fallasFavoritas WHERE id_f = :id")
-    fun getCamping(id: Int): Falla?
+    fun getFalla(id: Int): Falla?
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertCamping(vararg camping: Falla)
+    fun insertFalla(vararg falla: Falla)
     @Update
-    fun updateCamping(camping: Falla)
+    fun updateFalla(falla: Falla)
     @Delete
-    fun delete(camping: Falla)
+    fun delete(falla: Falla)
     @Query("DELETE FROM fallasFavoritas")
     fun deleteAll()
 }

@@ -69,6 +69,9 @@
         <action
             android:id="@+id/action_fallasFragment_to_fallaDetails2"
             app:destination="@id/fallaDetails" />
+        <action
+            android:id="@+id/action_fallasFragment_to_favoritosFragment"
+            app:destination="@id/favoritosFragment" />
     </fragment>
 
     <fragment
@@ -93,4 +96,13 @@
         android:name="pardo.tarin.uv.fallas.CalendarioFragment"
         android:label="Calendario"
         tools:layout="@layout/fragment_calendario" />
+    <fragment
+        android:id="@+id/favoritosFragment"
+        android:name="pardo.tarin.uv.fallas.FavoritosFragment"
+        android:label="Fallas Favoritas"
+        tools:layout="@layout/fragment_favoritos" >
+        <action
+            android:id="@+id/action_favoritosFragment_to_fallaDetails"
+            app:destination="@id/fallaDetails" />
+    </fragment>
 </navigation>

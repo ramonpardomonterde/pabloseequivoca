@@ -13,6 +13,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -39,6 +40,7 @@ class FallaDetails : Fragment() {
     private lateinit var binding: FragmentFallaDetailsBinding
     private lateinit var falla: Falla
     private var tipo: String = ""
+    private var imgBtnFav: ImageButton? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -58,6 +60,33 @@ class FallaDetails : Fragment() {
         //falla = arguments?.getSerializable("falla") as Falla
 
         binding = FragmentFallaDetailsBinding.inflate(inflater, container, false)
+        imgBtnFav = (activity as MainActivity).botonfav
+        imgBtnFav!!.visibility = View.VISIBLE
+        comprobarFavorito(falla) { esfavorito ->
+            if (esfavorito) {
+                imgBtnFav!!.setImageResource(android.R.drawable.btn_star_big_on)
+            } else {
+                imgBtnFav!!.setImageResource(android.R.drawable.btn_star_big_off)
+            }
+        }
+
+        (activity as MainActivity).botonfav.setOnClickListener {
+            comprobarFavorito(falla) { esfavorito ->
+                if (esfavorito) {
+                    imgBtnFav!!.setImageResource(android.R.drawable.btn_star_big_off)
+                    falla.favorito = false
+                    borrarFavorito(falla)
+                    Toast.makeText(requireContext(), "Eliminado de favoritos", Toast.LENGTH_SHORT)
+                        .show()
+                } else {
+                    imgBtnFav!!.setImageResource(android.R.drawable.btn_star_big_on)
+                    falla.favorito = true
+                    añadirFavorito(falla)
+                    Toast.makeText(requireContext(), "Añadido a favoritos", Toast.LENGTH_SHORT)
+                        .show()
+                }
+            }
+        }
 
         binding.mapaButton.setOnClickListener {
             AlertDialog.Builder(requireContext())
@@ -86,23 +115,6 @@ class FallaDetails : Fragment() {
                 }
                 .setNegativeButton("No", null)
                 .show()
-        }
-
-        binding.addFav.setOnClickListener{
-            if(falla.favorito)
-            {
-                binding.addFav.setImageResource(android.R.drawable.btn_star_big_off)
-                falla.favorito = false
-                borrarFavorito(falla)
-                Toast.makeText(requireContext(), "Eliminado a favoritos", Toast.LENGTH_SHORT).show()
-            }
-            else
-            {
-                binding.addFav.setImageResource(android.R.drawable.btn_star_big_on)
-                falla.favorito = true
-                añadirFavorito(falla)
-                Toast.makeText(requireContext(), "Añadido de favoritos", Toast.LENGTH_SHORT).show()
-            }
         }
 
         return binding.root
@@ -166,12 +178,13 @@ class FallaDetails : Fragment() {
         val db = Room.databaseBuilder(
             requireContext(),
             AppDatabase::class.java, "fallasFavoritas"
-        ).build()
+        ).fallbackToDestructiveMigration().build()
         val fallaDao = db.fallaDao()
-        val falla = Falla(falla.id, falla.nombre, falla.escudo, falla.seccion, falla.premio, falla.premioE, falla.fallera, falla.presidente, falla.artista, falla.lema, falla.boceto, falla.experim, falla.coordLat, falla.coordLong)
+        val falla = Falla(falla.objid, falla.id, falla.nombre, falla.escudo, falla.seccion, falla.premio, falla.premioE, falla.fallera, falla.presidente, falla.artista, falla.lema, falla.boceto, falla.experim, falla.coordLat, falla.coordLong)
         GlobalScope.launch {
             try{
-                fallaDao.insertCamping(falla)
+                fallaDao.insertFalla(falla)
+                Log.d("FavoritosFallaDetails", falla.favorito.toString())
                 Log.d("FavoritosDetails", fallaDao.getAll().toString())
                 Log.d("CampingDetails", "Camping ${falla.nombre} añadido a favoritos")
             } catch (e: Exception) {
@@ -184,11 +197,12 @@ class FallaDetails : Fragment() {
         val db = Room.databaseBuilder(
             requireContext(),
             AppDatabase::class.java, "fallasFavoritas"
-        ).build()
+        ).fallbackToDestructiveMigration().build()
         val fallaDao = db.fallaDao()
         GlobalScope.launch {
             try{
                 fallaDao.delete(falla)
+                Log.d("FavoritosFallaDetails", falla.favorito.toString())
                 Log.d("FavoritosDetails", fallaDao.getAll().toString())
                 Log.d("CampingDetails", "Camping ${falla.nombre} eliminado de favoritos")
             } catch (e: Exception) {
@@ -197,5 +211,30 @@ class FallaDetails : Fragment() {
         }
     }
 
+    fun comprobarFavorito(falla: Falla, callback: (Boolean) -> Unit) {
+        val db = Room.databaseBuilder(
+            requireContext(),
+            AppDatabase::class.java, "fallasFavoritas"
+        ).fallbackToDestructiveMigration().build()
+        val fallaDao = db.fallaDao()
+        GlobalScope.launch {
+            try {
+                val favorito = fallaDao.getFalla(falla.objid)
+                withContext(Dispatchers.Main) {
+                    callback(favorito != null)
+                }
+            } catch (e: Exception) {
+                Log.e("FallaDetails", "Error al comprobar si la falla es favorita: ${e.message}")
+                withContext(Dispatchers.Main) {
+                    callback(false)
+                }
+            }
+        }
+    }
 
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        (activity as MainActivity).botonfav.visibility = View.GONE
+    }
 }
