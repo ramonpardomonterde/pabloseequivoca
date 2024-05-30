@@ -1,5 +1,6 @@
 package pardo.tarin.uv.fallas
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -26,7 +27,32 @@ class FavoritosFragment : Fragment() {
     ): View? {
         binding = FragmentFavoritosBinding.inflate(inflater, container, false)
         getData()
-        // Inflate the layout for this fragment
+
+        binding.borrarTodosFav.setOnClickListener{
+            AlertDialog.Builder(requireContext())
+                .setTitle("Borrar todos los favoritos")
+                .setMessage("¿Estás seguro de que quieres borrar todos los favoritos?")
+                .setPositiveButton("Sí") { _, _ ->
+                    CoroutineScope(Dispatchers.IO).launch {
+                        val db = Room.databaseBuilder(
+                            requireContext(),
+                            AppDatabase::class.java, "fallasFavoritas"
+                        ).fallbackToDestructiveMigration().build()
+                        val userDao = db.fallaDao()
+                        userDao.deleteAll()
+                        fallasData.clear()
+                        withContext(Dispatchers.Main) {
+                            binding.layoutFallasFavs.removeAllViews()
+                            binding.listaFavVacia.visibility = View.VISIBLE
+                            binding.borrarTodosFav.visibility = View.GONE
+                            requireActivity().invalidateOptionsMenu()
+                        }
+                    }
+                }
+                .setNegativeButton("No", null)
+                .show()
+        }
+
         return binding.root
     }
 
@@ -45,8 +71,10 @@ class FavoritosFragment : Fragment() {
             withContext(Dispatchers.Main) {
                 if(listaFavoritas.isEmpty()){
                     binding.listaFavVacia.visibility = View.VISIBLE
+                    binding.borrarTodosFav.visibility = View.GONE
                 } else {
                     binding.listaFavVacia.visibility = View.GONE
+                    binding.borrarTodosFav.visibility = View.VISIBLE
                 }
                 fallasData = ArrayList(listaFavoritas)
 

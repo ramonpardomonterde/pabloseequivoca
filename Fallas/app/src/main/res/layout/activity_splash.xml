@@ -11,4 +11,19 @@
         android:layout_centerInParent="true"
         android:src="@drawable/logo_sinfondo" />
 
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:text="Ramón Pardo y Pablo Tarín"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
 </RelativeLayout>

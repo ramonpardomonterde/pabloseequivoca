@@ -57,8 +57,8 @@
             android:id="@+id/action_nav_home_to_mapaFragment"
             app:destination="@id/mapaFragment" />
         <action
-            android:id="@+id/action_nav_home_to_calendarioFragment"
-            app:destination="@id/calendarioFragment" />
+            android:id="@+id/action_nav_home_to_favoritosFragment"
+            app:destination="@id/favoritosFragment" />
     </fragment>
 
     <fragment
@@ -69,9 +69,6 @@
         <action
             android:id="@+id/action_fallasFragment_to_fallaDetails2"
             app:destination="@id/fallaDetails" />
-        <action
-            android:id="@+id/action_fallasFragment_to_favoritosFragment"
-            app:destination="@id/favoritosFragment" />
     </fragment>
 
     <fragment

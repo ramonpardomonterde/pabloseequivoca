@@ -63,10 +63,6 @@ class FallasFragment: FallasGeneral() {
             cargarFallas(tipo)
         }
 
-        binding.button2.setOnClickListener {
-            findNavController().navigate(R.id.action_fallasFragment_to_favoritosFragment)
-        }
-
         /*lifecycleScope.launchWhenStarted {
             infantilesViewModel?.infantilesPorSeccion?.collect { fallas ->
                 // Este bloque de código se ejecutará cuando los datos estén listos

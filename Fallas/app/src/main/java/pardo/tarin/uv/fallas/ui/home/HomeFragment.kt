@@ -63,12 +63,12 @@ class HomeFragment : Fragment() {
         }
 
         val eventosButton = binding.eventosButton
-        scaledDrawable = scaleDrawable(R.drawable.calendario, 80, 80)
+        scaledDrawable = scaleDrawable(R.drawable.corazon, 80, 80)
         eventosButton.setCompoundDrawablesWithIntrinsicBounds(null, scaledDrawable, null, null)
         eventosButton.setText(getString(R.string.home_calendario))
 
         eventosButton.setOnClickListener {
-            findNavController().navigate(R.id.action_nav_home_to_calendarioFragment)
+            findNavController().navigate(R.id.action_nav_home_to_favoritosFragment)
         }
 
         /*val textView: TextView = binding.textHome
