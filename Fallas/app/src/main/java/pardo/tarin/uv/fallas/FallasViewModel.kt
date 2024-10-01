@@ -1,5 +1,6 @@
 package pardo.tarin.uv.fallas
 
+import android.app.Application
 import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.LiveData
@@ -14,12 +15,15 @@ import okhttp3.Request
 import org.json.JSONObject
 import java.io.IOException
 import java.net.SocketTimeoutException
+import java.util.Locale
 
 class FallasViewModel: ViewModel() {
 
     val _fallasInfantiles = MutableLiveData<List<List<Any>>?>()
 
     val _fallasAdultas = MutableLiveData<List<List<Any>>?>()
+
+    val currentLenguage = Locale.getDefault().language
 
     init {
         getFallas()
@@ -108,31 +112,33 @@ class FallasViewModel: ViewModel() {
 
     fun ordenarPorSeccion(originalFallasData: ArrayList<Falla>): List<List<Any>> {
         val fallasPorSeccion: Map<String, List<Falla>> = originalFallasData.groupBy { it.seccion.toString() }
-
+        val secciontext = if(currentLenguage == "es") "Sección " else "Section "
+        val seccionEspecialText = if(currentLenguage == "es") "Sección Especial" else "Special Section"
+        val seccionFCText = if(currentLenguage == "es") "Sección Fuera de Concurso" else "Out of Contest Section"
         val matriz = fallasPorSeccion.map { (seccion, fallas) ->
             val fila = mutableListOf<Any>()
             if(seccion == "IE" || seccion == "E"){
-                fila.add("Sección Especial")
+                fila.add(seccionEspecialText)
             }
             else if (seccion == "FC"){
-                fila.add("Sección Fuera de Concurso")
+                fila.add(seccionFCText)
             }
             else if (seccion != null){
-                fila.add("Sección $seccion") // Se añade el nombre de la sección a la fila
+                fila.add("$secciontext $seccion") // Se añade el nombre de la sección a la fila
             }
             fila.addAll(fallas)
             fila
         }
 
-        val matrizIE = matriz.filter { it[0] == "Sección Especial" }
+        val matrizIE = matriz.filter { it[0] == seccionEspecialText }
         /*val matrizNoIE = matriz.filter { it[0] != "Sección Especial" && it[0] != "Sección null"}.sortedBy {
             val seccion = it[0].toString().removePrefix("Sección ").toIntOrNull() ?: Int.MAX_VALUE
             seccion
         }*/
-        val matrizNoIE = matriz.filter { it[0] != "Sección Especial" && it[0] != "Sección null"}.sortedWith(
+        val matrizNoIE = matriz.filter { it[0] != seccionEspecialText && it[0] != "$secciontext null"}.sortedWith(
             compareBy(
-                { it[0].toString().removePrefix("Sección ").filter { char -> char.isDigit() }.toIntOrNull() ?: Int.MAX_VALUE },
-                { it[0].toString().removePrefix("Sección ").filter { char -> char.isLetter() } }
+                { it[0].toString().removePrefix("$secciontext ").filter { char -> char.isDigit() }.toIntOrNull() ?: Int.MAX_VALUE },
+                { it[0].toString().removePrefix("$secciontext ").filter { char -> char.isLetter() } }
             )
         )
 

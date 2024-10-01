@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="No hay ningúna falla como favorita"
+        android:text="@string/listaVacia"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold|italic"

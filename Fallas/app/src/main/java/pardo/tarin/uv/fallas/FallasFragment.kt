@@ -204,7 +204,7 @@ class FallasFragment: FallasGeneral() {
                     "2" -> medalla.text = "\uD83E\uDD48"
                     "3" -> medalla.text = "\uD83E\uDD49"
                     else -> {
-                        premio.text = "Premio Sección: ${falla.premio}"
+                        premio.text = "${getString(R.string.premioSeccion)}: ${falla.premio}"
                         medalla.text = ""
                         premio.visibility = View.VISIBLE
                     }
@@ -212,7 +212,7 @@ class FallasFragment: FallasGeneral() {
                 if(falla.premioE != "Sin premio") {
                     val premioE = fallaView.findViewById<TextView>(R.id.fallaEG_prize)
                     premioE.visibility = View.VISIBLE
-                    premioE.text = "Premio Ingenio y Gracia: ${falla.premioE}"
+                    premioE.text = "${getString(R.string.premioIG)}: ${falla.premioE}"
                 }
 
                 fallaView.setOnClickListener(){
@@ -248,5 +248,6 @@ class FallasFragment: FallasGeneral() {
         }
 
         binding.loadingSpinner.visibility = View.GONE
+
     }
 }

@@ -57,6 +57,9 @@
             android:id="@+id/action_nav_home_to_mapaFragment"
             app:destination="@id/mapaFragment" />
         <action
+            android:id="@+id/action_nav_home_to_eventsFragment"
+            app:destination="@id/calendarioFragment" />
+        <action
             android:id="@+id/action_nav_home_to_favoritosFragment"
             app:destination="@id/favoritosFragment" />
     </fragment>

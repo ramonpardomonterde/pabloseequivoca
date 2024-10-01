@@ -60,6 +60,9 @@ class FallaDetails : Fragment() {
         //falla = arguments?.getSerializable("falla") as Falla
 
         binding = FragmentFallaDetailsBinding.inflate(inflater, container, false)
+
+        binding.textView2.text = "\uD83C\uDFC6 ${getString(R.string.premios)} \uD83C\uDFC6"
+        binding.textView6.text = getString(R.string.IGtitulo).uppercase()
         imgBtnFav = (activity as MainActivity).botonfav
         imgBtnFav!!.visibility = View.VISIBLE
         comprobarFavorito(falla) { esfavorito ->
@@ -76,13 +79,13 @@ class FallaDetails : Fragment() {
                     imgBtnFav!!.setImageResource(android.R.drawable.btn_star_big_off)
                     falla.favorito = false
                     borrarFavorito(falla)
-                    Toast.makeText(requireContext(), "Eliminado de favoritos", Toast.LENGTH_SHORT)
+                    Toast.makeText(requireContext(), getString(R.string.RemoveFav), Toast.LENGTH_SHORT)
                         .show()
                 } else {
                     imgBtnFav!!.setImageResource(android.R.drawable.btn_star_big_on)
                     falla.favorito = true
                     añadirFavorito(falla)
-                    Toast.makeText(requireContext(), "Añadido a favoritos", Toast.LENGTH_SHORT)
+                    Toast.makeText(requireContext(), getString(R.string.AddFav), Toast.LENGTH_SHORT)
                         .show()
                 }
             }
@@ -90,9 +93,9 @@ class FallaDetails : Fragment() {
 
         binding.mapaButton.setOnClickListener {
             AlertDialog.Builder(requireContext())
-                .setTitle("Abrir Maps")
-                .setMessage("¿Quieres abrir Google Maps para obtener la ruta?")
-                .setPositiveButton("Sí") { _, _ ->
+                .setTitle(getString(R.string.mapaTitulo))
+                .setMessage(getString(R.string.mapaMensaje))
+                .setPositiveButton(getString(R.string.Si)) { _, _ ->
                     //val uri = Uri.parse("geo:0,0?q=${falla.coordenadas?.first},${falla.coordenadas?.second}(${falla.nombre})")
                     val uri = Uri.parse("geo:0,0?q=${falla.coordLat},${falla.coordLong}(${falla.nombre})")
                     val intent = Intent(Intent.ACTION_VIEW, uri)
@@ -105,9 +108,9 @@ class FallaDetails : Fragment() {
 
         binding.boceto.setOnClickListener {
             AlertDialog.Builder(requireContext())
-                .setTitle("Abrir boceto")
-                .setMessage("¿Quieres abrir el boceto en internet?")
-                .setPositiveButton("Sí") { _, _ ->
+                .setTitle(getString(R.string.bocetoTitulo))
+                .setMessage(getString(R.string.bocetoMensaje))
+                .setPositiveButton(getString(R.string.Si)) { _, _ ->
                     val searchTerm = falla.boceto // reemplaza con el término de búsqueda que quieras
                     val uri = Uri.parse(searchTerm)
                     val intent = Intent(Intent.ACTION_VIEW, uri)
@@ -131,7 +134,7 @@ class FallaDetails : Fragment() {
             .load("${falla.escudo}")
             .into(binding.escudo)*/
         binding.nombreBoceto.text = falla.lema
-        binding.nombreArtista.text = "Artista: ${falla.artista}"
+        binding.nombreArtista.text = "${getString(R.string.artista)}: ${falla.artista}"
         /*if(tipo == "adultas")
         {
             binding.nombreFallera.text = "Fallera Mayor:\n     ${falla.fallera}"
@@ -144,7 +147,7 @@ class FallaDetails : Fragment() {
         }*/
         if(falla.seccion == "IE" || falla.seccion == "E")
         {
-            binding.seccionText.text = "SECCIÓN ESPECIAL"
+            binding.seccionText.text = getString(R.string.seccionEspecial).uppercase()
         }
         else if(falla.seccion == "FC")
         {
@@ -152,7 +155,7 @@ class FallaDetails : Fragment() {
             binding.premios.visibility = View.GONE
         }
         else
-            binding.seccionText.text = "SECCIÓN ${falla.seccion}"
+            binding.seccionText.text = "${getString(R.string.seccion)} ${falla.seccion}"
 
         if(falla.premio == "Sin premio" && falla.premioE == "Sin premio")
         {

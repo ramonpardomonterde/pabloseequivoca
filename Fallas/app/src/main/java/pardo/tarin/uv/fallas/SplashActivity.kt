@@ -14,7 +14,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         val splashImage: ImageView = findViewById(R.id.splash_image)
-        val anim = AnimationUtils.loadAnimation(this, R.anim.splash_animation)
+        val anim = AnimationUtils.loadAnimation(this, R.anim.heartbeat_animation)
         splashImage.startAnimation(anim)
 
         Handler().postDelayed({

@@ -7,18 +7,61 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="menu_infantiles">Fallas Infantiles</string>
-    <string name="menu_adultas">Fallas Adultas</string>
+    <!--*********************** GENERALES  **************************-->
+    <string name="Si">Yes</string>
+    <!--*************************************************************-->
 
-    <string name="home_mapa">Mapa</string>
-    <string name="home_calendario">Favortios</string>
+    <!-- ******************** HomeFragment **************************-->
+    <string name="menu_home">Home</string>
+    <string name="menu_infantiles">CHILDREN\'S MONUMENTS</string>
+    <string name="menu_adultas">ADULTS MONUMENTS</string>
+    <string name="home_mapa">MAP</string>
+    <string name="home_calendario">EVENTS</string>
+    <string name="favoritos">FAVORITES</string>
+    <!--*************************************************************-->
 
-    <string name="filtrar">Filtrar por secciones</string>
-    <string name="premioSeccion">Premio Sección</string>
-    <string name="premioIG">Premio Ingenio y Gracia</string>
+    <!-- ******************** Fallas Fragment ***********************-->
+    <string name="premioSeccion">Section award</string>
+    <string name="premioIG">Ingenuity and grace award</string>
+    <string name="seccion">Section</string>
+    <!--*************************************************************-->
+
+    <!-- ******************** Mapa Fragment *************************-->
+    <string name="filtrar">Filter by sections</string>
+    <string name="especial">Special</string>
+    <string name="fueraConcurso">OC</string>
+    <string name="adultos">Adults</string>
+    <string name="infantiles">Children\'s</string>
+    <!--*************************************************************-->
+
+    <!-- ******************** Favoritos Fragment ********************-->
+    <string name="seccionEspecialInfantl">Special children\'s section</string>
+    <string name="seccionEspecial">Special section</string>
+    <string name="listaVacia">There is no Falla as a favorite</string>
+    <string name="borrarTitulo">Delete all favorites?</string>
+    <string name="borrarMensaje">Are you sure you want to delete all your favorites?</string>
+    <!--*************************************************************-->
+
+    <!-- ******************** Falla Details Fragment ****************-->
+    <string name="artista">Artist</string>
+    <string name="mapaTitulo">Open Maps</string>
+    <string name="mapaMensaje">Do you want to open Google Maps to get the route?</string>
+    <string name="bocetoTitulo">Open sketch</string>
+    <string name="bocetoMensaje">Do you want to open the sketch on the Internet?</string>
+    <string name="IGtitulo">Ingenuity and grace</string>
+    <string name="premios">Awards</string>
+    <string name="AddFav">Added to favourites</string>
+    <string name="RemoveFav">Removed from favourites</string>
+    <!--*************************************************************-->
+
+    <!-- ******************** Calendario Fragment *******************-->
+    <string name="detallesEvento">More details</string>
+    <string name="listaVaciaEventos">There are no events for this day</string>
+    <string name="alarmaTitulo">Add notice</string>
+    <string name="alarmaMensaje">Notice scheduled for 5 minutes before the event</string>
+    <!--*************************************************************-->
 </resources>

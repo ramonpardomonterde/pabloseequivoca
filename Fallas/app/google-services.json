@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "788144985634",
+    "project_id": "im-tfg",
+    "storage_bucket": "im-tfg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788144985634:android:e5ba773bc335f17e0bdc7b",
+        "android_client_info": {
+          "package_name": "pardo.tarin.uv.fallas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQb5Cf-9pv3Ic7M3qW-_m3TfG7eeKuNns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

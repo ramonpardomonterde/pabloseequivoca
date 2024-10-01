@@ -7,10 +7,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import pardo.tarin.uv.fallas.R
 import pardo.tarin.uv.fallas.databinding.FragmentHomeBinding
@@ -63,11 +61,20 @@ class HomeFragment : Fragment() {
         }
 
         val eventosButton = binding.eventosButton
-        scaledDrawable = scaleDrawable(R.drawable.corazon, 80, 80)
+        scaledDrawable = scaleDrawable(R.drawable.calendario, 80, 80)
         eventosButton.setCompoundDrawablesWithIntrinsicBounds(null, scaledDrawable, null, null)
         eventosButton.setText(getString(R.string.home_calendario))
 
         eventosButton.setOnClickListener {
+            findNavController().navigate(R.id.action_nav_home_to_eventsFragment)
+        }
+
+        val favButton = binding.favButton
+        scaledDrawable = scaleDrawable(R.drawable.corazon, 30, 30)
+        favButton.setCompoundDrawablesWithIntrinsicBounds(scaledDrawable, null, scaledDrawable, null)
+        favButton.setText(getString(R.string.favoritos))
+
+        favButton.setOnClickListener {
             findNavController().navigate(R.id.action_nav_home_to_favoritosFragment)
         }
 

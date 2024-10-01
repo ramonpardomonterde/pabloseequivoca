@@ -9,12 +9,26 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.gms.tasks.Task
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.QuerySnapshot
 import java.time.LocalDate
+import java.time.ZoneId
 import java.time.format.TextStyle
+import java.time.temporal.ChronoUnit
+import java.util.Date
 import java.util.Locale
 
 class CalendarioAdapter(private val calendario: List<LocalDate>) : RecyclerView.Adapter<CalendarioAdapter.CalendarioViewHolder>() {
 
+    data class Evento(
+        val nombre: String? = null,
+        val fecha: Date? = null,
+        val lugar: String? = null,
+        val estado: Boolean? = null,
+        val id : String? = null,
+        val alarmaCreada: Boolean? = null
+    )
     var selectedItem = -1
         set(value) {
             field = value

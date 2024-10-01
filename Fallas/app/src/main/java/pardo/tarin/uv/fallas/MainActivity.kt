@@ -22,6 +22,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProvider
+import com.google.firebase.analytics.FirebaseAnalytics
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -45,6 +46,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         botonfav = binding.appBarMain.botonfav
         setSupportActionBar(binding.appBarMain.toolbar)
+
+        val analytics = FirebaseAnalytics.getInstance(this)
+        val bundle = Bundle()
+        bundle.putString("Message", "Integración de Firebase completada")
+        analytics.logEvent("InitScreen", bundle)
 
 
         /*val infantilesViewModel =

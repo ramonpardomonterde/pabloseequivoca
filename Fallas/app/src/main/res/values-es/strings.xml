@@ -1,15 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--*********************** GENERALES  **************************-->
+    <string name="Si">Sí</string>
+    <!--*************************************************************-->
+
+    <!-- ******************** HomeFragment **************************-->
     <string name="menu_home">Inicio</string>
     <string name="menu_infantiles">MONUMENTOS INFANTILES</string>
     <string name="menu_adultas">MONUMENTOS ADULTOS</string>
-
     <string name="home_mapa">MAPA</string>
-    <string name="home_calendario">FAVORITOS</string>
+    <string name="home_calendario">EVENTOS</string>
+    <string name="favoritos">FAVORITOS</string>
+    <!--*************************************************************-->
 
-    <string name="filtrar">Filtrar por secciones</string>
-
+    <!-- ******************** Fallas Fragment ***********************-->
     <string name="premioSeccion">Premio Sección</string>
+    <string name="seccion">Sección</string>
     <string name="premioIG">Premio Ingenio y Gracia</string>
+    <!--*************************************************************-->
 
+    <!-- ******************** Mapa Fragment *************************-->
+    <string name="filtrar">Filtrar por secciones</string>
+    <string name="especial">Especial</string>
+    <string name="fueraConcurso">FC</string>
+    <string name="adultos">Adultos</string>
+    <string name="infantiles">Infantiles</string>
+    <!--*************************************************************-->
+
+    <!-- ******************** Favoritos Fragment ********************-->
+    <string name="seccionEspecialInfantl">Sección Especial Infantil</string>
+    <string name="seccionEspecial">Sección Especial</string>
+    <string name="listaVacia">No hay ninguna Falla como favorita</string>
+    <string name="borrarTitulo">Borrar todos los favoritos</string>
+    <string name="borrarMensaje">¿Estás seguro de que quieres borrar todos los favoritos?</string>
+    <!--*************************************************************-->
+
+    <!-- ******************** Falla Details Fragment ****************-->
+    <string name="artista">Artista</string>
+    <string name="mapaTitulo">Abrir Maps</string>
+    <string name="mapaMensaje">¿Quieres abrir Google Maps para obtener la ruta?</string>
+    <string name="bocetoTitulo">Abrir boceto</string>
+    <string name="bocetoMensaje">¿Quieres abrir el boceto en internet?</string>
+    <string name="IGtitulo">INGENIO Y GRACIA</string>
+    <string name="premios">Premios</string>
+    <string name="AddFav">Añadido a favoritos</string>
+    <string name="RemoveFav">Eliminado de favoritos</string>
+    <!--*************************************************************-->
+
+
+    <!-- ******************** Calendario Fragment *******************-->
+    <string name="detallesEvento">Más detalles</string>
+    <string name="listaVaciaEventos">No hay eventos para este día</string>
+    <string name="alarmaTitulo">Añadir aviso</string>
+    <string name="alarmaMensaje">Aviso programado para 5 minutos antes del evento</string>
+    <!--*************************************************************-->
 </resources>

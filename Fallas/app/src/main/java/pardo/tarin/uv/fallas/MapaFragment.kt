@@ -39,12 +39,8 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var map: GoogleMap
     private val LOCATION_PERMISSION_REQUEST_CODE = 1
-    private val seccionesInfantiles = arrayOf(
-        "--", "Especial", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "FC"
-    )
-    private val seccionesAdultas = arrayOf(
-        "--", "Especial", "1A", "1B", "2A", "2B", "3A", "3B", "3C", "4A", "4B", "4C", "5A", "5B", "5C", "6A", "6B", "6C", "7A", "7B", "7C", "8A", "8B", "8C", "FC"
-    )
+    private lateinit var seccionesInfantiles: Array<String>
+    private lateinit var seccionesAdultas: Array<String>
     private var mapaModelView: FallasViewModel? = null
     private var _view: View? = null
 
@@ -58,9 +54,16 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
             return _view!!
         }
 
+        seccionesInfantiles = arrayOf(
+            "--", getString(R.string.especial), "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", getString(R.string.fueraConcurso)
+        )
+        seccionesAdultas = arrayOf(
+            "--", getString(R.string.especial), "1A", "1B", "2A", "2B", "3A", "3B", "3C", "4A", "4B", "4C", "5A", "5B", "5C", "6A", "6B", "6C", "7A", "7B", "7C", "8A", "8B", "8C", getString(R.string.fueraConcurso)
+        )
+
         for(i in 1 until seccionesAdultas.size){
-            seccionesAdultas[i] = "Sección " + seccionesAdultas[i]
-            seccionesInfantiles[i] = "Sección " + seccionesInfantiles[i]
+            seccionesAdultas[i] = if(seccionesAdultas[i] == getString(R.string.fueraConcurso)) seccionesAdultas[i] + " ${getString(R.string.seccion)}" else "${getString(R.string.seccion)} " + seccionesAdultas[i]
+            seccionesInfantiles[i] = if(seccionesInfantiles[i] == getString(R.string.fueraConcurso)) seccionesInfantiles[i] + " ${getString(R.string.seccion)}" else "${getString(R.string.seccion)} " + seccionesInfantiles[i]
         }
 
         binding = FragmentMapaBinding.inflate(inflater, container, false)
@@ -116,45 +119,7 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
 
 
             mapaModelView = ViewModelProvider(this)[FallasViewModel::class.java]
-        /*val toggleButtons = listOf(
-            binding.toggleButtonSE,
-            binding.toggleButtonS1,
-            binding.toggleButtonS2,
-            binding.toggleButtonS3,
-            binding.toggleButtonS4,
-            binding.toggleButtonS5,
-            binding.toggleButtonS6,
-            binding.toggleButtonS7,
-            binding.toggleButtonS8,
-            binding.toggleButtonS9,
-            binding.toggleButtonS10,
-            binding.toggleButtonS11,
-            binding.toggleButtonS12,
-            binding.toggleButtonS13,
-            binding.toggleButtonS14,
-            binding.toggleButtonS15,
-            binding.toggleButtonS16,
-            binding.toggleButtonS17,
-            binding.toggleButtonS18,
-            binding.toggleButtonS19,
-            binding.toggleButtonS20,
-            binding.toggleButtonS21,
-            binding.toggleButtonS22,
-            binding.toggleButtonSFC
-        )
 
-        toggleButtons.forEach { toggleButton ->
-            toggleButton.setOnCheckedChangeListener { button, isChecked ->
-                if (isChecked) {
-                    toggleButtons.forEach { it.isChecked = it == button }
-                } else {
-                    // Si todos los botones están desactivados, vuelve a activar el botón actual
-                    if (toggleButtons.none { it.isChecked }) {
-                        button.isChecked = true
-                    }
-                }
-            }
-        }*/
         val mapView = binding.mapa
         mapView.onCreate(savedInstanceState)
         mapView.getMapAsync(this)
@@ -166,7 +131,6 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
 
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
-        var seleccionado = "infantiles"
 
         if (ActivityCompat.checkSelfPermission(
                 requireContext(),
@@ -237,45 +201,6 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
             true
         }
 
-        /*binding.rutaEspecial.setOnClickListener {
-            val coordFallas: ArrayList<LatLng> = ArrayList()
-            mapaModelView?._fallasAdultas?.observe(viewLifecycleOwner) { fallasAdultas ->
-                if (fallasAdultas != null && fallasAdultas.isNotEmpty()) {
-                    for (i in fallasAdultas[0].drop(1)) {
-                        val falla = i as Falla
-                        val coordenadas = falla.coordenadas
-                        val latLng = LatLng(coordenadas!!.first, coordenadas.second)
-                        coordFallas.add(latLng)
-                    }
-                    // Comprueba si hay coordenadas para crear la ruta
-                    if (coordFallas.size >= 2) {
-                        // Crea una lista de waypoints para las coordenadas intermedias
-                        val waypoints = mutableListOf<String>()
-                        for (i in 1 until coordFallas.size - 1) {
-                            val latLng = coordFallas[i]
-                            waypoints.add("${latLng.latitude},${latLng.longitude}")
-                        }
-
-                        // Construye la URI de la ruta con las coordenadas
-                        val origin = "origin=${coordFallas.first().latitude},${coordFallas.first().longitude}"
-                        val destination = "destination=${coordFallas.last().latitude},${coordFallas.last().longitude}"
-                        val waypointsQuery = if (waypoints.isNotEmpty()) "&waypoints=${waypoints.joinToString("|")}" else ""
-                        val url = "https://www.google.com/maps/dir/?api=1&$origin&$destination$waypointsQuery"
-
-                        // Crea un intent para abrir Google Maps con la ruta óptima
-                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-                        intent.`package` = "com.google.android.apps.maps"
-                        startActivity(intent)
-                    } else {
-                        Toast.makeText(context, "Se necesitan al menos dos coordenadas para crear una ruta", Toast.LENGTH_SHORT).show()
-                    }
-                } else {
-                    Toast.makeText(context, "No se encontraron fallas", Toast.LENGTH_SHORT).show()
-                }
-            }
-        }*/
-
-
         binding.botonClose.setOnClickListener {
             binding.layoutFallaMapa.visibility = View.GONE
         }
@@ -302,7 +227,6 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
                     marker?.tag = falla
                 }
             }
-            seleccionado = "adultas"
         }
 
         binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -321,7 +245,6 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
                         }
                     }
                 }
-                seleccionado = "infantiles"
                 binding.spinner2.setSelection(0)
             }
 
@@ -346,7 +269,6 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
                         }
                     }
                 }
-                seleccionado = "adultas"
                 binding.spinner.setSelection(0)
             }
 

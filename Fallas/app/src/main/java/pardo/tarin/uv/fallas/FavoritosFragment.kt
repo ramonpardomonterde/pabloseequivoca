@@ -26,13 +26,14 @@ class FavoritosFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentFavoritosBinding.inflate(inflater, container, false)
+        (activity as MainActivity).supportActionBar?.title = getString(R.string.favoritos)
         getData()
 
         binding.borrarTodosFav.setOnClickListener{
             AlertDialog.Builder(requireContext())
-                .setTitle("Borrar todos los favoritos")
-                .setMessage("¿Estás seguro de que quieres borrar todos los favoritos?")
-                .setPositiveButton("Sí") { _, _ ->
+                .setTitle(getString(R.string.borrarTitulo))
+                .setMessage(getString(R.string.borrarMensaje))
+                .setPositiveButton(getString(R.string.Si)) { _, _ ->
                     CoroutineScope(Dispatchers.IO).launch {
                         val db = Room.databaseBuilder(
                             requireContext(),
@@ -66,7 +67,6 @@ class FavoritosFragment : Fragment() {
             ).fallbackToDestructiveMigration().build()
             val userDao = db.fallaDao()
             val listaFavoritas = userDao.getAll()
-            println("Lista de favoritos: $listaFavoritas")
 
             withContext(Dispatchers.Main) {
                 if(listaFavoritas.isEmpty()){
@@ -88,21 +88,21 @@ class FavoritosFragment : Fragment() {
                     val seccion = fallaView.findViewById<TextView>(R.id.falla_section)
                     seccion.visibility = View.VISIBLE
                     if (falla.seccion == "IE") {
-                        seccion.text = "Sección Especial Infantil"
+                        seccion.text = getString(R.string.seccionEspecialInfantl)
                     } else if(falla.seccion == "E"){
-                        seccion.text = "Sección Especial"
+                        seccion.text = getString(R.string.seccionEspecial)
                     } else {
-                        seccion.text = "Sección ${falla.seccion}"
+                        seccion.text = getString(R.string.seccion) + " " + falla.seccion
                     }
                     val premio = fallaView.findViewById<TextView>(R.id.falla_prize)
                     val medalla = fallaView.findViewById<TextView>(R.id.falla_medalla)
-                    premio.text = "Premio Sección: ${falla.premio}"
+                    premio.text = "${getString(R.string.premioSeccion)}: ${falla.premio}"
                     medalla.text = ""
                     premio.visibility = View.VISIBLE
                     if(falla.premioE != "Sin premio") {
                         val premioE = fallaView.findViewById<TextView>(R.id.fallaEG_prize)
                         premioE.visibility = View.VISIBLE
-                        premioE.text = "Premio Ingenio y Gracia: ${falla.premioE}"
+                        premioE.text = "${getString(R.string.premioIG)}: ${falla.premioE}"
                     }
                     linearLayout.addView(fallaView)
                     fallaView.setOnClickListener() {
