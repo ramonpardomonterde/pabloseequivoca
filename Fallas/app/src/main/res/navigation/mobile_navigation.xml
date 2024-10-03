@@ -47,13 +47,6 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_nav_home_to_fallasFragment"
-            app:destination="@id/fallasFragment" >
-            <argument
-                android:name="tipo"
-                app:argType="string" />
-        </action>
-        <action
             android:id="@+id/action_nav_home_to_mapaFragment"
             app:destination="@id/mapaFragment" />
         <action
@@ -62,17 +55,19 @@
         <action
             android:id="@+id/action_nav_home_to_favoritosFragment"
             app:destination="@id/favoritosFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_infantilesFragment"
+            app:destination="@id/infantilesFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_adultasFragment"
+            app:destination="@id/adultasFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/fallasFragment"
         android:name="pardo.tarin.uv.fallas.FallasFragment"
         android:label="@string/menu_adultas"
-        tools:layout="@layout/fragment_fallas">
-        <action
-            android:id="@+id/action_fallasFragment_to_fallaDetails2"
-            app:destination="@id/fallaDetails" />
-    </fragment>
+        tools:layout="@layout/fragment_fallas"/>
 
     <fragment
         android:id="@+id/fallaDetails"
@@ -103,6 +98,24 @@
         tools:layout="@layout/fragment_favoritos" >
         <action
             android:id="@+id/action_favoritosFragment_to_fallaDetails"
+            app:destination="@id/fallaDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/infantilesFragment"
+        android:name="pardo.tarin.uv.fallas.ui.infantiles.InfantilesFragment"
+        android:label="fragment_infantiles"
+        tools:layout="@layout/fragment_infantiles" >
+        <action
+            android:id="@+id/action_infantilesFragment_to_fallaDetails"
+            app:destination="@id/fallaDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/adultasFragment"
+        android:name="pardo.tarin.uv.fallas.ui.adultas.AdultasFragment"
+        android:label="fragment_adultas"
+        tools:layout="@layout/fragment_adultas" >
+        <action
+            android:id="@+id/action_adultasFragment_to_fallaDetails"
             app:destination="@id/fallaDetails" />
     </fragment>
 </navigation>

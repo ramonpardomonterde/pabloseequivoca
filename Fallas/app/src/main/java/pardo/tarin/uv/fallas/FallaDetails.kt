@@ -64,14 +64,15 @@ class FallaDetails : Fragment() {
         binding.textView2.text = "\uD83C\uDFC6 ${getString(R.string.premios)} \uD83C\uDFC6"
         binding.textView6.text = getString(R.string.IGtitulo).uppercase()
         imgBtnFav = (activity as MainActivity).botonfav
-        imgBtnFav!!.visibility = View.VISIBLE
         comprobarFavorito(falla) { esfavorito ->
             if (esfavorito) {
                 imgBtnFav!!.setImageResource(android.R.drawable.btn_star_big_on)
             } else {
                 imgBtnFav!!.setImageResource(android.R.drawable.btn_star_big_off)
             }
+            imgBtnFav!!.visibility = View.VISIBLE
         }
+
 
         (activity as MainActivity).botonfav.setOnClickListener {
             comprobarFavorito(falla) { esfavorito ->

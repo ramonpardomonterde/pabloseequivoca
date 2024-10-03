@@ -6,17 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.infantiles.InfantilesFragment">
 
-    <ProgressBar
-        android:id="@+id/loading_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/textoRecargar"
         android:layout_width="174dp"
@@ -52,98 +41,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"/>
 
-            <!--<include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccionEspecial" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion1" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion2" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion3" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion4" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion5" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion6" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion7" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion8" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion9" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion10" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion11" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion12" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion13" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion14" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion15" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion16" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion17" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion18" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion19" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion20" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion21" />
-
-            <include
-                layout="@layout/seccion_view"
-                android:id="@+id/seccion22" />-->
     </ScrollView>
 
+    <ProgressBar
+        android:id="@+id/loading_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

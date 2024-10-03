@@ -1,5 +1,7 @@
 package pardo.tarin.uv.fallas.ui.home
 
+import android.content.Context
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
@@ -10,6 +12,9 @@ import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.auth.FirebaseAuth
+import pardo.tarin.uv.fallas.LoginActivity
+import pardo.tarin.uv.fallas.MainActivity
 import pardo.tarin.uv.fallas.R
 import pardo.tarin.uv.fallas.databinding.FragmentHomeBinding
 
@@ -31,14 +36,17 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        val email = arguments?.getString("email")
+        binding.textView7.text = email
+
         val infButton = binding.monumentosInfButton
         var scaledDrawable = scaleDrawable(R.drawable.pareja_falleros_infantil, 100, 100)
         infButton.setCompoundDrawablesWithIntrinsicBounds(scaledDrawable, null, null, null)
         infButton.setText(getString(R.string.menu_infantiles))
 
         infButton.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavHomeToFallasFragment("infantiles")
-            findNavController().navigate(action)
+            //val action = HomeFragmentDirections.actionNavHomeToInfantilesFragment("infantiles")
+            findNavController().navigate(R.id.action_nav_home_to_infantilesFragment)
         }
 
         val adultosButton = binding.monumentosAdultosButton
@@ -47,8 +55,8 @@ class HomeFragment : Fragment() {
         adultosButton.setText(getString(R.string.menu_adultas))
 
         adultosButton.setOnClickListener {
-            val action = HomeFragmentDirections.actionNavHomeToFallasFragment("adultas")
-            findNavController().navigate(action)
+            //val action = HomeFragmentDirections.actionNavHomeToFallasFragment("adultas")
+            findNavController().navigate(R.id.action_nav_home_to_adultasFragment)
         }
 
         val mapaButton = binding.mapaButton
@@ -83,6 +91,48 @@ class HomeFragment : Fragment() {
             textView.text = it
         }*/
         return root
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        // Obtén una referencia a botonfav
+        val botonfav = (activity as MainActivity).botonfav
+        botonfav.visibility = View.VISIBLE
+        var abierto = false
+        // Cambia la imagen de botonfav
+        botonfav.setImageResource(R.drawable.usuario50)
+        botonfav.setOnClickListener {
+            if (!abierto) {
+                botonfav.setImageResource(android.R.drawable.ic_menu_close_clear_cancel)
+            } else {
+                botonfav.setImageResource(R.drawable.usuario50)
+            }
+            abierto = !abierto
+
+            val prefs = requireActivity().getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
+            prefs.clear()
+            prefs.apply()
+
+            FirebaseAuth.getInstance().signOut()
+
+            // Inicia LoginActivity
+            val intent = Intent(activity, LoginActivity::class.java)
+            startActivity(intent)
+
+            // Cierra la actividad actual
+            activity?.finish()
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        // Obtén una referencia a botonfav
+        val botonfav = (activity as MainActivity).botonfav
+
+        // Haz que botonfav desaparezca
+        botonfav.visibility = View.GONE
     }
 
     override fun onDestroyView() {

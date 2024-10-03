@@ -1,35 +1,17 @@
 package pardo.tarin.uv.fallas
 
 import android.content.Context
-import android.content.res.Configuration
-import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.util.Log
-import android.view.Menu
-import android.view.View
 import android.widget.ImageButton
-import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.res.ResourcesCompat
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.lifecycle.ViewModelProvider
-import com.google.firebase.analytics.FirebaseAnalytics
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import pardo.tarin.uv.fallas.databinding.ActivityMainBinding
-import pardo.tarin.uv.fallas.ui.infantiles.InfantilesFragment
-import pardo.tarin.uv.fallas.ui.infantiles.InfantilesViewModel
-import java.util.Locale
+import pardo.tarin.uv.fallas.ui.home.HomeFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -47,11 +29,10 @@ class MainActivity : AppCompatActivity() {
         botonfav = binding.appBarMain.botonfav
         setSupportActionBar(binding.appBarMain.toolbar)
 
-        val analytics = FirebaseAnalytics.getInstance(this)
+        /*val analytics = FirebaseAnalytics.getInstance(this)
         val bundle = Bundle()
         bundle.putString("Message", "Integración de Firebase completada")
-        analytics.logEvent("InitScreen", bundle)
-
+        analytics.logEvent("InitScreen", bundle)*/
 
         /*val infantilesViewModel =
             ViewModelProvider(this).get(InfantilesViewModel::class.java)
@@ -80,6 +61,22 @@ class MainActivity : AppCompatActivity() {
             )/*, drawerLayout*/
         )*/
 
+        // Recoge los extras del Intent
+        val email = intent.getStringExtra("email")
+        val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
+        prefs.putString("email", email)
+        prefs.apply()
+
+        // Crea un Bundle y añade los extras
+        val bundle = Bundle()
+        bundle.putString("email", email)
+
+        // Crea una instancia de HomeFragment y establece los argumentos
+        val homeFragment = HomeFragment()
+        homeFragment.arguments = bundle
+
+        navController.setGraph(R.navigation.mobile_navigation, bundle)
+
         appBarConfiguration = AppBarConfiguration(setOf(R.id.nav_home))
         setupActionBarWithNavController(navController, appBarConfiguration)
         /*navView.setupWithNavController(navController)*/
@@ -94,12 +91,5 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-    }
-
-    fun scaleDrawable(drawableId: Int, width: Int, height: Int): Drawable {
-        val drawable = ResourcesCompat.getDrawable(resources, drawableId, null)
-        val bitmap = (drawable as BitmapDrawable).bitmap
-        val scaledBitmap = Bitmap.createScaledBitmap(bitmap, width, height, true)
-        return BitmapDrawable(resources, scaledBitmap)
     }
 }

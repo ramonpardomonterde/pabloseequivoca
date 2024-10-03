@@ -215,16 +215,16 @@ class FallasFragment: FallasGeneral() {
                     premioE.text = "${getString(R.string.premioIG)}: ${falla.premioE}"
                 }
 
-                fallaView.setOnClickListener(){
+                /*fallaView.setOnClickListener(){
                     if(isAdded) {
                         val bundle = Bundle()
                         bundle.putSerializable("falla", falla)
                         findNavController().navigate(
-                            R.id.action_fallasFragment_to_fallaDetails2,
+                            R.id.action_nav_fallas_to_fallaFragment,
                             bundle
                         )
                     }
-                }
+                }*/
 
                 layoutFallasSeccion.addView(fallaView)
                 layoutFallasSeccion.visibility = View.GONE
