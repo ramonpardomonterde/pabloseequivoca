@@ -2,9 +2,10 @@ package pardo.tarin.uv.fallas.bdRoom
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import pardo.tarin.uv.fallas.CalendarioAdapter
 import pardo.tarin.uv.fallas.Falla
 
-@Database(entities = [Falla::class], version = 2)
+@Database(entities = [CalendarioAdapter.Evento::class], version = 1)
 abstract class AppDatabase: RoomDatabase() {
-    abstract fun fallaDao(): FallaDao
+    abstract fun eventDao(): EventosDao
 }

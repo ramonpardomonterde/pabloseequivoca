@@ -13,9 +13,29 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
-    <string name="prefs_file">fallas2024_prefs</string>
+    <string name="prefs_file" translatable="false">fallas2024_prefs</string>
     <!--*********************** GENERALES  **************************-->
     <string name="Si">Yes</string>
+    <string name="Aceptar">Accept</string>
+    <!--*************************************************************-->
+
+    <!-- ******************** Login Activity ************************-->
+    <string name="iniciarSesion">LOG IN</string>
+    <string name="registrarse">REGISTER</string>
+    <string name="email">Email</string>
+    <string name="contrasena">Password</string>
+    <!--***** Exception Login *****-->
+    <string name="usuarioNoExiste">This email is not registered.</string>
+    <string name="contrasenaIncorrecta">Incorrect password.</string>
+    <string name="errorLogin">An error occurred authenticating the user.</string>
+    <!--***************************-->
+    <!-- *** Exception Register ***-->
+    <string name="usuarioYaExiste">This email is already registered.</string>
+    <string name="correoInvalido">Invalid email.</string>
+    <string name="contrasenaInvalida">Invalid password.</string>
+    <string name="contrasenaRequisitos">The password must contain at least 6 characters, a number, a capital letter and a lowercase character.</string>
+    <string name="errorRegistro">An error occurred registering the user.</string>
+    <!--***************************-->
     <!--*************************************************************-->
 
     <!-- ******************** HomeFragment **************************-->
@@ -25,12 +45,30 @@
     <string name="home_mapa">MAP</string>
     <string name="home_calendario">EVENTS</string>
     <string name="favoritos">FAVORITES</string>
+    <string name="cerrarSesion">Log out</string>
+    <string name="consultarCerrarSesion">Do you want to log out?</string>
+    <!--***** Acerca de *****-->
+    <string name="acercaDe">ABOUT THE APP</string>
+    <string name="creador">Creator</string>
+    <string name="version">Version</string>
+    <string name="description">Welcome to Fallas Guide, your interactive guide to the Fallas festival in Valencia.\n
+
+With this application, you can explore the monuments for adults and children, see their location on the map and know the scheduled events.\n
+
+In addition, you can mark your favorite monuments and events to have them always at hand.\n
+
+If you have any questions or need help, do not hesitate to contact us.\n
+
+Enjoy the Fallas!</string>
+    <!--*********************-->
     <!--*************************************************************-->
 
     <!-- ******************** Fallas Fragment ***********************-->
     <string name="premioSeccion">Section award</string>
     <string name="premioIG">Ingenuity and grace award</string>
     <string name="seccion">Section</string>
+    <string name="noCargaFallas">FAILED TO LOAD FAULTS</string>
+    <string name="reintentar">Retry</string>
     <!--*************************************************************-->
 
     <!-- ******************** Mapa Fragment *************************-->
@@ -44,6 +82,7 @@
     <!-- ******************** Favoritos Fragment ********************-->
     <string name="seccionEspecialInfantl">Special children\'s section</string>
     <string name="seccionEspecial">Special section</string>
+    <string name="seccionFueraConcurso">Out of competition section</string>
     <string name="listaVacia">There is no Falla as a favorite</string>
     <string name="borrarTitulo">Delete all favorites?</string>
     <string name="borrarMensaje">Are you sure you want to delete all your favorites?</string>
@@ -65,6 +104,7 @@
     <string name="detallesEvento">More details</string>
     <string name="listaVaciaEventos">There are no events for this day</string>
     <string name="alarmaTitulo">Add notice</string>
+    <string name="eliminarAlarma">Remove notice</string>
     <string name="alarmaMensaje">Notice scheduled for 5 minutes before the event</string>
     <!--*************************************************************-->
 </resources>

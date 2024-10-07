@@ -15,11 +15,8 @@ import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import pardo.tarin.uv.fallas.databinding.FragmentCalendarioBinding
 import java.time.LocalDate
-import java.time.LocalDateTime
 import java.time.format.TextStyle
 import java.util.Locale
-import com.google.firebase.database.*
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
 import java.time.ZoneId
 import java.util.Date
@@ -106,10 +103,7 @@ class CalendarioFragment : Fragment() {
                     val nombre = document.getString("Nombre")
                     val fecha = document.getDate("Fecha")
                     val lugar = document.getString("Localización")
-                    val estado = document.getBoolean("Estado")
-                    val alarmaCreada = document.getBoolean("AlarmaCreada")
-                    val id = document.id
-                    val event = CalendarioAdapter.Evento(nombre, fecha, lugar, estado, id, alarmaCreada)
+                    val event = CalendarioAdapter.Evento(document.id, nombre, fecha, lugar)
                     eventList.add(event)
                 }
 

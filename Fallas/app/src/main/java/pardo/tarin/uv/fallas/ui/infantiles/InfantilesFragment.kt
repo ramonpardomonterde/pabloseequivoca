@@ -171,6 +171,7 @@ class InfantilesFragment: FallasGeneral() {
                     if(isAdded) {
                         val bundle = Bundle()
                         bundle.putSerializable("falla", falla)
+                        Log.d("PruebaFalla", falla.toString())
                         findNavController().navigate(
                             R.id.action_infantilesFragment_to_fallaDetails,
                             bundle

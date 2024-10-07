@@ -31,9 +31,12 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import pardo.tarin.uv.fallas.databinding.FragmentFallaDetailsBinding
 import com.bumptech.glide.request.transition.Transition
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 import pardo.tarin.uv.fallas.bdRoom.AppDatabase
+import java.util.Locale
 
 class FallaDetails : Fragment() {
 
@@ -48,6 +51,7 @@ class FallaDetails : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         falla = arguments?.getSerializable("falla") as Falla
+        Log.d("FallaDetails", falla.toString())
         /*try {
             falla = arguments?.getSerializable("adultas") as Falla
             tipo = "adultas"
@@ -63,31 +67,46 @@ class FallaDetails : Fragment() {
 
         binding.textView2.text = "\uD83C\uDFC6 ${getString(R.string.premios)} \uD83C\uDFC6"
         binding.textView6.text = getString(R.string.IGtitulo).uppercase()
+        binding.seccionText.text = getString(R.string.seccion).uppercase()
         imgBtnFav = (activity as MainActivity).botonfav
-        comprobarFavorito(falla) { esfavorito ->
-            if (esfavorito) {
-                imgBtnFav!!.setImageResource(android.R.drawable.btn_star_big_on)
-            } else {
-                imgBtnFav!!.setImageResource(android.R.drawable.btn_star_big_off)
+        GlobalScope.launch {
+            val esfavorito = comprobarFavorito(falla)
+            Log.d("ComprobarFavorito", esfavorito.toString())
+            withContext(Dispatchers.Main) {
+                if (esfavorito) {
+                    imgBtnFav!!.setImageResource(android.R.drawable.btn_star_big_on)
+                } else {
+                    imgBtnFav!!.setImageResource(android.R.drawable.btn_star_big_off)
+                }
+                imgBtnFav!!.visibility = View.VISIBLE
             }
-            imgBtnFav!!.visibility = View.VISIBLE
         }
 
-
         (activity as MainActivity).botonfav.setOnClickListener {
-            comprobarFavorito(falla) { esfavorito ->
-                if (esfavorito) {
-                    imgBtnFav!!.setImageResource(android.R.drawable.btn_star_big_off)
-                    falla.favorito = false
-                    borrarFavorito(falla)
-                    Toast.makeText(requireContext(), getString(R.string.RemoveFav), Toast.LENGTH_SHORT)
-                        .show()
-                } else {
-                    imgBtnFav!!.setImageResource(android.R.drawable.btn_star_big_on)
-                    falla.favorito = true
-                    añadirFavorito(falla)
-                    Toast.makeText(requireContext(), getString(R.string.AddFav), Toast.LENGTH_SHORT)
-                        .show()
+            GlobalScope.launch {
+                val esfavorito = comprobarFavorito(falla)
+                withContext(Dispatchers.Main) {
+                    if (esfavorito) {
+                        imgBtnFav!!.setImageResource(android.R.drawable.btn_star_big_off)
+                        //falla.favorito = false
+                        borrarFavorito(falla)
+                        Toast.makeText(
+                            requireContext(),
+                            getString(R.string.RemoveFav),
+                            Toast.LENGTH_SHORT
+                        )
+                            .show()
+                    } else {
+                        imgBtnFav!!.setImageResource(android.R.drawable.btn_star_big_on)
+                        //falla.favorito = true
+                        añadirFavorito(falla)
+                        Toast.makeText(
+                            requireContext(),
+                            getString(R.string.AddFav),
+                            Toast.LENGTH_SHORT
+                        )
+                            .show()
+                    }
                 }
             }
         }
@@ -126,7 +145,7 @@ class FallaDetails : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.d("FallaDetails", "${falla.boceto}")
+        //Log.d("FallaDetails", "${falla.boceto}")
         val imageview = binding.boceto
         Glide.with(this)
             .load("${falla.boceto}")
@@ -152,7 +171,7 @@ class FallaDetails : Fragment() {
         }
         else if(falla.seccion == "FC")
         {
-            binding.seccionText.text = "SECCIÓN FUERA CONCURSO"
+            binding.seccionText.text = getString(R.string.seccionFueraConcurso).uppercase()
             binding.premios.visibility = View.GONE
         }
         else
@@ -179,18 +198,22 @@ class FallaDetails : Fragment() {
     }
 
     fun añadirFavorito(falla: Falla) {
-        val db = Room.databaseBuilder(
+        val dbfirestore = FirebaseFirestore.getInstance()
+        /*val db = Room.databaseBuilder(
             requireContext(),
             AppDatabase::class.java, "fallasFavoritas"
         ).fallbackToDestructiveMigration().build()
-        val fallaDao = db.fallaDao()
+        val fallaDao = db.fallaDao()*/
         val falla = Falla(falla.objid, falla.id, falla.nombre, falla.escudo, falla.seccion, falla.premio, falla.premioE, falla.fallera, falla.presidente, falla.artista, falla.lema, falla.boceto, falla.experim, falla.coordLat, falla.coordLong)
         GlobalScope.launch {
             try{
-                fallaDao.insertFalla(falla)
-                Log.d("FavoritosFallaDetails", falla.favorito.toString())
-                Log.d("FavoritosDetails", fallaDao.getAll().toString())
-                Log.d("CampingDetails", "Camping ${falla.nombre} añadido a favoritos")
+                //fallaDao.insertFalla(falla)
+                val fallaMap = falla.toMap()
+                dbfirestore.collection("users").document(DataHolder.publicEmail).get().addOnSuccessListener {
+                    val fallasFav = it.get("favoritas") as MutableList<Map<String, Any>>
+                    fallasFav.add(fallaMap as Map<String, Any>)
+                    dbfirestore.collection("users").document(DataHolder.publicEmail).update("favoritas", fallasFav)
+                }
             } catch (e: Exception) {
                 Log.e("CampingDetails", "Error al añadir el camping a favoritos: ${e.message}")
             }
@@ -198,25 +221,34 @@ class FallaDetails : Fragment() {
     }
 
     fun borrarFavorito(falla: Falla) {
-        val db = Room.databaseBuilder(
+        /*val db = Room.databaseBuilder(
             requireContext(),
             AppDatabase::class.java, "fallasFavoritas"
         ).fallbackToDestructiveMigration().build()
-        val fallaDao = db.fallaDao()
+        val fallaDao = db.fallaDao()*/
+        val dbfirestore = FirebaseFirestore.getInstance()
         GlobalScope.launch {
             try{
-                fallaDao.delete(falla)
-                Log.d("FavoritosFallaDetails", falla.favorito.toString())
-                Log.d("FavoritosDetails", fallaDao.getAll().toString())
-                Log.d("CampingDetails", "Camping ${falla.nombre} eliminado de favoritos")
+                //fallaDao.delete(falla)
+                Log.d("FirestoreBorrar", falla.objid.toString())
+                dbfirestore.collection("users").document(DataHolder.publicEmail).get().addOnSuccessListener {
+                    val fallasFav = it.get("favoritas") as MutableList<Map<String, Any>>
+                    for (i in fallasFav){
+                        if (i["objid"] == falla.objid)
+                            Log.d("FirestoreBorrar", i["objid"].toString())
+                            fallasFav.remove(i)
+                    }
+                    //fallasFav.removeIf { it.objid == falla.objid }
+                    dbfirestore.collection("users").document(DataHolder.publicEmail).update("favoritas", fallasFav)
+                }
             } catch (e: Exception) {
                 Log.e("CampingDetails", "Error al eliminar el camping de favoritos: ${e.message}")
             }
         }
     }
 
-    fun comprobarFavorito(falla: Falla, callback: (Boolean) -> Unit) {
-        val db = Room.databaseBuilder(
+    //fun comprobarFavorito(falla: Falla): Boolean {
+        /*val db = Room.databaseBuilder(
             requireContext(),
             AppDatabase::class.java, "fallasFavoritas"
         ).fallbackToDestructiveMigration().build()
@@ -234,6 +266,25 @@ class FallaDetails : Fragment() {
                 }
             }
         }
+    }
+         */
+    suspend fun comprobarFavorito(falla: Falla) : Boolean {
+        val db = FirebaseFirestore.getInstance()
+        var esFavorito = false
+        try{
+            val result = db.collection("users").document(DataHolder.publicEmail).get().await()
+            val fallasFav = result.get("favoritas") as MutableList<Map<String, Any>>
+            for (i in fallasFav){
+                if (i["objid"].toString() == falla.objid.toString()){
+                    esFavorito = true
+                    break
+                }
+            }
+        } catch (e: Exception) {
+            Log.e("ComprobarFavorito", "Error al comprobar la falla de favoritos: ${e.message}")
+        }
+
+        return esFavorito
     }
 
 

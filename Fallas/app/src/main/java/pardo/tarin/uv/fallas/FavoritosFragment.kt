@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import androidx.room.Room
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -27,7 +28,8 @@ class FavoritosFragment : Fragment() {
     ): View? {
         binding = FragmentFavoritosBinding.inflate(inflater, container, false)
         (activity as MainActivity).supportActionBar?.title = getString(R.string.favoritos)
-        getData()
+        //getData()
+        obtenerFallasFav()
 
         binding.borrarTodosFav.setOnClickListener{
             AlertDialog.Builder(requireContext())
@@ -35,12 +37,15 @@ class FavoritosFragment : Fragment() {
                 .setMessage(getString(R.string.borrarMensaje))
                 .setPositiveButton(getString(R.string.Si)) { _, _ ->
                     CoroutineScope(Dispatchers.IO).launch {
-                        val db = Room.databaseBuilder(
+                        /*val db = Room.databaseBuilder(
                             requireContext(),
                             AppDatabase::class.java, "fallasFavoritas"
                         ).fallbackToDestructiveMigration().build()
                         val userDao = db.fallaDao()
-                        userDao.deleteAll()
+                        userDao.deleteAll()*/
+                        val db = FirebaseFirestore.getInstance()
+                        val favsEmpty: List<Map<String, Any>> = emptyList()
+                        db.collection("users").document(DataHolder.publicEmail).update("favoritas", favsEmpty)
                         fallasData.clear()
                         withContext(Dispatchers.Main) {
                             binding.layoutFallasFavs.removeAllViews()
@@ -61,22 +66,33 @@ class FavoritosFragment : Fragment() {
         val linearLayout = binding.layoutFallasFavs
         val inflater = LayoutInflater.from(context)
         CoroutineScope(Dispatchers.IO).launch {
-            val db = Room.databaseBuilder(
+            /*val db = Room.databaseBuilder(
                 requireContext(),
                 AppDatabase::class.java, "fallasFavoritas"
             ).fallbackToDestructiveMigration().build()
             val userDao = db.fallaDao()
-            val listaFavoritas = userDao.getAll()
+            val listaFavoritas = userDao.getAll()*/
+            /*val db = FirebaseFirestore.getInstance()
+            var fallasFav: List<Falla> = listOf()
+            db.collection("users").document(DataHolder.publicEmail).get()
+                .addOnSuccessListener { result ->
+                    val fallasFavMaps = result.get("favoritas") as List<Map<String, Any>>
+                    fallasFav = fallasFavMaps.map{Falla.fromMap(it)}
+                    fallasData = ArrayList(fallasFav)
+                    Log.d("Favoritos", fallasFav.toString())
+                }
+                .addOnFailureListener { exception ->
+                    Log.d("Favoritos", "Error getting documents: ", exception)
+                }*/
 
             withContext(Dispatchers.Main) {
-                if(listaFavoritas.isEmpty()){
+                if(fallasData.isEmpty()){
                     binding.listaFavVacia.visibility = View.VISIBLE
                     binding.borrarTodosFav.visibility = View.GONE
                 } else {
                     binding.listaFavVacia.visibility = View.GONE
                     binding.borrarTodosFav.visibility = View.VISIBLE
                 }
-                fallasData = ArrayList(listaFavoritas)
 
                 for(j in fallasData) {
                     val falla = j
@@ -119,5 +135,24 @@ class FavoritosFragment : Fragment() {
                 requireActivity().invalidateOptionsMenu()
             }
         }
+    }
+
+    private fun obtenerFallasFav(){
+        val db = FirebaseFirestore.getInstance()
+        db.collection("users").document(DataHolder.publicEmail).get()
+            .addOnSuccessListener { result ->
+                val fallasFavMaps = result.get("favoritas")
+                if (fallasFavMaps != null) {
+                    fallasData = ArrayList((fallasFavMaps as List<Map<String, Any>>).map{Falla.fromMap(it)})
+                    getData()
+                    Log.d("Favoritos", fallasData.toString())
+                } else {
+                    fallasData = ArrayList()
+                    getData()
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.d("Favoritos", "Error getting documents: ", exception)
+            }
     }
 }

@@ -20,7 +20,8 @@ class AlarmReceiver : BroadcastReceiver() {
         Log.d("EventAdapter", "Alarma recibida")
         val eventName = intent.getStringExtra("event_name") ?: "Evento"
         val eventLocation = intent.getStringExtra("event_location") ?: "Ubicación desconocida"
-        val message = "¡$eventName comienza en 5 minutos en $eventLocation!"
+        val minutesBefore = intent.getIntExtra("minutes_before", 0)
+        val message = intent.getStringExtra("message") ?: "Recordatorio de evento"
 
         // Mostrar la notificación
         showNotification(context, eventName, message)
@@ -53,7 +54,7 @@ class AlarmReceiver : BroadcastReceiver() {
 
         // Crear la notificación
         val notification = NotificationCompat.Builder(context, channelId)
-            .setSmallIcon(R.drawable.logo_app) // Asegúrate de que el ícono esté disponible
+            .setSmallIcon(R.drawable.logo_app32) // Asegúrate de que el ícono esté disponible
             .setContentTitle(title)
             .setContentText(message)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
