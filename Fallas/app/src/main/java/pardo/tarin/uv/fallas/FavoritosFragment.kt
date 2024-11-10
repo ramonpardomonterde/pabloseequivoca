@@ -9,13 +9,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
-import androidx.room.Room
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import pardo.tarin.uv.fallas.bdRoom.AppDatabase
 import pardo.tarin.uv.fallas.databinding.FragmentFavoritosBinding
 
 class FavoritosFragment : Fragment() {

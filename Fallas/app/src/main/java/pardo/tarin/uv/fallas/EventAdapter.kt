@@ -24,6 +24,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import pardo.tarin.uv.fallas.AlarmReceiver
 import pardo.tarin.uv.fallas.CalendarioAdapter
+import pardo.tarin.uv.fallas.CalendarioFragment
 import pardo.tarin.uv.fallas.R
 import pardo.tarin.uv.fallas.bdRoom.AppDatabase
 import java.time.LocalDateTime
@@ -32,7 +33,7 @@ import java.time.format.DateTimeFormatter
 import java.time.format.TextStyle
 import java.util.Locale
 
-class EventAdapter(private var events: List<CalendarioAdapter.Evento>) : RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
+class EventAdapter(private val fragment: CalendarioFragment, private var events: List<CalendarioAdapter.Evento>) : RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
     val db = FirebaseFirestore.getInstance()
     inner class EventViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nombreTextView: TextView = itemView.findViewById(R.id.event_name)
@@ -40,6 +41,16 @@ class EventAdapter(private var events: List<CalendarioAdapter.Evento>) : Recycle
         val lugarTextView: TextView = itemView.findViewById(R.id.event_location)
         val btnSetAlarm: Button = itemView.findViewById(R.id.btn_set_alarm)
         val btnDeleteAlarm: Button = itemView.findViewById(R.id.btn_delete_alarm)
+
+        init {
+            itemView.findViewById<Button>(R.id.details_button).setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val event = events[position]
+                    fragment.showEventDetails(event)
+                }
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventViewHolder {
@@ -83,7 +94,7 @@ class EventAdapter(private var events: List<CalendarioAdapter.Evento>) : Recycle
             holder.btnSetAlarm.visibility = View.GONE
             holder.btnDeleteAlarm.visibility = View.VISIBLE
         }*/
-        val db = Room.databaseBuilder(holder.itemView.context, AppDatabase::class.java, "eventos").build()
+        val db = Room.databaseBuilder(holder.itemView.context, AppDatabase::class.java, "eventos").fallbackToDestructiveMigration().build()
         val evDao = db.eventDao()
         GlobalScope.launch {
             val ev = evDao.getEvento(event.id)
@@ -255,7 +266,7 @@ class EventAdapter(private var events: List<CalendarioAdapter.Evento>) : Recycle
 
                 // Log para confirmar que la alarma fue programada con éxito
                 Log.d("EventAdapter", "Alarma programada con éxito para: $alarmDateTime")
-                val db = Room.databaseBuilder(context, AppDatabase::class.java, "eventos").build()
+                val db = Room.databaseBuilder(context, AppDatabase::class.java, "eventos").fallbackToDestructiveMigration().build()
                 val evDao = db.eventDao()
                 GlobalScope.launch {
                     evDao.insertEvento(event)
@@ -291,7 +302,7 @@ class EventAdapter(private var events: List<CalendarioAdapter.Evento>) : Recycle
 
         alarmManager.cancel(pendingIntent)
         //db.collection("eventos").document(event.id.toString()).update("AlarmaCreada", false)
-        val db = Room.databaseBuilder(context, AppDatabase::class.java, "eventos").build()
+        val db = Room.databaseBuilder(context, AppDatabase::class.java, "eventos").fallbackToDestructiveMigration().build()
         val evDao = db.eventDao()
         GlobalScope.launch {
             evDao.delete(event)

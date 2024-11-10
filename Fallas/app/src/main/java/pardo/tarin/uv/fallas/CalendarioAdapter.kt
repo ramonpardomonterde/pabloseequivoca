@@ -26,6 +26,8 @@ class CalendarioAdapter(private val calendario: List<LocalDate>) : RecyclerView.
         val nombre: String? = null,
         val fecha: Date? = null,
         val lugar: String? = null,
+        val descripcion: String? = null,
+        val descripcionEng: String? = null
     )
     var selectedItem = -1
         set(value) {

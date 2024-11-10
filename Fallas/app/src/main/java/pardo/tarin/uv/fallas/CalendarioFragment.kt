@@ -1,14 +1,20 @@
 package pardo.tarin.uv.fallas
 
 import EventAdapter
+import android.graphics.Typeface
 import android.os.Build
 import android.os.Bundle
+import android.text.Spannable
+import android.text.SpannableStringBuilder
+import android.text.TextUtils
+import android.text.style.StyleSpan
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
@@ -19,11 +25,13 @@ import java.time.format.TextStyle
 import java.util.Locale
 import com.google.firebase.firestore.FirebaseFirestore
 import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 import java.util.Date
 
 class CalendarioFragment : Fragment() {
 
     private lateinit var binding: FragmentCalendarioBinding
+
     private var position = 0
     @RequiresApi(Build.VERSION_CODES.O)
     private val calendario = List(366) { LocalDate.ofYearDay(2024, it + 1) }
@@ -63,7 +71,7 @@ class CalendarioFragment : Fragment() {
         val snapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(recyclerView)
 
-        eventAdapter = EventAdapter(emptyList())
+        eventAdapter = EventAdapter(this, emptyList())
         binding.eventosRV.adapter = eventAdapter
         binding.eventosRV.layoutManager = LinearLayoutManager(requireContext())
 
@@ -85,6 +93,8 @@ class CalendarioFragment : Fragment() {
             }
         })
 
+
+
         return binding.root
     }
     // Función para obtener los eventos de Firestore según la fecha seleccionada
@@ -103,7 +113,9 @@ class CalendarioFragment : Fragment() {
                     val nombre = document.getString("Nombre")
                     val fecha = document.getDate("Fecha")
                     val lugar = document.getString("Localización")
-                    val event = CalendarioAdapter.Evento(document.id, nombre, fecha, lugar)
+                    val descripcion = document.getString("Descripción")
+                    val descripcionEng = document.getString("DescripciónEng")
+                    val event = CalendarioAdapter.Evento(document.id, nombre, fecha, lugar, descripcion, descripcionEng)
                     eventList.add(event)
                 }
 
@@ -122,5 +134,45 @@ class CalendarioFragment : Fragment() {
             .addOnFailureListener { exception ->
                 Log.w("CalendarioFragment", "Error getting documents: ", exception)
             }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    fun showEventDetails(event: CalendarioAdapter.Evento) {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setTitle(event.nombre)
+        val fechaText = SpannableStringBuilder(getString(R.string.fecha))
+        val date = event.fecha!!.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime()
+        fechaText.setSpan(StyleSpan(Typeface.BOLD), 0, fechaText.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        val formattedDate: String = if(Locale.getDefault().language == "es") {
+            val daySpanish = date.dayOfWeek.getDisplayName(TextStyle.FULL, Locale.getDefault()).capitalize(
+                Locale.getDefault())
+            val monthSpanish = date.month.getDisplayName(TextStyle.FULL, Locale.getDefault()).capitalize(Locale.getDefault())
+            "${daySpanish}, ${date.dayOfMonth} de $monthSpanish de ${date.year} - ${date.format(
+                DateTimeFormatter.ofPattern("HH:mm"))}h"
+        } else {
+            date.format(DateTimeFormatter.ofPattern("EEEE, MMMM d, yyyy - h:mm a"))
+        }
+        val lugar = SpannableStringBuilder(getString(R.string.lugar))
+        lugar.setSpan(StyleSpan(Typeface.BOLD), 0, lugar.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        val descripcionText = SpannableStringBuilder(getString(R.string.descripcion))
+        descripcionText.setSpan(StyleSpan(Typeface.BOLD), 0, descripcionText.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        val description : String = if (Locale.getDefault().language == "es") {
+            event.descripcion!!
+        } else {
+            event.descripcionEng!!
+        }
+
+
+        builder.setMessage(
+            TextUtils.concat(
+            fechaText, ": ${formattedDate}\n\n",
+            lugar, ": ${event.lugar}\n\n",
+                descripcionText, ": $description"
+        ))
+        //builder.setMessage("${getString(R.string.fecha)}: ${event.fecha}\n\n${getString(R.string.lugar)}: ${event.lugar}\n\n${getString(R.string.descripcion)}: ${event.descripcion}")
+        builder.setPositiveButton("OK") { dialog, _ ->
+            dialog.dismiss()
+        }
+        builder.show()
     }
 }

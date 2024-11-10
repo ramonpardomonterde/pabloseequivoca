@@ -13,18 +13,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import android.view.animation.TranslateAnimation
-import android.widget.ImageButton
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import androidx.room.Room
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
 import pardo.tarin.uv.fallas.DataHolder
 import pardo.tarin.uv.fallas.LoginActivity
 import pardo.tarin.uv.fallas.MainActivity
 import pardo.tarin.uv.fallas.R
-import pardo.tarin.uv.fallas.bdRoom.AppDatabase
 import pardo.tarin.uv.fallas.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {

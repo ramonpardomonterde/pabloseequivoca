@@ -92,5 +92,8 @@ Enjoy the Fallas!</string>
     <string name="alarmaTitulo">Add notice</string>
     <string name="eliminarAlarma">Remove notice</string>
     <string name="alarmaMensaje">Notice scheduled for 5 minutes before the event</string>
+    <string name="fecha">Date</string>
+    <string name="lugar">Place</string>
+    <string name="descripcion">Description</string>
     <!--*************************************************************-->
 </resources>

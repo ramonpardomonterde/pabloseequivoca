@@ -93,5 +93,8 @@ Si tienes alguna pregunta o necesitas ayuda, no dudes en ponerte en contacto con
     <string name="alarmaTitulo">Añadir aviso</string>
     <string name="eliminarAlarma">Eliminar aviso</string>
     <string name="alarmaMensaje">Aviso programado para 5 minutos antes del evento</string>
+    <string name="fecha">Fecha</string>
+    <string name="lugar">Localización</string>
+    <string name="descripcion">Descripción</string>
     <!--*************************************************************-->
 </resources>
