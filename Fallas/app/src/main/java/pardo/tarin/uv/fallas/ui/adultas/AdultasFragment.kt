@@ -9,7 +9,6 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.CoroutineScope
@@ -21,7 +20,6 @@ import pardo.tarin.uv.fallas.FallasGeneral
 import pardo.tarin.uv.fallas.FallasViewModel
 import pardo.tarin.uv.fallas.R
 import pardo.tarin.uv.fallas.databinding.FragmentAdultasBinding
-import pardo.tarin.uv.fallas.databinding.FragmentFallasBinding
 import java.net.SocketTimeoutException
 
 class AdultasFragment : FallasGeneral() {

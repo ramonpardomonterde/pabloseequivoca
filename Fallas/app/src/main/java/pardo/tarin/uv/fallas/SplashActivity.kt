@@ -20,6 +20,6 @@ class SplashActivity : AppCompatActivity() {
         Handler().postDelayed({
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
-        }, 4000) // 3000 is the delayed time in milliseconds.
+        }, 4000)
     }
 }

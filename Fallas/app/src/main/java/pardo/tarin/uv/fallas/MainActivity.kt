@@ -2,7 +2,6 @@ package pardo.tarin.uv.fallas
 
 import android.content.Context
 import android.os.Bundle
-import android.provider.ContactsContract.Data
 import android.util.Log
 import android.widget.ImageButton
 import androidx.navigation.findNavController
@@ -20,9 +19,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
     lateinit var botonfav: ImageButton
-    //var email: String? = null
-
-    val coroutineScope = CoroutineScope(Dispatchers.Main)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,18 +45,10 @@ class MainActivity : AppCompatActivity() {
 
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         navController.navigate(R.id.nav_home, bundle)
-        //navController.setGraph(R.navigation.mobile_navigation, bundle)
 
         appBarConfiguration = AppBarConfiguration(setOf(R.id.nav_home))
         setupActionBarWithNavController(navController, appBarConfiguration)
-        /*navView.setupWithNavController(navController)*/
     }
-
-    /*override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.main, menu)
-        return true
-    }*/
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)

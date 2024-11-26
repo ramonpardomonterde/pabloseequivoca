@@ -9,18 +9,14 @@ import android.content.Intent
 import android.os.Build
 import android.util.Log
 import androidx.core.app.NotificationCompat
-import pardo.tarin.uv.fallas.MainActivity
-import pardo.tarin.uv.fallas.R
 
 class AlarmReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        // Obtener los datos del evento
 
+        // Obtener los datos del evento
         Log.d("EventAdapter", "Alarma recibida")
         val eventName = intent.getStringExtra("event_name") ?: "Evento"
-        val eventLocation = intent.getStringExtra("event_location") ?: "Ubicación desconocida"
-        val minutesBefore = intent.getIntExtra("minutes_before", 0)
         val message = intent.getStringExtra("message") ?: "Recordatorio de evento"
 
         // Mostrar la notificación
@@ -30,7 +26,7 @@ class AlarmReceiver : BroadcastReceiver() {
     private fun showNotification(context: Context, title: String, message: String) {
         val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
-        // Crear el canal de notificaciones (necesario para Android O+)
+        // Crear el canal de notificaciones
         val channelId = "event_channel"
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
@@ -54,7 +50,7 @@ class AlarmReceiver : BroadcastReceiver() {
 
         // Crear la notificación
         val notification = NotificationCompat.Builder(context, channelId)
-            .setSmallIcon(R.drawable.logo_app32) // Asegúrate de que el ícono esté disponible
+            .setSmallIcon(R.drawable.logo_app32)
             .setContentTitle(title)
             .setContentText(message)
             .setPriority(NotificationCompat.PRIORITY_HIGH)

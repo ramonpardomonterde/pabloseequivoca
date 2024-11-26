@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -34,10 +35,10 @@ class CalendarioFragment : Fragment() {
 
     private var position = 0
     @RequiresApi(Build.VERSION_CODES.O)
-    private val calendario = List(366) { LocalDate.ofYearDay(2024, it + 1) }
+    private val calendario = List(if (LocalDate.now().isLeapYear) 366 else 365) { LocalDate.ofYearDay(LocalDate.now().year, it + 1) }
     private val db = FirebaseFirestore.getInstance()
-    // Mantén una sola instancia de EventAdapter
     private lateinit var eventAdapter: EventAdapter
+    private var calendarioButton: ImageButton? = null
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
@@ -49,12 +50,47 @@ class CalendarioFragment : Fragment() {
 
         val recyclerView = binding.recyclerView
         val monthTextView = binding.mes
+        val calendar = binding.calendarView
+        val viewCalendario = binding.viewCalendario
         val adapter = CalendarioAdapter(calendario)
         val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapter
 
+        calendarioButton = (activity as MainActivity).botonfav
+        calendarioButton!!.setImageResource(R.drawable.calendario32)
+
+        calendarioButton!!.setOnClickListener() {
+
+            viewCalendario.visibility = View.VISIBLE
+        }
+
+        val minDate = calendario.first()
+        calendar.minDate = Date.from(minDate.atStartOfDay(ZoneId.systemDefault()).toInstant()).time
+        val maxDate = calendario.last()
+        calendar.maxDate = Date.from(maxDate.atStartOfDay(ZoneId.systemDefault()).toInstant()).time
+
+        calendar.setOnDateChangeListener { _, year, month, dayOfMonth ->
+            val selectedDate = LocalDate.of(year, month + 1, dayOfMonth)
+            val position = adapter.getPositionForDate(selectedDate)
+            adapter.selectedItem = position
+
+            // Scroll the RecyclerView to the selected date
+            val itemWidth = recyclerView.findViewHolderForAdapterPosition(position)?.itemView?.width ?: 0
+            val offset = (recyclerView.width - itemWidth) / 2
+            layoutManager.scrollToPositionWithOffset(position, offset)
+
+            monthTextView.text = selectedDate.month.getDisplayName(TextStyle.FULL, Locale.getDefault()).toUpperCase(
+                Locale.getDefault())
+
+            viewCalendario.visibility = View.GONE
+            calendar.date = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant()).time
+
+            fetchEventsForDate(selectedDate)
+        }
+
         val today = LocalDate.now()
+        calendar.date = Date.from(today.atStartOfDay(ZoneId.systemDefault()).toInstant()).time
         position = today.dayOfYear - 1
         // Desplaza el RecyclerView a la posición de la fecha actual
         val day = calendario[position]
@@ -86,8 +122,6 @@ class CalendarioFragment : Fragment() {
                     val selectedDay = calendario[pos]
                     monthTextView.text =
                         selectedDay.month.getDisplayName(TextStyle.FULL, Locale.getDefault()).toUpperCase(Locale.getDefault())
-                    //recyclerView.smoothScrollToPosition(selectedDay.dayOfYear - 1)
-                    //adapter.notifyDataSetChanged()
                     fetchEventsForDate(selectedDay)
                 }
             }
@@ -169,10 +203,33 @@ class CalendarioFragment : Fragment() {
             lugar, ": ${event.lugar}\n\n",
                 descripcionText, ": $description"
         ))
-        //builder.setMessage("${getString(R.string.fecha)}: ${event.fecha}\n\n${getString(R.string.lugar)}: ${event.lugar}\n\n${getString(R.string.descripcion)}: ${event.descripcion}")
         builder.setPositiveButton("OK") { dialog, _ ->
             dialog.dismiss()
         }
         builder.show()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Obtén una referencia a botonfav
+        val botonfav = (activity as MainActivity).botonfav
+        botonfav.visibility = View.VISIBLE
+        val viewCalendario = binding.viewCalendario
+
+        // Cambia la imagen de botonfav
+        botonfav.setImageResource(R.drawable.calendario32)
+        botonfav.setOnClickListener {
+            viewCalendario.visibility = View.VISIBLE
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        // Obtén una referencia a botonfav
+        val botonfav = (activity as MainActivity).botonfav
+
+        // Haz que botonfav desaparezca
+        botonfav.visibility = View.GONE
     }
 }

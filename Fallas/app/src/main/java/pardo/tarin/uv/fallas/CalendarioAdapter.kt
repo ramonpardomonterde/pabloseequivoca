@@ -1,5 +1,6 @@
 package pardo.tarin.uv.fallas
 
+import android.graphics.Color
 import android.os.Build
 import android.support.annotation.RequiresApi
 import android.view.LayoutInflater
@@ -45,20 +46,19 @@ class CalendarioAdapter(private val calendario: List<LocalDate>) : RecyclerView.
         return CalendarioViewHolder(view)
     }
 
+    fun getPositionForDate(date: LocalDate): Int{
+        return calendario.indexOf(date)
+    }
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: CalendarioViewHolder, position: Int) {
         val dia = calendario[position]
         val diasemana = dia.dayOfWeek.getDisplayName(TextStyle.SHORT, Locale.getDefault()).toUpperCase(Locale.getDefault())
         val dayOfMonthPadded = dia.dayOfMonth.toString().padStart(2, '0')
-        //val monthName = dia.month.getDisplayName(TextStyle.FULL, Locale.getDefault()).toUpperCase(Locale.getDefault())
         holder.dayTextView.text = dayOfMonthPadded
         holder.dayOfWeek.text = diasemana
         holder.selector.visibility = if (position == selectedItem) View.VISIBLE else View.GONE
-        /*if (position == selectedItem) {
-            holder.itemView.setBackgroundColor(Color.parseColor("#FF6200EE")) // Cambia el color de fondo del elemento seleccionado
-        } else {
-            holder.itemView.setBackgroundColor(Color.parseColor("#FFFFFFFF")) // Restaura el color de fondo del elemento no seleccionado
-        }*/
+
 
         // Ajusta el ancho del elemento para que solo se vean 7 elementos a la vez
         val displayMetrics = holder.itemView.context.resources.displayMetrics

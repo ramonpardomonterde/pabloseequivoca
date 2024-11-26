@@ -17,7 +17,6 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.RelativeLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.ViewModelProvider
@@ -27,10 +26,8 @@ import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.google.android.gms.maps.model.PolylineOptions
 import pardo.tarin.uv.fallas.databinding.FragmentMapaBinding
 
 class MapaFragment : Fragment(), OnMapReadyCallback {
@@ -72,7 +69,7 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
                 val view = super.getView(position, convertView, parent)
                 val textView = view as TextView
-                textView.setTextColor(Color.BLACK) // Cambia esto al color que desees
+                textView.setTextColor(Color.BLACK)
                 return view
             }
         }
@@ -83,7 +80,7 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
                 val view = super.getView(position, convertView, parent)
                 val textView = view as TextView
-                textView.setTextColor(Color.BLACK) // Cambia esto al color que desees
+                textView.setTextColor(Color.BLACK)
                 return view
             }
         }
@@ -106,7 +103,7 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
             drawable = if (isOpen) ResourcesCompat.getDrawable(resources, R.drawable.plus, null) else ResourcesCompat.getDrawable(resources, R.drawable.menos, null)
             button.setCompoundDrawablesWithIntrinsicBounds(null, null, drawable, null)
             val animator = ValueAnimator.ofFloat(startBias, endBias)
-            animator.duration = 1000 // Duración de la animación en milisegundos
+            animator.duration = 1000
             animator.addUpdateListener { animation ->
                 val animatedValue = animation.animatedValue as Float
                 layoutParams.topMargin = animatedValue.toInt()
@@ -157,7 +154,6 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
         fusedLocationClient.lastLocation.addOnSuccessListener { location ->
             if (location != null) {
                 val currentLatLng = LatLng(location.latitude, location.longitude)
-                //map.addMarker(MarkerOptions().position(currentLatLng).title("Mi ubicación"))
                 map.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 15f))
             }
         }
@@ -190,7 +186,6 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
                 }
 
                 binding.botonRuta.setOnClickListener {
-                    //val coordenadas = falla.coordenadas
                     val latLng = LatLng(falla.coordLat!!, falla.coordLong!!)
                     val gmmIntentUri = Uri.parse("https://www.google.com/maps/dir/?api=1&destination=${latLng.latitude},${latLng.longitude}")
                     val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
@@ -213,16 +208,7 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
             if (fallasAdultas != null && fallasAdultas.isNotEmpty()) {
                 for (i in fallasAdultas[0].drop(1)) {
                     val falla = i as Falla
-                    //val coordenadas = falla.coordenadas
                     val latLng = LatLng(falla.coordLat!!, falla.coordLong!!)
-                    /*if(falla.premio == "1"){
-                        val marker = map.addMarker(MarkerOptions().position(latLng).title(falla.nombre).icon(goldIcon))
-                        marker?.tag = falla
-                    }
-                    else{
-                        val marker = map.addMarker(MarkerOptions().position(latLng).title(falla.nombre))
-                        marker?.tag = falla
-                    }*/
                     val marker = map.addMarker(MarkerOptions().position(latLng).title(falla.nombre))
                     marker?.tag = falla
                 }
@@ -231,14 +217,12 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
 
         binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                //val seccion = secciones[position]
                 if(position == 0) return
                 map.clear()
                 mapaModelView!!._fallasInfantiles.observe(viewLifecycleOwner) { fallasInfantiles ->
                     if (fallasInfantiles != null && position < fallasInfantiles.size + 1) {
                         for (i in fallasInfantiles[position - 1].drop(1)) {
                             val falla = i as Falla
-                            //val coordenadas = falla.coordenadas
                             val latLng = LatLng(falla.coordLat!!, falla.coordLong!!)
                             val marker = map.addMarker(MarkerOptions().position(latLng).title(falla.nombre))
                             marker?.tag = falla
@@ -249,20 +233,17 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                //viewModel.getFallas("Sección Especial")
             }
         }
 
         binding.spinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                //val seccion = secciones[position]
                 if(position == 0) return
                 map.clear()
                 mapaModelView!!._fallasAdultas.observe(viewLifecycleOwner) { fallasAdultas ->
                     if (fallasAdultas != null && position < fallasAdultas.size + 1) {
                         for (i in fallasAdultas[position-1].drop(1)) {
                             val falla = i as Falla
-                            //val coordenadas = falla.coordenadas
                             val latLng = LatLng(falla.coordLat!!, falla.coordLong!!)
                             val marker = map.addMarker(MarkerOptions().position(latLng).title(falla.nombre))
                             marker?.tag = falla
@@ -273,7 +254,6 @@ class MapaFragment : Fragment(), OnMapReadyCallback {
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                //viewModel.getFallas("Sección Especial")
             }
         }
     }

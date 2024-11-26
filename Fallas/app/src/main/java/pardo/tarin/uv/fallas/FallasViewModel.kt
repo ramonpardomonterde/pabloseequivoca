@@ -1,9 +1,6 @@
 package pardo.tarin.uv.fallas
 
-import android.app.Application
-import android.util.Log
 import android.widget.Toast
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.CoroutineScope

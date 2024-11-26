@@ -8,25 +8,18 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
-import kotlinx.coroutines.flow.collect
 import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import pardo.tarin.uv.fallas.Falla
 import pardo.tarin.uv.fallas.FallasGeneral
 import pardo.tarin.uv.fallas.FallasViewModel
 import pardo.tarin.uv.fallas.R
 import pardo.tarin.uv.fallas.databinding.FragmentFallasBinding
-import pardo.tarin.uv.fallas.databinding.FragmentInfantilesBinding
 import java.net.SocketTimeoutException
 
 class InfantilesFragment: FallasGeneral() {

@@ -24,6 +24,11 @@
     <string name="registrarse">REGISTER</string>
     <string name="email">Email</string>
     <string name="contrasena">Password</string>
+    <!--**** Restablecer contraseña ****-->
+    <string name="olvidoContraseña"><u>I forgot my password</u></string>
+    <string name="correoEnviado">An email has been sent to reset your password</string>
+    <string name="correoNoEnviadoError">An error occurred while sending the email</string>
+    <!--********************************-->
     <!--***** Exception Login *****-->
     <string name="usuarioNoExiste">This email is not registered.</string>
     <string name="contrasenaIncorrecta">Incorrect password.</string>

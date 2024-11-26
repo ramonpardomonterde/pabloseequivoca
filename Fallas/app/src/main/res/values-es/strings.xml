@@ -10,6 +10,11 @@
     <string name="registrarse">REGISTRARSE</string>
     <string name="email">Correo electrónico</string>
     <string name="contrasena">Contraseña</string>
+    <!--**** Restablecer contraseña ****-->
+    <string name="olvidoContraseña"><u>He olvidado la contraseña</u></string>
+    <string name="correoEnviado">Se ha enviado un correo para restablecer la contraseña</string>
+    <string name="correoNoEnviadoError">Se ha producido un error al enviar el correo</string>
+    <!--********************************-->
     <!--***** Exception Login *****-->
     <string name="usuarioNoExiste">Este correo electrónico no está registrado.</string>
     <string name="contrasenaIncorrecta">Contraseña incorrecta.</string>

@@ -122,7 +122,7 @@ class HomeFragment : Fragment() {
             builder.setMessage(getString(R.string.consultarCerrarSesion))
             builder.setPositiveButton(getString(R.string.Si)) { dialog, _ ->
                 dialog.dismiss()
-                cerrarSesion(DataHolder.publicEmail)
+                cerrarSesion()
             }
             builder.setNegativeButton("No") { dialog, _ ->
                 dialog.dismiss()
@@ -186,8 +186,7 @@ class HomeFragment : Fragment() {
                 // Asegúrate de eliminar el oyente para evitar múltiples llamadas
                 binding.nombreusuario.viewTreeObserver.removeOnGlobalLayoutListener(this)
 
-                // Ahora puedes obtener el ancho de los elementos
-                Log.d("AnchoNombre", binding.nombreusuario.width.toString())
+
 
                 if(binding.nombreusuario.width > screenWidth!!) {
                     binding.nombreusuario.width = screenWidth!! / 2
@@ -207,8 +206,7 @@ class HomeFragment : Fragment() {
         binding.nombreusuario.text = arguments?.getString("email")
     }
 
-    fun cerrarSesion(email: String) {
-        //añadirFavoritasUsuario(email)
+    fun cerrarSesion() {
         val prefs = requireActivity().getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
         prefs.clear()
         prefs.apply()
@@ -240,21 +238,13 @@ class HomeFragment : Fragment() {
         // Calcula la distancia a moverse
         val distance = opcionesUsuario.width
 
-        val animation: TranslateAnimation
         var translationX = 0f
 
         if(abierto) {
-            animation = TranslateAnimation(-distance.toFloat(), 0f, 0f, 0f)
             translationX = 0f
         } else {
-            animation = TranslateAnimation(0f, -distance.toFloat(), 0f, 0f)
             translationX = -distance.toFloat()
         }
-
-        //animation.duration = 500 // Duración de la animación en milisegundos
-
-        // Aplica la animación a la vista
-        //opcionesUsuario.startAnimation(animation)
 
         opcionesUsuario.translationX = translationX
     }
@@ -262,10 +252,8 @@ class HomeFragment : Fragment() {
     override fun onPause() {
         super.onPause()
 
-        // Obtén una referencia a botonfav
         val botonfav = (activity as MainActivity).botonfav
 
-        // Haz que botonfav desaparezca
         botonfav.visibility = View.GONE
     }
 

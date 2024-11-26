@@ -25,7 +25,6 @@ class FallaDetails : Fragment() {
 
     private lateinit var binding: FragmentFallaDetailsBinding
     private lateinit var falla: Falla
-    private var tipo: String = ""
     private var imgBtnFav: ImageButton? = null
 
     override fun onCreateView(
@@ -35,16 +34,6 @@ class FallaDetails : Fragment() {
     ): View {
         falla = arguments?.getSerializable("falla") as Falla
         Log.d("FallaDetails", falla.toString())
-        /*try {
-            falla = arguments?.getSerializable("adultas") as Falla
-            tipo = "adultas"
-        }
-        catch (e: Exception)
-        {
-            falla = arguments?.getSerializable("infantiles") as Falla
-            tipo = "infantiles"
-        }*/
-        //falla = arguments?.getSerializable("falla") as Falla
 
         binding = FragmentFallaDetailsBinding.inflate(inflater, container, false)
 
@@ -71,7 +60,6 @@ class FallaDetails : Fragment() {
                 withContext(Dispatchers.Main) {
                     if (esfavorito) {
                         imgBtnFav!!.setImageResource(android.R.drawable.btn_star_big_off)
-                        //falla.favorito = false
                         borrarFavorito(falla)
                         Toast.makeText(
                             requireContext(),
@@ -81,7 +69,6 @@ class FallaDetails : Fragment() {
                             .show()
                     } else {
                         imgBtnFav!!.setImageResource(android.R.drawable.btn_star_big_on)
-                        //falla.favorito = true
                         añadirFavorito(falla)
                         Toast.makeText(
                             requireContext(),
